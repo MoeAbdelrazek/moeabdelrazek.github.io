@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moe Abdelrazek | Portfolio</title>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Moe Abdelrazek's professional portfolio: AI, Coding, Data Analysis, and Digital Marketing.">
+  <meta property="og:title" content="Moe Abdelrazek | Portfolio">
+  <meta property="og:description" content="Explore Moe's journey into tech: Python, AI, and digital strategy.">
+  <meta property="og:image" content="profile.jpg">
 </head>
 <body>
-  <!-- Navigation -->
   <nav>
     <div class="logo">Moe Abdelrazek</div>
     <ul>
@@ -23,17 +23,15 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
   <header class="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-art"></div>
     <img src="profile.jpg" alt="Moe Abdelrazek" class="profile-pic">
-    <h1>Career Shifting into Tech</h1>
-    <p>(AI – Coding – Digital Marketing)</p>
+    <h1>Shifting into Tech</h1>
+    <p>AI – Coding – Data Analysis – Digital Marketing</p>
     <a href="#projects" class="cta-btn">View My Work</a>
-    <a href="Moe's Resume.pdf" class="cta-btn secondary" download>Download Resume</a>
+    <a href="Moe-Abdelrazek-Resume.pdf" class="cta-btn secondary" target="_blank">View Resume</a>
   </header>
 
-  <!-- About -->
   <section id="about" class="card">
     <h2>About Me</h2>
     <p>
@@ -43,62 +41,65 @@
     </p>
   </section>
 
-  <!-- Certifications -->
   <section id="certifications" class="card">
     <h2>Certifications</h2>
     <div class="progress">
-      <span><i class="fa-brands fa-microsoft"></i> Microsoft Python Development Professional Certificate</span>
+      <span>Microsoft Python Development Professional Certificate</span>
       <div class="bar completed"></div>
     </div>
     <div class="progress">
-      <span><i class="fa-brands fa-google"></i> Google IT Automation with Python</span>
+      <span>Google IT Automation with Python</span>
       <div class="bar inprogress"></div>
     </div>
     <div class="progress">
-      <span><i class="fa-brands fa-google"></i> Google Digital Marketing & E-commerce</span>
+      <span>Google Digital Marketing & E-commerce</span>
       <div class="bar completed"></div>
     </div>
   </section>
 
-  <!-- Skills -->
   <section id="skills" class="card">
     <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill"><i class="fa-solid fa-brain"></i> Critical Thinking</div>
-      <div class="skill"><i class="fa-solid fa-shield-halved"></i> Resilience</div>
-      <div class="skill"><i class="fa-solid fa-user-tie"></i> Professionalism</div>
-      <div class="skill"><i class="fa-brands fa-python"></i> Python Development</div>
-      <div class="skill"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
+    <div class="skills-block">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Python Development</li>
+        <li>Git & GitHub</li>
+        <li>Data Analysis</li>
+        <li>Automation Scripting</li>
+        <li>Web Deployment</li>
+      </ul>
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Critical Thinking</li>
+        <li>Resilience</li>
+        <li>Professionalism</li>
+        <li>Detail Orientation</li>
+        <li>Strategic Communication</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects" class="card">
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
         <h3>Beginner Project</h3>
         <p>A simple Python script showcasing fundamentals.</p>
-        <a href="#" class="btn">View on GitHub</a>
+        <a href="#">View on GitHub</a>
       </div>
       <div class="project-card">
         <h3>Automation Project</h3>
         <p>Automating repetitive tasks with Python.</p>
-        <a href="#" class="btn">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Future Project</h3>
-        <p>Placeholder for upcoming portfolio work.</p>
+        <a href="#">View on GitHub</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="card">
     <h2>Contact</h2>
     <p>
-      <a href="mailto:moe-abdelrazek@outlook.com"><i class="fa-solid fa-envelope"></i> Email Me</a>  
-      | <a href="https://github.com/MoeAbdelrazek" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="mailto:moe-abdelrazek@outlook.com">Email Me</a> | 
+      <a href="https://github.com/MoeAbdelrazek" target="_blank">GitHub</a>
     </p>
     <form>
       <label for="message">Send me a message:</label><br />
@@ -107,15 +108,12 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Moe Abdelrazek</p>
     <button id="toggle-theme">Toggle Dark Mode</button>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Dark mode toggle with memory
     const button = document.getElementById('toggle-theme');
     if(localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
     button.onclick = () => {
@@ -123,7 +121,6 @@
       localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
     };
 
-    // Scroll animations
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
