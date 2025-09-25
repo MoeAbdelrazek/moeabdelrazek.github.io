@@ -2,8 +2,8 @@
 body {
   font-family: 'Times New Roman', serif;
   margin: 0;
-  background: #ffffff;
-  color: #222222;
+  background: #1a1a1a;
+  color: #eee;
   transition: background 0.3s, color 0.3s;
   scroll-behavior: smooth;
 }
@@ -14,7 +14,7 @@ body::before {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('hero-bg.jpg') center/cover no-repeat;
-  opacity: 0.2;
+  opacity: 0.15;
   z-index: -2;
 }
 
@@ -23,7 +23,7 @@ body::after {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(255,255,255,0.9));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
   z-index: -1;
 }
 
@@ -45,12 +45,12 @@ a:hover {
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  background: #eeeeee;
+  background: #2b2b2b;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   z-index: 1000;
 }
 nav .logo {
@@ -65,7 +65,7 @@ nav ul {
   padding: 0;
 }
 nav li a {
-  color: #222;
+  color: #eee;
 }
 
 /* Hero section */
@@ -82,7 +82,7 @@ nav li a {
   border: 4px solid #f5c518;
   object-fit: cover;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   animation: fadeIn 1.5s ease-out;
 }
 @keyframes fadeIn {
@@ -100,8 +100,8 @@ nav li a {
   transition: all 0.3s;
 }
 .cta-btn:hover {
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #f5c518;
 }
 .cta-btn.secondary {
   background: transparent;
@@ -118,9 +118,9 @@ nav li a {
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #f9f9f9;
+  background: #2b2b2b;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   border-left: 4px solid #f5c518;
   opacity: 0;
   transform: translateY(30px);
@@ -149,7 +149,7 @@ nav li a {
 .bar {
   height: 10px;
   border-radius: 5px;
-  background: #ddd;
+  background: #444;
   overflow: hidden;
   position: relative;
 }
@@ -188,10 +188,10 @@ nav li a {
   gap: 1rem;
 }
 .skills-block li {
-  background: #eeeeee;
+  background: #3a3a3a;
   padding: 0.6rem 1rem;
   border-radius: 6px;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
 }
 
 /* Projects */
@@ -201,15 +201,15 @@ nav li a {
   gap: 1.5rem;
 }
 .project-card {
-  background: #eeeeee;
+  background: #3a3a3a;
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #555;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 .project-card h3 {
   color: #f5c518;
@@ -220,9 +220,9 @@ form textarea {
   width: 100%;
   padding: 0.8rem;
   border-radius: 6px;
-  border: 1px solid #ccc;
-  background: #fff;
-  color: #222;
+  border: 1px solid #555;
+  background: #1a1a1a;
+  color: #eee;
   margin-bottom: 1rem;
 }
 form button {
@@ -235,20 +235,20 @@ form button {
   font-weight: bold;
 }
 form button:hover {
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #f5c518;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 2rem;
-  background: #eeeeee;
-  color: #555;
+  background: #2b2b2b;
+  color: #aaa;
 }
 footer button {
   margin-top: 1rem;
-  background: #ddd;
+  background: #444;
   color: #f5c518;
   border: none;
   padding: 0.5rem 1rem;
@@ -260,15 +260,13 @@ footer button:hover {
   color: #000;
 }
 
-/* Dark Mode */
-body.dark {
-  background: #1a1a1a;
-  color: #eee;
-}
-body.dark .card {
-  background: #2b2b2b;
-}
-body.dark nav,
-body.dark footer {
-  background: #2b2b2b;
+/* Responsive layout */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
