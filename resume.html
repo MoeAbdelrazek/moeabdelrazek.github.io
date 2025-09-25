@@ -25,20 +25,12 @@
       font-size: 18px;
     }
 
-    h1, h2 {
-      font-family: "Times New Roman", Times, serif;
-      margin: 0 0 10px;
-      position: relative;
-      overflow: hidden;
-    }
-
     h1 {
       font-size: 36px;
       text-align: center;
-      background: linear-gradient(90deg, #FFD700, #fff, #FFD700);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 4s infinite linear;
+      color: var(--gold);   /* solid gold, no sparkle */
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     h2 {
@@ -48,9 +40,10 @@
       padding-bottom: 4px;
       margin-bottom: 10px;
       animation: fadeInUp 1s ease forwards;
+      position: relative;
     }
 
-    h1::after, h2::after {
+    h2::after {
       content: "✦";
       position: absolute;
       top: 0;
@@ -69,8 +62,8 @@
     .motto {
       text-align: center;
       font-style: italic;
-      color: var(--text); /* increased contrast */
-      font-weight: bold;  /* clearer on screen and print */
+      color: var(--text);
+      font-weight: bold;
       margin-bottom: 20px;
       animation: fadeIn 2s ease forwards;
     }
@@ -136,9 +129,9 @@
     }
 
     .date {
-      color: var(--text);   /* increased contrast */
+      color: var(--text);
       font-size: 14px;
-      font-weight: bold;    /* clearer */
+      font-weight: bold;
     }
 
     .contact-label {
@@ -152,7 +145,7 @@
       color: var(--text);
       margin-left: 10px;
       display: inline-block;
-      font-weight: bold;    /* clearer */
+      font-weight: bold;
     }
 
     footer {
@@ -167,18 +160,12 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes shine {
-      0% { background-position: -200px; }
-      100% { background-position: 200px; }
-    }
-
     @keyframes backgroundShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* Ensure A4 sizing and strong print clarity */
     @page {
       size: A4;
       margin: 12mm;
@@ -199,11 +186,9 @@
       }
       h1, h2 {
         color: #000;
-        -webkit-text-fill-color: initial;
         background: none;
         text-shadow: none;
       }
-      /* Keep the profile photo visible when printing */
       .profile-pic { display: block; }
       a {
         color: #000;
@@ -211,30 +196,11 @@
       }
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Mohamed Abdelrazek",
-    "url": "https://moeabdelrazek.github.io",
-    "email": "mailto:moe-abdelrazek@outlook.com",
-    "jobTitle": "Python Developer",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Alexandria",
-      "addressCountry": "Egypt"
-    },
-    "sameAs": [
-      "https://github.com/MoeAbdelrazek"
-    ]
-  }
-  </script>
 </head>
 <body>
 
   <h1>Mohamed Abdelrazek</h1>
-  <div class="motto">“Built with discipline. Delivered with heart.”</div>
+  <div class="motto">“Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.”</div>
   <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic">
 
   <div class="grid">
@@ -242,22 +208,10 @@
     <div>
       <div class="card">
         <h2>📇 Contact</h2>
-        <p>
-          <span class="contact-label">Email:</span>
-          <span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span>
-        </p>
-        <p>
-          <span class="contact-label">Phone:</span>
-          <span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span>
-        </p>
-        <p>
-          <span class="contact-label">Website:</span>
-          <span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span>
-        </p>
-        <p>
-          <span class="contact-label">Address:</span>
-          <span class="contact-value">Alexandria, Egypt</span>
-        </p>
+        <p><span class="contact-label">Email:</span><span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+        <p><span class="contact-label">Phone:</span><span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
+        <p><span class="contact-label">Website:</span><span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+        <p><span class="contact-label">Address:</span><span class="contact-value">Alexandria, Egypt</span></p>
       </div>
 
       <div class="card">
@@ -289,16 +243,11 @@
     <div>
       <div class="card">
         <h2>✨ Professional Summary</h2>
-        <p>
-          Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.
-          Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance
-          shaped by professional football. Actively pursuing certifications to bridge technology with business impact.
-        </p>
+        <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance shaped by professional football. Actively pursuing certifications to bridge technology with business impact.</p>
       </div>
 
       <div class="card">
         <h2>💼 Professional Experience</h2>
-
         <p><span class="role">Engoo — Online Tutor</span> <span class="date">(2021–Present)</span></p>
         <ul>
           <li>Delivered personalized lessons to diverse learners; strengthened communication and adaptability.</li>
