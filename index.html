@@ -14,6 +14,7 @@
   <meta property="og:image" content="profile.jpg">
 </head>
 <body class="dark">
+  <!-- Navigation -->
   <nav>
     <div class="logo">Mohamed Abdelrazek</div>
     <ul>
@@ -25,14 +26,17 @@
     </ul>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero">
     <img src="profile.jpg" alt="Mohamed Abdelrazek" class="profile-pic">
     <h1>Building a Smarter Future</h1>
     <p>Python • AI • Automation • Digital Strategy</p>
     <a href="#projects" class="cta-btn">View My Work</a>
-    <a href="Mohamed-Abdelrazek-Resume.pdf" class="cta-btn secondary" target="_blank">View Resume</a>
+    <!-- Updated Resume Link -->
+    <a href="resume.html" class="cta-btn secondary" target="_blank">View Resume</a>
   </header>
 
+  <!-- About Section -->
   <section id="about" class="card">
     <h2>About Me</h2>
     <p>
@@ -44,6 +48,7 @@
     </p>
   </section>
 
+  <!-- Certifications Section -->
   <section id="certifications" class="card">
     <h2>Certifications</h2>
     <div class="progress">
@@ -60,6 +65,7 @@
     </div>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills" class="card">
     <h2>Skills</h2>
     <div class="skills-block">
@@ -82,6 +88,7 @@
     </div>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects" class="card">
     <h2>Projects</h2>
     <div class="project-grid">
@@ -98,6 +105,7 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="card">
     <h2>Contact</h2>
     <p>
@@ -111,12 +119,15 @@
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Mohamed Abdelrazek</p>
     <button id="toggle-theme">Toggle Light Mode</button>
   </footer>
 
+  <!-- Scripts -->
   <script>
+    // Theme toggle
     const button = document.getElementById('toggle-theme');
     button.onclick = () => {
       document.body.classList.toggle('dark');
@@ -124,6 +135,7 @@
       button.textContent = document.body.classList.contains('dark') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
     };
 
+    // Card fade-in animation
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
