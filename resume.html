@@ -23,6 +23,31 @@
       color: var(--text);
       line-height: 1.6;
       font-size: 20px;
+      position: relative;
+      z-index: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('hero-bg.jpg') center/cover no-repeat;
+      opacity: 0.15;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+      z-index: -1;
+    }
+
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     h1 {
@@ -119,6 +144,7 @@
 
     a:hover {
       text-decoration: underline;
+      color: var(--gold);
     }
 
     .role {
@@ -160,12 +186,6 @@
 
     .download-link a:hover {
       text-decoration: underline;
-    }
-
-    @keyframes backgroundShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
