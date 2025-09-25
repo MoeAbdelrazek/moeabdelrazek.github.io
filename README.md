@@ -12,8 +12,7 @@ The foundation behind this work includes 48 completed engineering courses at Ale
 
 The long-term vision driving this portfolio is to secure a stable, high-paying tech role with a strong work-life balance, one that supports family and fuels continued growth in the digital space.
 
-Explore More: How leadership and resilience shaped my tech path
-https://github.com/MoeAbdelrazek/Career-journey.md/blob/main/README.md
+##View My Website https://moeabdelrazek.github.io/
 
 ##View My Resume [https://github.com/MoeAbdelrazek/Moe-s-Resume](https://moeabdelrazek.github.io/resume.html)
 
