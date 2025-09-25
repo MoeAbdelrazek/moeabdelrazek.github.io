@@ -1,0 +1,127 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  font-weight: 600;
+  color: #111;
+}
+
+a {
+  color: #0078d7; /* Microsoft blue accent */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Header ===== */
+header {
+  background: #0078d7;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+}
+
+header .tagline {
+  font-size: 1.1rem;
+  margin: 0.2rem 0;
+}
+
+header .alt-name {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ===== Main Content ===== */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+/* ===== Contact Form ===== */
+form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background: #0078d7;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background: #005a9e;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+footer button {
+  margin-top: 0.5rem;
+  background: #444;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background: #222;
+}
+
+/* ===== Dark Mode ===== */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header {
+  background: #1f1f1f;
+}
+
+body.dark a {
+  color: #4da3ff;
+}
+
+body.dark footer {
+  background: #1f1f1f;
+}
