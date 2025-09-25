@@ -47,18 +47,20 @@ body::after {
 nav {
   position: fixed;
   top: 0;
+  left: 0;
   right: 0;
+  background: var(--card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
   z-index: 1000;
-  background: var(--card);
 }
 
-nav .logo {
-  position: absolute;
-  left: 2rem;
-  top: 1rem;
+nav .welcome {
   font-weight: bold;
   color: var(--gold);
+  font-size: 1.2rem;
 }
 
 nav ul {
