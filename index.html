@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moe Abdelrazek | Career Shift into Tech</title>
+  <title>Moe Abdelrazek | Portfolio</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -23,10 +25,12 @@
 
   <!-- Hero Section -->
   <header class="hero">
+    <div class="hero-bg"></div>
     <img src="profile.jpg" alt="Moe Abdelrazek" class="profile-pic">
-    <h1>Career shifting into the Tech world</h1>
+    <h1>Career Shifting into Tech</h1>
     <p>(AI – Coding – Digital Marketing)</p>
     <a href="#projects" class="cta-btn">View My Work</a>
+    <a href="Moe's Resume.pdf" class="cta-btn secondary" download>Download Resume</a>
   </header>
 
   <!-- About -->
@@ -43,15 +47,15 @@
   <section id="certifications" class="card">
     <h2>Certifications</h2>
     <div class="progress">
-      <span>Microsoft Python Development Professional Certificate</span>
+      <span><i class="fa-brands fa-microsoft"></i> Microsoft Python Development Professional Certificate</span>
       <div class="bar completed"></div>
     </div>
     <div class="progress">
-      <span>Google IT Automation with Python</span>
+      <span><i class="fa-brands fa-google"></i> Google IT Automation with Python</span>
       <div class="bar inprogress"></div>
     </div>
     <div class="progress">
-      <span>Google Digital Marketing & E-commerce</span>
+      <span><i class="fa-brands fa-google"></i> Google Digital Marketing & E-commerce</span>
       <div class="bar completed"></div>
     </div>
   </section>
@@ -59,22 +63,33 @@
   <!-- Skills -->
   <section id="skills" class="card">
     <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Resilience</li>
-      <li>Critical Thinking</li>
-      <li>Professionalism</li>
-      <li>Python Development</li>
-      <li>Git & GitHub</li>
-    </ul>
+    <div class="skills-grid">
+      <div class="skill"><i class="fa-solid fa-brain"></i> Critical Thinking</div>
+      <div class="skill"><i class="fa-solid fa-shield-halved"></i> Resilience</div>
+      <div class="skill"><i class="fa-solid fa-user-tie"></i> Professionalism</div>
+      <div class="skill"><i class="fa-brands fa-python"></i> Python Development</div>
+      <div class="skill"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
+    </div>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="card">
     <h2>Projects</h2>
     <div class="project-grid">
-      <div class="project-card">Beginner Project Placeholder</div>
-      <div class="project-card">Technical Project Placeholder</div>
-      <div class="project-card">Future Project</div>
+      <div class="project-card">
+        <h3>Beginner Project</h3>
+        <p>A simple Python script showcasing fundamentals.</p>
+        <a href="#" class="btn">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Automation Project</h3>
+        <p>Automating repetitive tasks with Python.</p>
+        <a href="#" class="btn">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Future Project</h3>
+        <p>Placeholder for upcoming portfolio work.</p>
+      </div>
     </div>
   </section>
 
@@ -82,8 +97,8 @@
   <section id="contact" class="card">
     <h2>Contact</h2>
     <p>
-      Connect with me on <a href="https://github.com/MoeAbdelrazek" target="_blank">GitHub</a>  
-      or email me at <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a>.
+      <a href="mailto:moe-abdelrazek@outlook.com"><i class="fa-solid fa-envelope"></i> Email Me</a>  
+      | <a href="https://github.com/MoeAbdelrazek" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
     </p>
     <form>
       <label for="message">Send me a message:</label><br />
@@ -100,9 +115,13 @@
 
   <!-- Scripts -->
   <script>
-    // Dark mode toggle
+    // Dark mode toggle with memory
     const button = document.getElementById('toggle-theme');
-    button.onclick = () => document.body.classList.toggle('dark');
+    if(localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
+    button.onclick = () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    };
 
     // Scroll animations
     const cards = document.querySelectorAll('.card');
