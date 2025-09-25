@@ -28,7 +28,7 @@
     h1 {
       font-size: 36px;
       text-align: center;
-      color: var(--gold);   /* solid gold, no sparkle */
+      color: var(--gold);
       font-weight: bold;
       margin-bottom: 10px;
     }
@@ -189,7 +189,9 @@
         background: none;
         text-shadow: none;
       }
-      .profile-pic { display: block; }
+      .profile-pic {
+        display: block !important;
+      }
       a {
         color: #000;
         text-decoration: underline;
@@ -204,7 +206,6 @@
   <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic">
 
   <div class="grid">
-    <!-- Left column -->
     <div>
       <div class="card">
         <h2>📇 Contact</h2>
@@ -239,7 +240,6 @@
       </div>
     </div>
 
-    <!-- Right column -->
     <div>
       <div class="card">
         <h2>✨ Professional Summary</h2>
