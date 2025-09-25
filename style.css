@@ -8,17 +8,17 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Background image */
+/* Ocean background */
 body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('hero-bg.jpg') center/cover no-repeat;
-  opacity: 0.15;
+  opacity: 0.2;
   z-index: -2;
 }
 
-/* Overlay gradient */
+/* Soft overlay */
 body::after {
   content: "";
   position: fixed;
