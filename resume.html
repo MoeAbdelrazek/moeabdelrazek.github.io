@@ -6,17 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
-      --bg1: #0f172a;
-      --bg2: #1e293b;
-      --text: #f8fafc;
+      --bg1: #d9d9d9;
+      --text: #000000;
       --gold: #FFD700;
-      --card: #1e293b;
+      --card: #e3e4e8;
     }
 
     body {
       margin: 40px;
       font-family: "Times New Roman", Times, serif;
-      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      background: linear-gradient(135deg, var(--bg1), #f0f0f0);
       background-size: 400% 400%;
       animation: backgroundShift 20s ease infinite;
       color: var(--text);
@@ -30,17 +29,9 @@
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: url('hero-bg-light.jpg') center/cover no-repeat;
+      background: url('diamond-bg.jpg') center/cover no-repeat;
       opacity: 0.2;
       z-index: -2;
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
-      z-index: -1;
     }
 
     @keyframes backgroundShift {
@@ -73,14 +64,14 @@
       top: 0;
       right: -20px;
       font-size: 18px;
-      color: #fff;
-      text-shadow: 0 0 6px #FFD700, 0 0 12px #fff;
+      color: var(--gold);
+      text-shadow: 0 0 6px var(--gold), 0 0 12px #fff;
       animation: sparkle 2s infinite ease-in-out;
     }
 
     @keyframes sparkle {
-      0%, 100% { opacity: 0; transform: translateY(-10px) scale(0.5); }
-      50% { opacity: 1; transform: translateY(0) scale(1.2); }
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.2); }
     }
 
     .motto {
@@ -113,7 +104,7 @@
       padding: 18px;
       border-radius: 10px;
       border-left: 4px solid var(--gold);
-      box-shadow: 0 0 12px rgba(255,215,0,0.2);
+      box-shadow: 0 0 12px rgba(255,215,0,0.15);
     }
 
     ul {
@@ -195,6 +186,18 @@
     .download-link a:hover {
       text-decoration: underline;
     }
+
+    .separator {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .separator::before {
+      content: "◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆";
+      color: var(--gold);
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
   </style>
 </head>
 <body>
@@ -213,6 +216,8 @@
         <p><span class="contact-label">Address:</span><span class="contact-value">Alexandria, Egypt</span></p>
       </div>
 
+      <div class="separator"></div>
+
       <div class="card">
         <h2>🛠️ Core Skills</h2>
         <ul>
@@ -227,6 +232,8 @@
           <li>Languages: Arabic, English, German</li>
         </ul>
       </div>
+
+      <div class="separator"></div>
 
       <div class="card">
         <h2>🎓 Certifications (In Progress)</h2>
@@ -244,6 +251,8 @@
         <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance shaped by professional football. Actively pursuing certifications to bridge technology with business impact.</p>
       </div>
 
+      <div class="separator"></div>
+
       <div class="card">
         <h2>💼 Professional Experience</h2>
         <p><span class="role">Engoo — Online Tutor</span> <span class="date">(2021–Present)</span></p>
@@ -253,13 +262,17 @@
           <li>Maintained high session quality and learner satisfaction across hundreds of lessons.</li>
         </ul>
 
+        <div class="separator"></div>
+
         <p><span class="role">Professional Athlete — Football</span> <span class="date">(2011–2022)</span></p>
-                <ul>
+        <ul>
           <li>Competed at a high level for over a decade; developed discipline and resilience under pressure.</li>
           <li>Led and collaborated within dynamic teams; honed leadership and teamwork.</li>
           <li>Transferred performance mindset to technology learning and delivery.</li>
         </ul>
       </div>
+
+      <div class="separator"></div>
 
       <div class="card">
         <h2>🏫 Education</h2>
@@ -272,6 +285,8 @@
       </div>
     </div>
   </div>
+
+  <div class="separator"></div>
 
   <div class="download-link">
     <a href="Mohamed_Abdelrazek_Resume.pdf" download>
