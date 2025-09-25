@@ -1,14 +1,16 @@
 /* Base styles */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Times New Roman', serif;
   margin: 0;
-  background: #111;
-  color: #eee;
+  background: #181818;
+  color: #f0f0f0;
   transition: background 0.3s, color 0.3s;
+  scroll-behavior: smooth;
 }
 h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Times New Roman', serif;
   color: #f5c518;
+  text-shadow: 0 0 4px rgba(245, 197, 24, 0.3);
 }
 a {
   color: #f5c518;
@@ -16,6 +18,25 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+/* Background image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  opacity: 0.2;
+  z-index: -2;
+}
+
+/* Overlay gradient */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+  z-index: -1;
 }
 
 /* Navigation */
@@ -31,8 +52,7 @@ nav {
   z-index: 1000;
 }
 nav .logo {
-  font-weight: 600;
-  font-family: 'Poppins';
+  font-weight: bold;
   color: #f5c518;
 }
 nav ul {
@@ -52,15 +72,6 @@ nav li a {
   text-align: center;
   padding: 5rem 1rem;
   position: relative;
-  overflow: hidden;
-  background: #000;
-}
-.hero-art {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url('hero-bg.jpg') center/cover no-repeat;
-  opacity: 0.2;
-  z-index: -1;
 }
 .profile-pic {
   width: 160px;
@@ -70,6 +81,11 @@ nav li a {
   object-fit: cover;
   margin-bottom: 1rem;
   box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+  animation: fadeIn 1.5s ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
 .cta-btn {
   display: inline-block;
@@ -100,7 +116,7 @@ nav li a {
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #1a1a1a;
+  background: #222;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(255,255,255,0.05);
   border-left: 4px solid #f5c518;
@@ -126,7 +142,7 @@ nav li a {
 .progress span {
   display: block;
   margin-bottom: 0.3rem;
-  font-weight: 500;
+  font-weight: bold;
 }
 .bar {
   height: 10px;
