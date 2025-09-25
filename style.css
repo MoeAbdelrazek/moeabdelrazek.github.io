@@ -1,22 +1,21 @@
 :root {
-  --bg1: #d9d9d9;
+  --bg1: #2a2a2a;
+  --bg2: #3a3a3a;
   --text: #ffffff;
   --gold: #FFD700;
-  --card: #e3e4e8;
+  --card: #444;
 }
 
-/* Background */
 body {
-  font-family: 'Times New Roman', serif;
   margin: 0;
-  font-size: 22px;
-  background: linear-gradient(135deg, var(--bg1), #f0f0f0);
+  font-family: 'Times New Roman', serif;
+  font-size: 20px;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
   background-size: 400% 400%;
   animation: backgroundShift 20s ease infinite;
   color: var(--text);
   scroll-behavior: smooth;
   position: relative;
-  z-index: 0;
 }
 
 body::before {
@@ -24,7 +23,7 @@ body::before {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('diamond-bg.jpg') center/cover no-repeat;
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: -2;
 }
 
@@ -34,7 +33,6 @@ body::before {
   100% { background-position: 0% 50%; }
 }
 
-/* Navigation */
 nav {
   position: fixed;
   top: 0;
@@ -72,18 +70,17 @@ nav li a:hover {
   color: var(--gold);
 }
 
-/* Hero */
 .hero {
   margin-top: 100px;
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .profile-pic {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 4px solid var(--gold);
+  border: 3px solid var(--gold);
   object-fit: cover;
   margin-bottom: 1rem;
   box-shadow: 0 0 15px rgba(255,215,0,0.7);
@@ -96,14 +93,12 @@ nav li a:hover {
 
 .motto {
   font-style: italic;
-  color: var(--text);
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-size: 1.2rem;
 }
 
-/* Buttons */
 .cta-btn {
   display: inline-block;
   margin: 0.5rem;
@@ -123,21 +118,73 @@ nav li a:hover {
   transform: translateY(-2px);
 }
 
-/* Cards */
 .card {
-  max-width: 900px;
+  max-width: 850px;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 1.5rem;
   background: var(--card);
   border-radius: 10px;
-  box-shadow: 0 0 12px rgba(255,215,0,0.15);
+  box-shadow: 0 0 10px rgba(255,215,0,0.1);
   border-left: 4px solid var(--gold);
-  color: #000000;
 }
 
 .card h2 {
-  position: relative;
+  font-size: 24px;
+  color: var(--gold);
   border-bottom: 2px solid var(--gold);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  position: relative;
+  font-weight: bold;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.card p,
+.card li {
+  font-size: 20px;
+  color: var(--text);
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+li::before {
+  content: "◆ ";
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.separator {
+  border-top: 1px solid var(--gold);
+  margin: 30px auto;
+  max-width: 850px;
+}
+
+.contact-label {
+  font-weight: bold;
+  color: var(--gold);
+  display: block;
+  margin-top: 6px;
+}
+
+.contact-value {
+  margin-left: 10px;
   display: inline-block;
-  padding-bottom: 0.3rem;
-  margin-bottom:
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
