@@ -4,9 +4,201 @@
   <meta charset="UTF-8" />
   <title>Mohamed Abdelrazek — Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg1: #2a2a2a;
+      --bg2: #3a3a3a;
+      --text: #ffffff;
+      --gold: #FFD700;
+      --card: #444;
+    }
+
+    body {
+      margin: 40px;
+      font-family: "Times New Roman", Times, serif;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      background-size: 400% 400%;
+      animation: backgroundShift 20s ease infinite;
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 20px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('diamond-bg.jpg') center/cover no-repeat;
+      opacity: 0.1;
+      z-index: -2;
+    }
+
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      color: var(--gold);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: var(--gold);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      position: relative;
+      font-weight: bold;
+    }
+
+    h2::after {
+      content: "✦";
+      position: absolute;
+      top: 0;
+      right: -20px;
+      font-size: 18px;
+      color: var(--gold);
+      text-shadow: 0 0 6px var(--gold), 0 0 12px #fff;
+      animation: sparkle 2s infinite ease-in-out;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    .motto {
+      text-align: center;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      display: block;
+      margin: 0 auto 20px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 15px rgba(255,215,0,0.7);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .left-column, .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border-left: 4px solid var(--gold);
+      box-shadow: 0 0 10px rgba(255,215,0,0.1);
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    li::before {
+      content: "◆ ";
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    li {
+      margin: 6px 0;
+      font-size: 20px;
+      font-weight: normal;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: normal;
+      color: var(--text);
+    }
+
+    .summary-card p {
+      font-size: 21px;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--gold);
+    }
+
+    .role {
+      font-weight: bold;
+    }
+
+    .date {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .contact-label {
+      font-weight: bold;
+      color: var(--gold);
+      display: block;
+      margin-top: 6px;
+    }
+
+    .contact-value {
+      margin-left: 10px;
+      display: inline-block;
+    }
+
+    .separator {
+      border-top: 1px solid var(--gold);
+      margin: 30px auto;
+      max-width: 850px;
+    }
+
+    .download-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .download-link a {
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .download-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+
   <h1>Mohamed Abdelrazek</h1>
   <div class="motto">“Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.”</div>
   <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
@@ -96,5 +288,6 @@
       📄 Download PDF Resume
     </a>
   </div>
+
 </body>
 </html>
