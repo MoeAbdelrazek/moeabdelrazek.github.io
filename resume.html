@@ -5,32 +5,36 @@
 <title>Mohamed Abdelrazek — Resume</title>
 <style>
   :root {
-    --bg: #0f172a;       /* dark navy background */
-    --text: #f8fafc;     /* light text */
-    --gold: #FFD700;     /* gold for headings */
-    --muted: #94a3b8;    /* muted gray */
-    --card: #1e293b;     /* dark card background */
+    --bg1: #0f172a;
+    --bg2: #1e293b;
+    --text: #f8fafc;
+    --gold: #FFD700;
+    --muted: #94a3b8;
+    --card: #1e293b;
   }
   body {
     margin: 40px;
-    font-family: Calibri, Inter, Arial, sans-serif;
-    background: var(--bg);
+    font-family: "Times New Roman", Times, serif;
+    background: linear-gradient(135deg, var(--bg1), var(--bg2));
+    background-size: 400% 400%;
+    animation: backgroundShift 20s ease infinite;
     color: var(--text);
     line-height: 1.6;
-    font-size: 18px; /* increased one degree */
+    font-size: 18px;
   }
   h1, h2 {
     font-family: "Times New Roman", Times, serif;
     margin: 0 0 10px;
+    position: relative;
+    overflow: hidden;
   }
   h1 {
     font-size: 36px;
     text-align: center;
-    color: var(--gold);
-    animation: shine 3s infinite linear;
     background: linear-gradient(90deg, #FFD700, #fff, #FFD700);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: shine 4s infinite linear;
   }
   h2 {
     font-size: 22px;
@@ -39,6 +43,21 @@
     padding-bottom: 4px;
     margin-bottom: 10px;
     animation: fadeInUp 1s ease forwards;
+  }
+  /* Sparkle effect */
+  h1::after, h2::after {
+    content: "✦";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 0 6px #FFD700, 0 0 12px #fff;
+    animation: sparkle 2s infinite ease-in-out;
+  }
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: translateY(-10px) scale(0.5); }
+    50% { opacity: 1; transform: translateY(0) scale(1.2); }
   }
   .motto {
     text-align: center;
@@ -58,6 +77,23 @@
     box-shadow: 0 0 15px rgba(255,215,0,0.7);
     animation: fadeIn 2s ease forwards;
   }
+  .download-btn {
+    display: block;
+    text-align: center;
+    margin: 10px auto 30px;
+    padding: 10px 20px;
+    border: 2px solid var(--gold);
+    border-radius: 6px;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: fit-content;
+  }
+  .download-btn:hover {
+    background: var(--gold);
+    color: #000;
+  }
   .grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -67,16 +103,30 @@
     background: var(--card);
     padding: 18px;
     border-radius: 8px;
+    border: 1px solid rgba(255,215,0,0.4);
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards;
   }
-  ul { list-style: none; padding: 0; margin: 0; }
-  li { margin: 8px 0; }
-  a { color: var(--gold); text-decoration: none; }
+  ul { 
+    list-style-type: none; 
+    padding-left: 20px; 
+    margin: 0; 
+  }
+  li::before {
+    content: "◆ ";
+    color: var(--gold);
+    font-weight: bold;
+  }
+  li { 
+    margin: 6px 0; 
+    font-size: 17px;
+  }
+  a { color: var(--gold); text-decoration: none; font-weight: bold; }
   a:hover { text-decoration: underline; }
   .role { font-weight: 700; color: var(--text); }
   .date { color: var(--muted); font-size: 14px; }
+  .contact-label { font-weight: bold; color: var(--gold); display: block; margin-top: 6px; }
 
   /* Animations */
   @keyframes fadeIn {
@@ -91,6 +141,32 @@
     0% { background-position: -200px; }
     100% { background-position: 200px; }
   }
+  @keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Print-friendly */
+  @media print {
+    body {
+      background: #fff;
+      color: #000;
+      font-size: 12pt;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #000;
+      box-shadow: none;
+    }
+    h1, h2 {
+      color: #000;
+      -webkit-text-fill-color: initial;
+      background: none;
+      text-shadow: none;
+    }
+    .profile-pic, .download-btn { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -102,17 +178,18 @@
   <!-- Profile Picture -->
   <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
 
+  <!-- Download PDF Button -->
+  <a href="Mohamed-Abdelrazek-Resume.pdf" class="download-btn" target="_blank">⬇ Download PDF Resume</a>
+
   <div class="grid">
     <!-- Left column -->
     <div>
       <div class="card">
         <h2>📇 Contact</h2>
-        <ul>
-          <li><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></li>
-          <li><a href="tel:+201017286384">+20 1017286384</a></li>
-          <li><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></li>
-          <li>Alexandria, Egypt</li>
-        </ul>
+        <p><span class="contact-label">Email:</span> <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></p>
+        <p><span class="contact-label">Phone:</span> <a href="tel:+201017286384">+20 1017286384</a></p>
+        <p><span class="contact-label">Website:</span> <a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></p>
+        <p><span class="contact-label">Address:</span> Alexandria, Egypt</p>
       </div>
 
       <div class="card">
@@ -133,9 +210,9 @@
       <div class="card">
         <h2>🎓 Certifications (In Progress)</h2>
         <ul>
-          <li>Google IT Automation with Python</li>
-          <li>Microsoft Python Development</li>
-          <li>Google Digital Marketing & E-commerce</li>
+          <li>Google IT Automation with Python (In progress)</li>
+          <li>Microsoft Python Development (In progress)</li>
+          <li>Google Digital Marketing & E-commerce (In progress)</li>
         </ul>
       </div>
     </div>
@@ -144,25 +221,4 @@
     <div>
       <div class="card">
         <h2>✨ Professional Summary</h2>
-        <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance shaped by professional football. Actively pursuing certifications to bridge technology with business impact.</p>
-      </div>
-
-      <div class="card">
-        <h2>💼 Professional Experience</h2>
-        <p><span class="role">Engoo — Online Tutor</span> <span class="date">(2021–Present)</span><br>
-        Personalized instruction for international learners; strengthened communication and adaptability; leveraged digital tools to improve outcomes.</p>
-
-        <p><span class="role">Professional Athlete — Football</span> <span class="date">(2011–2022)</span><br>
-        Competed at a high level for over a decade; developed discipline, resilience, teamwork, and leadership under pressure.</p>
-      </div>
-
-      <div class="card">
-        <h2>🏫 Education</h2>
-        <p><span class="role">Alexandria University — Engineering Studies</span><br>
-        4 years completed, 48 courses; incomplete Bachelor’s degree.</p>
-      </div>
-    </div>
-  </div>
-
-</body>
-</html>
+        <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance shaped by professional football. Actively pursuing certifications to bridge technology
