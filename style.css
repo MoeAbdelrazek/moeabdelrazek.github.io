@@ -1,4 +1,4 @@
-/* Base */
+/* Base styles */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -46,7 +46,7 @@ nav li a {
   color: #eee;
 }
 
-/* Hero */
+/* Hero section */
 .hero {
   margin-top: 60px;
   text-align: center;
@@ -58,8 +58,8 @@ nav li a {
 .hero-art {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url('geometry-art.svg') center/cover no-repeat;
-  opacity: 0.08;
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  opacity: 0.2;
   z-index: -1;
 }
 .profile-pic {
@@ -95,7 +95,7 @@ nav li a {
   color: #000;
 }
 
-/* Cards */
+/* Card sections */
 .card {
   max-width: 900px;
   margin: 2rem auto;
