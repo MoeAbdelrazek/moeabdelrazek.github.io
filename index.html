@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moe Abdelrazek | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <meta name="description" content="Moe Abdelrazek's professional portfolio: AI, Coding, Data Analysis, and Digital Marketing.">
   <meta name="keywords" content="Moe Abdelrazek, Python Developer, AI, Digital Marketing, Portfolio">
   <meta name="author" content="Moe Abdelrazek">
@@ -12,7 +13,7 @@
   <meta property="og:description" content="Explore Moe's journey into tech: Python, AI, and digital strategy.">
   <meta property="og:image" content="profile.jpg">
 </head>
-<body>
+<body class="dark">
   <nav>
     <div class="logo">Moe Abdelrazek</div>
     <ul>
@@ -85,12 +86,12 @@
       <div class="project-card">
         <h3>Beginner Project</h3>
         <p>A simple Python script showcasing fundamentals.</p>
-        <a href="#">View on GitHub</a>
+        <a href="https://github.com/MoeAbdelrazek/beginner-python" target="_blank">View on GitHub</a>
       </div>
       <div class="project-card">
         <h3>Automation Project</h3>
         <p>Automating repetitive tasks with Python.</p>
-        <a href="#">View on GitHub</a>
+        <a href="https://github.com/MoeAbdelrazek/python-automation" target="_blank">View on GitHub</a>
       </div>
     </div>
   </section>
@@ -101,24 +102,24 @@
       <a href="mailto:moe-abdelrazek@outlook.com">Email Me</a> |  
       <a href="https://github.com/MoeAbdelrazek" target="_blank">GitHub</a>
     </p>
-    <form>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
       <label for="message">Send me a message:</label><br />
-      <textarea id="message" name="message" rows="4" placeholder="Your message here..."></textarea><br />
+      <textarea id="message" name="message" rows="4" placeholder="Your message here..." required></textarea><br />
       <button type="submit">Send</button>
     </form>
   </section>
 
   <footer>
     <p>© 2025 Moe Abdelrazek</p>
-    <button id="toggle-theme">Toggle Dark Mode</button>
+    <button id="toggle-theme">Toggle Light Mode</button>
   </footer>
 
   <script>
     const button = document.getElementById('toggle-theme');
-    if(localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
     button.onclick = () => {
       document.body.classList.toggle('dark');
       localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      button.textContent = document.body.classList.contains('dark') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
     };
 
     const cards = document.querySelectorAll('.card');
