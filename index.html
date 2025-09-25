@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohamed Abdelrazek | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <meta name="description" content="Mohamed Abdelrazek's professional portfolio: Python, AI, Automation, and Digital Strategy.">
 </head>
 <body>
   <!-- Navigation -->
@@ -19,63 +17,60 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="theme-switch" />
+        <span class="slider"></span>
+      </label>
+    </div>
   </nav>
 
   <!-- Hero Section -->
   <header class="hero">
-    <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic">
+    <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
     <h1>Mohamed Abdelrazek</h1>
     <div class="motto">“Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.”</div>
     <a href="#projects" class="cta-btn">View My Work</a>
     <a href="resume.html" class="cta-btn">View My Resume</a>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="card">
     <h2>✨ Professional Summary</h2>
     <p>
-      Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.  
-      Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance shaped by professional football.  
+      Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.
+      Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance shaped by professional football.
       Actively pursuing certifications to bridge technology with business impact.
     </p>
   </section>
 
-  <!-- Certifications Section -->
+  <!-- Certifications -->
   <section id="certifications" class="card">
     <h2>🎓 Certifications</h2>
-    <div class="progress">
-      <span>Microsoft Python Development Professional Certificate</span>
-      <div class="bar completed"></div>
-    </div>
-    <div class="progress">
-      <span>Google IT Automation with Python</span>
-      <div class="bar inprogress"></div>
-    </div>
-    <div class="progress">
-      <span>Google Digital Marketing & E-commerce</span>
-      <div class="bar completed"></div>
-    </div>
+    <ul>
+      <li>Microsoft Python Development Professional Certificate</li>
+      <li>Google IT Automation with Python</li>
+      <li>Google Digital Marketing & E-Commerce</li>
+    </ul>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section id="skills" class="card">
     <h2>🛠️ Core Skills</h2>
-    <div class="skills-block">
-      <ul>
-        <li>Python (Debugging, Automation)</li>
-        <li>Data Analysis Fundamentals</li>
-        <li>AI Fundamentals</li>
-        <li>GitHub & Version Control</li>
-        <li>Microsoft Suite</li>
-        <li>Digital Marketing & E-Commerce</li>
-        <li>Resilience & Discipline</li>
-        <li>Team Leadership</li>
-        <li>Languages: Arabic, English, German</li>
-      </ul>
-    </div>
+    <ul class="skills-list">
+      <li>Python (Debugging, Automation)</li>
+      <li>Data Analysis Fundamentals</li>
+      <li>AI Fundamentals</li>
+      <li>GitHub & Version Control</li>
+      <li>Microsoft Suite</li>
+      <li>Digital Marketing & E-Commerce</li>
+      <li>Resilience & Discipline</li>
+      <li>Team Leadership</li>
+      <li>Languages: Arabic, English, German</li>
+    </ul>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects" class="card">
     <h2>🌟 Projects</h2>
     <div class="project-grid">
@@ -87,7 +82,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="card">
     <h2>📇 Contact</h2>
     <p><span class="contact-label">Email:</span><span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
@@ -99,24 +94,14 @@
   <!-- Footer -->
   <footer>
     <p>© 2025 Mohamed Abdelrazek</p>
-    <button id="toggle-theme">Toggle Light Mode</button>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Theme Toggle Script -->
   <script>
-    const button = document.getElementById('toggle-theme');
-    button.onclick = () => {
-      document.body.classList.toggle('dark');
-      button.textContent = document.body.classList.contains('dark') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
-    };
-
-    const cards = document.querySelectorAll('.card');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-    cards.forEach(card => observer.observe(card));
+    const switcher = document.getElementById('theme-switch');
+    switcher.addEventListener('change', () => {
+      document.body.classList.toggle('light');
+    });
   </script>
 </body>
 </html>
