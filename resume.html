@@ -8,7 +8,7 @@
     :root {
       --bg1: #0f172a;
       --bg2: #1e293b;
-      --text: #ffffff;
+      --text: #f8fafc;
       --gold: #FFD700;
       --muted: #94a3b8;
       --card: #1e293b;
@@ -65,6 +65,7 @@
       padding-bottom: 4px;
       margin-bottom: 10px;
       position: relative;
+      font-weight: bold;
     }
 
     h2::after {
@@ -114,12 +115,6 @@
       border-radius: 10px;
       border-left: 4px solid var(--gold);
       box-shadow: 0 0 12px rgba(255,215,0,0.2);
-      opacity: 0.95;
-      transition: box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      box-shadow: 0 0 18px var(--gold);
     }
 
     ul {
@@ -137,18 +132,13 @@
     li {
       margin: 6px 0;
       font-size: 19px;
+      font-weight: normal;
       color: var(--text);
-      font-weight: bold;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
-    }
-
-    li:hover {
-      color: var(--gold);
-      text-shadow: 0 0 6px var(--gold), 0 0 12px var(--gold);
     }
 
     p {
       font-size: 19px;
+      font-weight: normal;
       color: var(--text);
     }
 
@@ -164,7 +154,7 @@
     }
 
     .role {
-      font-weight: 700;
+      font-weight: bold;
       color: var(--text);
     }
 
@@ -185,7 +175,6 @@
       color: var(--text);
       margin-left: 10px;
       display: inline-block;
-      font-weight: bold;
     }
 
     .download-link {
