@@ -7,13 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <meta name="description" content="Mohamed Abdelrazek's professional portfolio: Python, AI, Automation, and Digital Strategy.">
-  <meta name="keywords" content="Mohamed Abdelrazek, Python Developer, AI, Automation, Portfolio">
-  <meta name="author" content="Mohamed Abdelrazek">
-  <meta property="og:title" content="Mohamed Abdelrazek | Portfolio">
-  <meta property="og:description" content="Explore Mohamed's journey into tech: Python, AI, and digital strategy.">
-  <meta property="og:image" content="profile.jpg">
 </head>
-<body class="dark">
+<body>
   <!-- Navigation -->
   <nav>
     <div class="logo">Mohamed Abdelrazek</div>
@@ -32,8 +27,7 @@
     <h1>Building a Smarter Future</h1>
     <p>Python • AI • Automation • Digital Strategy</p>
     <a href="#projects" class="cta-btn">View My Work</a>
-    <!-- Updated Resume Link -->
-    <a href="resume.html" class="cta-btn secondary" target="_blank">View Resume</a>
+    <a href="Mohamed_Abdelrazek_Resume.pdf" download class="cta-btn secondary">📄 Download Resume</a>
   </header>
 
   <!-- About Section -->
@@ -42,9 +36,7 @@
     <p>
       <strong>Mohamed Abdelrazek</strong> — a former professional athlete fluent in multiple languages, now immersed in Python development and digital strategy.  
       Completed four years of engineering studies, covering 48 rigorous courses that sharpened analytical thinking and problem-solving mindset.  
-      The journey into tech is shaped by discipline, professionalism, and a relentless commitment to delivering results.  
-      Every project is approached with the mindset of a builder and a performer — blending logic, creativity, and resilience to create solutions that work and evolve.  
-      Whether it's automation, analysis, or design, clarity, precision, and purpose are at the core of everything built.
+      Every project blends logic, creativity, and resilience — built with clarity, precision, and purpose.
     </p>
   </section>
 
@@ -88,17 +80,17 @@
     </div>
   </section>
 
-<!-- Projects Section -->
-<section id="projects" class="card">
-  <h2 style="color: goldenrod; text-align: center;">🌟 Projects</h2>
-  <div class="project-grid">
-    <div class="project-card gold-highlight">
-      <h3>✨ Python Labs: Conditionals, Loops & Sorting</h3>
-      <p>Hands-on exercises exploring control flow and sorting algorithms in Python.</p>
-      <a href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">🔗 View on GitHub</a>
+  <!-- Projects Section -->
+  <section id="projects" class="card">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>✨ Python Labs: Conditionals, Loops & Sorting</h3>
+        <p>Hands-on exercises exploring control flow and sorting algorithms in Python.</p>
+        <a href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">🔗 View on GitHub</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="card">
@@ -122,15 +114,12 @@
 
   <!-- Scripts -->
   <script>
-    // Theme toggle
     const button = document.getElementById('toggle-theme');
     button.onclick = () => {
       document.body.classList.toggle('dark');
-      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
       button.textContent = document.body.classList.contains('dark') ? 'Toggle Light Mode' : 'Toggle Dark Mode';
     };
 
-    // Card fade-in animation
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
