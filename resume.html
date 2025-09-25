@@ -1,201 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Mohamed Abdelrazek — Resume</title>
-<style>
-  :root {
-    --bg1: #0f172a;
-    --bg2: #1e293b;
-    --text: #f8fafc;
-    --gold: #FFD700;
-    --muted: #94a3b8;
-    --card: #1e293b;
-  }
-  body {
-    margin: 40px;
-    font-family: "Times New Roman", Times, serif;
-    background: linear-gradient(135deg, var(--bg1), var(--bg2));
-    background-size: 400% 400%;
-    animation: backgroundShift 20s ease infinite;
-    color: var(--text);
-    line-height: 1.6;
-    font-size: 18px;
-  }
-  h1, h2 {
-    font-family: "Times New Roman", Times, serif;
-    margin: 0 0 10px;
-    position: relative;
-    overflow: hidden;
-  }
-  h1 {
-    font-size: 36px;
-    text-align: center;
-    background: linear-gradient(90deg, #FFD700, #fff, #FFD700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 4s infinite linear;
-  }
-  h2 {
-    font-size: 22px;
-    color: var(--gold);
-    border-bottom: 2px solid var(--gold);
-    padding-bottom: 4px;
-    margin-bottom: 10px;
-    animation: fadeInUp 1s ease forwards;
-  }
-  /* Sparkle effect */
-  h1::after, h2::after {
-    content: "✦";
-    position: absolute;
-    top: 0;
-    right: -20px;
-    font-size: 18px;
-    color: #fff;
-    text-shadow: 0 0 6px #FFD700, 0 0 12px #fff;
-    animation: sparkle 2s infinite ease-in-out;
-  }
-  @keyframes sparkle {
-    0%, 100% { opacity: 0; transform: translateY(-10px) scale(0.5); }
-    50% { opacity: 1; transform: translateY(0) scale(1.2); }
-  }
-
-  .motto {
-    text-align: center;
-    font-style: italic;
-    color: var(--muted);
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease forwards;
-  }
-  .profile-pic {
-    display: block;
-    margin: 0 auto 20px;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--gold);
-    box-shadow: 0 0 15px rgba(255,215,0,0.7);
-    animation: fadeIn 2s ease forwards;
-  }
-  .download-btn {
-    display: block;
-    text-align: center;
-    margin: 10px auto 30px;
-    padding: 10px 20px;
-    border: 2px solid var(--gold);
-    border-radius: 6px;
-    color: var(--gold);
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-    width: fit-content;
-  }
-  .download-btn:hover {
-    background: var(--gold);
-    color: #000;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 24px;
-  }
-  .card {
-    background: var(--card);
-    padding: 18px;
-    border-radius: 8px;
-    border: 1px solid rgba(255,215,0,0.4);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards;
-  }
-
-  /* Lists */
-  ul { 
-    list-style-type: none; 
-    padding-left: 20px; 
-    margin: 0; 
-  }
-  li::before {
-    content: "◆ ";
-    color: var(--gold);
-    font-weight: bold;
-  }
-  li { 
-    margin: 6px 0; 
-    font-size: 17px;
-  }
-
-  a { color: var(--gold); text-decoration: none; font-weight: bold; }
-  a:hover { text-decoration: underline; }
-  .role { font-weight: 700; color: var(--text); }
-  .date { color: var(--muted); font-size: 14px; }
-  .contact-label { font-weight: bold; color: var(--gold); display: block; margin-top: 6px; }
-
-  /* Animations */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes shine {
-    0% { background-position: -200px; }
-    100% { background-position: 200px; }
-  }
-  @keyframes backgroundShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  /* Print-friendly */
-  @media print {
-    body {
-      background: #fff;
-      color: #000;
-      font-size: 12pt;
+  <meta charset="UTF-8" />
+  <title>Mohamed Abdelrazek — Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --text: #f8fafc;
+      --gold: #FFD700;
+      --muted: #94a3b8;
+      --card: #1e293b;
     }
-    .card {
-      background: #fff;
-      border: 1px solid #000;
-      box-shadow: none;
+    body {
+      margin: 40px;
+      font-family: "Times New Roman", Times, serif;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      background-size: 400% 400%;
+      animation: backgroundShift 20s ease infinite;
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 18px;
     }
     h1, h2 {
-      color: #000;
-      -webkit-text-fill-color: initial;
-      background: none;
-      text-shadow: none;
+      font-family: "Times New Roman", Times, serif;
+      margin: 0 0 10px;
+      position: relative;
+      overflow: hidden;
     }
-    .profile-pic, .download-btn { display: none; }
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #fff, #FFD700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 4s infinite linear;
+    }
+    h2 {
+      font-size: 22px;
+      color: var(--gold);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      animation: fadeInUp 1s ease forwards;
+    }
+    h1::after, h2::after {
+      content: "✦";
+      position: absolute;
+      top: 0;
+      right: -20px;
+      font-size: 18px;
+      color: #fff;
+      text-shadow: 0 0 6px #FFD700, 0 0 12px #fff;
+      animation: sparkle 2s infinite ease-in-out;
+    }
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: translateY(-10px) scale(0.5); }
+      50% { opacity: 1; transform: translateY(0) scale(1.2); }
+    }
+    .motto {
+      text-align: center;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease forwards;
+    }
+    .profile-pic {
+      display: block;
+      margin: 0 auto 20px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 15px rgba(255,215,0,0.7);
+      animation: fadeIn 2s ease forwards;
+    }
+    .download-btn {
+      display: inline-block;
+      margin: 10px 10px 30px;
+      padding: 10px 20px;
+      border: 2px solid var(--gold);
+      border-radius: 6px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .download-btn:hover {
+      background: var(--gold);
+      color: #000;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 24px;
+    }
+    .card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,215,0,0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+      margin: 0;
+    }
+    li::before {
+      content: "◆ ";
+      color: var(--gold);
+      font-weight: bold;
+    }
+    li {
+      margin: 6px 0;
+      font-size: 17px;
+    }
+    a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .role {
+      font-weight: 700;
+      color: var(--text);
+    }
+    .date {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .contact-label {
+      font-weight: bold;
+      color: var(--gold);
+      display: block;
+      margin-top: 6px;
+    }
+    .contact-value {
+      color: var(--text);
+      margin-left: 10px;
+      display: inline-block;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--muted);
+      font-style: italic;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes shine {
+      0% { background-position: -200px; }
+      100% { background-position: 200px; }
+    }
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #000;
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+      h1, h2 {
+        color: #000;
+        -webkit-text-fill-color: initial;
+        background: none;
+        text-shadow: none;
+      }
+      .profile-pic, .download-btn {
+        display: none;
+      }
+      a {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohamed Abdelrazek",
+    "url": "https://moeabdelrazek.github.io",
+    "email": "mailto:moe-abdelrazek@outlook.com",
+    "jobTitle": "Python Developer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Alexandria",
+      "addressCountry": "Egypt"
+    },
+    "sameAs": [
+      "https://github.com/MoeAbdelrazek"
+    ]
   }
-</style>
+  </script>
 </head>
 <body>
-
-  <!-- Name and Motto -->
   <h1>Mohamed Abdelrazek</h1>
   <div class="motto">“Resilience in motion, discipline in action.”</div>
-
-  <!-- Profile Picture -->
-  <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-
-  <!-- Download PDF Button -->
-  <a href="Mohamed-Abdelrazek-Resume.pdf" class="download-btn" target="_blank">⬇ Download PDF Resume</a>
-
+  <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic">
+  <div style="text-align:center;">
+    <a href="Mohamed-Abdelrazek-Resume.pdf" download class="download-btn">⬇ Download PDF Resume</a>
+    <a href="#" onclick="window.print()" class="download-btn">🖨️ Print Resume</a>
+  </div>
   <div class="grid">
-    <!-- Left column -->
     <div>
       <div class="card">
         <h2>📇 Contact</h2>
-        <p><span class="contact-label">Email:</span> <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></p>
-        <p><span class="contact-label">Phone:</span> <a href="tel:+201017286384">+20 1017286384</a></p>
-        <p><span class="contact-label">Website:</span> <a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></p>
-        <p><span class="contact-label">Address:</span> Alexandria, Egypt</p>
+        <p><span class="contact-label">Email:</span><span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+        <p><span class="contact-label">Phone:</span><span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
+        <p><span class="contact-label">Website:</span><span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+        <p><span class="contact-label">Address:</span><span class="contact-value">Alexandria, Egypt</span></p>
       </div>
-
       <div class="card">
         <h2>🛠️ Core Skills</h2>
         <ul>
