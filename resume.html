@@ -8,7 +8,7 @@
     :root {
       --bg1: #0f172a;
       --bg2: #1e293b;
-      --text: #f8fafc;
+      --text: #ffffff;
       --gold: #FFD700;
       --muted: #94a3b8;
       --card: #1e293b;
@@ -111,8 +111,15 @@
     .card {
       background: var(--card);
       padding: 18px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,215,0,0.4);
+      border-radius: 10px;
+      border-left: 4px solid var(--gold);
+      box-shadow: 0 0 12px rgba(255,215,0,0.2);
+      opacity: 0.95;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 18px var(--gold);
     }
 
     ul {
@@ -130,10 +137,19 @@
     li {
       margin: 6px 0;
       font-size: 19px;
+      color: var(--text);
+      font-weight: bold;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    li:hover {
+      color: var(--gold);
+      text-shadow: 0 0 6px var(--gold), 0 0 12px var(--gold);
     }
 
     p {
       font-size: 19px;
+      color: var(--text);
     }
 
     a {
@@ -225,7 +241,7 @@
         <ul>
           <li>Google IT Automation with Python</li>
           <li>Microsoft Python Development</li>
-          <li>Google Digital Marketing & E-commerce</li>
+          <li>Google Digital Marketing & E-Commerce</li>
         </ul>
       </div>
     </div>
@@ -246,7 +262,7 @@
         </ul>
 
         <p><span class="role">Professional Athlete — Football</span> <span class="date">(2011–2022)</span></p>
-        <ul>
+                <ul>
           <li>Competed at a high level for over a decade; developed discipline and resilience under pressure.</li>
           <li>Led and collaborated within dynamic teams; honed leadership and teamwork.</li>
           <li>Transferred performance mindset to technology learning and delivery.</li>
@@ -258,7 +274,7 @@
         <p><span class="role">Alexandria University — Engineering Studies</span></p>
         <ul>
           <li>Completed 4 years, 48 courses; incomplete Bachelor’s degree.</li>
-          <li>Focus areas: systems thinking, analytical methods, problem-solving.</li>
+          <li>Focus areas: Systems Thinking, Analytical Methods, Problem-Solving.</li>
           <li>Applied engineering discipline to software development workflows.</li>
         </ul>
       </div>
