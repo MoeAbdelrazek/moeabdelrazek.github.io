@@ -16,12 +16,13 @@
     body {
       margin: 40px;
       font-family: "Times New Roman", Times, serif;
+      font-size: 19px;
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
       background-size: 400% 400%;
       animation: backgroundShift 20s ease infinite;
       color: var(--text);
       line-height: 1.6;
-      font-size: 20px;
+      position: relative;
     }
 
     body::before {
@@ -29,7 +30,7 @@
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       background: url('diamond-bg.jpg') center/cover no-repeat;
-      opacity: 0.1;
+      opacity: 0.15;
       z-index: -2;
     }
 
@@ -40,7 +41,7 @@
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 36px;
       text-align: center;
       color: var(--gold);
       font-weight: bold;
@@ -48,7 +49,7 @@
     }
 
     h2 {
-      font-size: 24px;
+      font-size: 22px;
       color: var(--gold);
       border-bottom: 2px solid var(--gold);
       padding-bottom: 4px;
@@ -94,7 +95,7 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
+      gap: 0;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -102,14 +103,14 @@
     .left-column, .right-column {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 0;
     }
 
     .card {
       background: var(--card);
-      padding: 1.5rem;
-      border-radius: 10px;
+      padding: 1rem;
       border-left: 4px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
       box-shadow: 0 0 10px rgba(255,215,0,0.1);
     }
 
@@ -127,19 +128,19 @@
 
     li {
       margin: 6px 0;
-      font-size: 20px;
+      font-size: 19px;
       font-weight: normal;
       color: var(--text);
     }
 
     p {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: normal;
       color: var(--text);
     }
 
     .summary-card p {
-      font-size: 21px;
+      font-size: 20px;
     }
 
     a {
@@ -172,12 +173,6 @@
     .contact-value {
       margin-left: 10px;
       display: inline-block;
-    }
-
-    .separator {
-      border-top: 1px solid var(--gold);
-      margin: 30px auto;
-      max-width: 850px;
     }
 
     .download-link {
@@ -213,8 +208,6 @@
         <p><span class="contact-label">Address:</span><span class="contact-value">Alexandria, Egypt</span></p>
       </div>
 
-      <div class="separator"></div>
-
       <div class="card">
         <h2>🛠️ Core Skills</h2>
         <ul>
@@ -229,8 +222,6 @@
           <li>Languages: Arabic, English, German</li>
         </ul>
       </div>
-
-      <div class="separator"></div>
 
       <div class="card">
         <h2>🎓 Certifications (In Progress)</h2>
@@ -247,8 +238,6 @@
         <h2>✨ Professional Summary</h2>
         <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance shaped by professional football. Actively pursuing certifications to bridge technology with business impact.</p>
       </div>
-
-      <div class="separator"></div>
 
       <div class="card">
         <h2>💼 Professional Experience</h2>
@@ -267,8 +256,6 @@
         </ul>
       </div>
 
-      <div class="separator"></div>
-
       <div class="card">
         <h2>🏫 Education</h2>
         <p><span class="role">Alexandria University — Engineering Studies</span></p>
@@ -280,8 +267,6 @@
       </div>
     </div>
   </div>
-
-  <div class="separator"></div>
 
   <div class="download-link">
     <a href="Mohamed_Abdelrazek_Resume.pdf" download>
