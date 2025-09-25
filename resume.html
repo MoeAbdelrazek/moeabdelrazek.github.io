@@ -14,14 +14,14 @@
     }
 
     body {
-      margin: 40px;
+      margin: 20px;
       font-family: "Times New Roman", Times, serif;
-      font-size: 18px;
+      font-size: 16px;
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
       background-size: 400% 400%;
       animation: backgroundShift 20s ease infinite;
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.4;
       position: relative;
     }
 
@@ -29,7 +29,7 @@
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: url('profile.jpg') center/cover no-repeat;
+      background: url('hero-bg.jpg') center/cover no-repeat;
       opacity: 0.12;
       z-index: -2;
     }
@@ -41,7 +41,7 @@
     }
 
     h1 {
-      font-size: 35px;
+      font-size: 30px;
       text-align: center;
       color: var(--gold);
       font-weight: bold;
@@ -49,72 +49,53 @@
     }
 
     h2 {
-      font-size: 21px;
+      font-size: 19px;
       color: var(--gold);
-      border-bottom: 2px solid var(--gold);
-      padding-bottom: 4px;
       margin-bottom: 10px;
-      position: relative;
       font-weight: bold;
-    }
-
-    h2::after {
-      content: "✦";
-      position: absolute;
-      top: 0;
-      right: -20px;
-      font-size: 18px;
-      color: var(--gold);
-      text-shadow: 0 0 6px var(--gold), 0 0 12px #fff;
-      animation: sparkle 2s infinite ease-in-out;
-    }
-
-    @keyframes sparkle {
-      0%, 100% { opacity: 0; transform: scale(0.5); }
-      50% { opacity: 1; transform: scale(1.2); }
     }
 
     .motto {
       text-align: center;
       font-style: italic;
-      font-weight: bold;
       margin-bottom: 20px;
     }
 
     .profile-pic {
       display: block;
       margin: 0 auto 20px;
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid var(--gold);
-      box-shadow: 0 0 15px rgba(255,215,0,0.7);
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 10px rgba(255,215,0,0.6);
     }
 
     .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      max-width: 1200px;
+      display: flex;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
-    .left-column, .right-column {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+    .left-column {
+      width: 30%;
+      padding-right: 20px;
+    }
+
+    .right-column {
+      width: 70%;
+      padding-left: 20px;
+      border-left: 1px solid rgba(255,215,0,0.2);
     }
 
     .card {
       background: var(--card);
-      padding: 1rem;
-      border-left: 4px solid var(--gold);
-      border-bottom: 1px solid var(--gold);
-      box-shadow: 0 0 10px rgba(255,215,0,0.1);
-      margin-bottom: 20px;
+      padding: 0.8rem;
+      margin-bottom: 15px;
+      border-radius: 6px;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       animation: fadeInUp 1s ease forwards;
     }
 
@@ -133,31 +114,25 @@
 
     ul {
       list-style-type: none;
-      padding-left: 20px;
+      padding-left: 15px;
       margin: 0;
     }
 
     li::before {
-      content: "◆ ";
+      content: "• ";
       color: var(--gold);
       font-weight: bold;
     }
 
     li {
-      margin: 6px 0;
-      font-size: 18px;
-      font-weight: normal;
+      margin: 4px 0;
+      font-size: 16px;
       color: var(--text);
     }
 
     p {
-      font-size: 18px;
-      font-weight: normal;
+      font-size: 16px;
       color: var(--text);
-    }
-
-    .summary-card p {
-      font-size: 19px;
     }
 
     a {
@@ -176,7 +151,7 @@
     }
 
     .date {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: bold;
     }
 
@@ -200,7 +175,7 @@
     .download-link a {
       color: var(--gold);
       font-weight: bold;
-      font-size: 17px;
+      font-size: 16px;
       text-decoration: none;
     }
 
@@ -218,15 +193,7 @@
   <div class="grid">
     <div class="left-column">
       <div class="card">
-        <h2>📇 Contact</h2>
-        <p><span class="contact-label">Email:</span><span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
-        <p><span class="contact-label">Phone:</span><span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
-        <p><span class="contact-label">Website:</span><span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
-        <p><span class="contact-label">Address:</span><span class="contact-value">Alexandria, Egypt</span></p>
-      </div>
-
-      <div class="card">
-        <h2>🛠️ Core Skills</h2>
+        <h2>🛠️ Skills</h2>
         <ul>
           <li>Python (Debugging, Automation)</li>
           <li>Data Analysis Fundamentals</li>
@@ -236,27 +203,43 @@
           <li>Digital Marketing & E-Commerce</li>
           <li>Resilience & Discipline</li>
           <li>Team Leadership</li>
-          <li>Languages: Arabic, English, German</li>
         </ul>
       </div>
 
       <div class="card">
-        <h2>🎓 Certifications (In Progress)</h2>
+        <h2>🎓 Certifications</h2>
         <ul>
           <li>Google IT Automation with Python</li>
           <li>Microsoft Python Development</li>
           <li>Google Digital Marketing & E-Commerce</li>
         </ul>
       </div>
+
+      <div class="card">
+        <h2>🌐 Languages</h2>
+        <ul>
+          <li>Arabic</li>
+          <li>English</li>
+          <li>German</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>📇 Contact</h2>
+        <p><span class="contact-label">Email:</span><span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+        <p><span class="contact-label">Phone:</span><span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
+        <p><span class="contact-label">Website:</span><span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+        <p><span class="contact-label">Address:</span><span class="contact-value">Alexandria, Egypt</span></p>
+      </div>
     </div>
 
     <div class="right-column">
-      <div class="card summary-card">
+      <div class="card">
         <h2>✨ Professional Summary</h2>
         <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance shaped by professional football. Actively pursuing certifications to bridge technology with business impact.</p>
       </div>
 
-            <div class="card">
+      <div class="card">
         <h2>💼 Professional Experience</h2>
         <p><span class="role">Engoo — Online Tutor</span> <span class="date">(2021–Present)</span></p>
         <ul>
@@ -269,6 +252,7 @@
         <ul>
           <li>Competed at a high level for over a decade; developed discipline and resilience under pressure.</li>
           <li>Led and collaborated within dynamic teams; honed leadership and teamwork.</li>
+          <li>Transferred performance mindset to technology
           <li>Transferred performance mindset to technology learning and delivery.</li>
         </ul>
       </div>
