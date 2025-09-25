@@ -2,7 +2,7 @@
   --bg1: #2a2a2a;
   --bg2: #3a3a3a;
   --text: #ffffff;
-  --gold: #FFD700;
+  --diamond: #D8F1FF;
   --card: #444;
 }
 
@@ -48,7 +48,7 @@ nav {
 
 nav .welcome {
   font-weight: bold;
-  color: var(--gold);
+  color: var(--diamond);
   font-size: 1.2rem;
 }
 
@@ -64,15 +64,15 @@ nav li a {
   font-size: 0.9rem;
   padding: 6px 12px;
   border-radius: 6px;
-  background-color: rgba(255, 215, 0, 0.2);
-  color: var(--gold);
+  background-color: rgba(216, 241, 255, 0.2);
+  color: var(--diamond);
   font-weight: bold;
   transition: background 0.3s ease, color 0.3s ease;
   text-decoration: none;
 }
 
 nav li a:hover {
-  background-color: var(--gold);
+  background-color: var(--diamond);
   color: #000;
 }
 
@@ -86,15 +86,15 @@ nav li a:hover {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 3px solid var(--gold);
+  border: 3px solid var(--diamond);
   object-fit: cover;
   margin-bottom: 1rem;
-  box-shadow: 0 0 6px rgba(255,215,0,0.4);
+  box-shadow: 0 0 6px rgba(216,241,255,0.3);
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  color: var(--gold);
+  color: var(--diamond);
 }
 
 .motto {
@@ -109,18 +109,18 @@ nav li a:hover {
   display: inline-block;
   margin: 0.5rem;
   padding: 0.7rem 1.5rem;
-  background: var(--gold);
+  background: var(--diamond);
   color: #000;
   font-weight: bold;
   border-radius: 6px;
-  box-shadow: 0 0 6px rgba(255,215,0,0.4);
+  box-shadow: 0 0 6px rgba(216,241,255,0.3);
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   text-decoration: none;
 }
 
 .cta-btn:hover {
-  background: #FFE066;
-  box-shadow: 0 0 8px rgba(255,215,0,0.5);
+  background: #eafaff;
+  box-shadow: 0 0 8px rgba(216,241,255,0.5);
   transform: translateY(-2px);
 }
 
@@ -130,14 +130,14 @@ nav li a:hover {
   padding: 1.5rem;
   background: var(--card);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255,215,0,0.1);
-  border-left: 4px solid var(--gold);
+  box-shadow: 0 0 10px rgba(216,241,255,0.1);
+  border-left: 4px solid var(--diamond);
 }
 
 .card h2 {
   font-size: 24px;
-  color: var(--gold);
-  border-bottom: 2px solid var(--gold);
+  color: var(--diamond);
+  border-bottom: 2px solid var(--diamond);
   padding-bottom: 4px;
   margin-bottom: 10px;
   font-weight: bold;
@@ -145,7 +145,7 @@ nav li a:hover {
 
 .card h3 {
   font-size: 20px;
-  color: var(--gold);
+  color: var(--diamond);
   margin-bottom: 8px;
   font-weight: bold;
 }
@@ -168,7 +168,7 @@ li::before {
 }
 
 .separator {
-  border-top: 1px solid var(--gold);
+  border-top: 1px solid var(--diamond);
   margin: 30px auto;
   max-width: 850px;
 }
@@ -181,7 +181,7 @@ li::before {
 
 .project-card a:hover {
   text-decoration: underline;
-  color: var(--gold);
+  color: var(--diamond);
 }
 
 .contact-label {
@@ -205,12 +205,12 @@ li::before {
 }
 
 .contact-value a:hover {
-  color: var(--gold);
+  color: var(--diamond);
 }
 
 .lang-tag {
   display: inline-block;
-  background-color: var(--gold);
+  background-color: var(--diamond);
   color: #000;
   padding: 3px 8px;
   border-radius: 12px;
