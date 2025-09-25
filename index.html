@@ -1,87 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moe Abdelrazek | Career Shift into Tech</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-<header class="hero">
-  <img src="profile.jpg" alt="Moe Abdelrazek" class="profile-pic">
-  <div class="hero-text">
-    <h1>Moe Abdelrazek</h1>
-    <p class="tagline">Career shifting into the Tech world (AI – Coding – Digital Marketing)</p>
-    <p class="alt-name">Officially: Mohamed Abdelrazek</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moe Abdelrazek | Career Shift into Tech</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Moe Abdelrazek</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="profile.jpg" alt="Moe Abdelrazek" class="profile-pic">
+    <h1>Career shifting into the Tech world</h1>
+    <p>(AI – Coding – Digital Marketing)</p>
     <a href="#projects" class="cta-btn">View My Work</a>
-  </div>
-</header>
+  </header>
 
-    <main>
-      <section>
-        <h2>About Me</h2>
-        <p>
-          I'm a self-driven Python learner transitioning into the tech world with a focus on automation, AI, and digital strategy.
-          My journey is rooted in real progress, beginner-friendly projects, and authentic learning.
-        </p>
-      </section>
+  <!-- About -->
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+      I'm <strong>Moe Abdelrazek</strong> (officially Mohamed Abdelrazek on certificates).  
+      Transitioning into tech with a focus on Python, AI, and digital strategy.  
+      My journey is built on resilience, critical thinking, and professionalism.
+    </p>
+  </section>
 
-      <section>
-        <h2>Certifications</h2>
-        <ul>
-          <li>Microsoft Python Development Professional Certificate</li>
-          <li>Google IT Automation with Python</li>
-          <li>Google Digital Marketing & E-commerce Certificate</li>
-        </ul>
-        <p><a href="https://github.com/MoeAbdelrazek" target="_blank">View my GitHub for certificate progress →</a></p>
-      </section>
+  <!-- Certifications -->
+  <section id="certifications" class="card">
+    <h2>Certifications</h2>
+    <div class="progress">
+      <span>Microsoft Python Development Professional Certificate</span>
+      <div class="bar completed"></div>
+    </div>
+    <div class="progress">
+      <span>Google IT Automation with Python</span>
+      <div class="bar inprogress"></div>
+    </div>
+    <div class="progress">
+      <span>Google Digital Marketing & E-commerce</span>
+      <div class="bar completed"></div>
+    </div>
+  </section>
 
-      <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>Resilience</li>
-          <li>Critical Thinking</li>
-          <li>Professionalism</li>
-        </ul>
-      </section>
+  <!-- Skills -->
+  <section id="skills" class="card">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Resilience</li>
+      <li>Critical Thinking</li>
+      <li>Professionalism</li>
+      <li>Python Development</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
 
-      <section>
-        <h2>Portfolio Projects</h2>
-        <p>Coming soon: beginner-friendly and technical projects that reflect my real learning journey.</p>
-      </section>
+  <!-- Projects -->
+  <section id="projects" class="card">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">Beginner Project Placeholder</div>
+      <div class="project-card">Technical Project Placeholder</div>
+      <div class="project-card">Future Project</div>
+    </div>
+  </section>
 
-      <section>
-        <h2>Milestone Tracker</h2>
-        <ul>
-          <li>✅ GitHub Pages site launched</li>
-          <li>✅ Certificates added</li>
-          <li>🔜 Portfolio section in progress</li>
-        </ul>
-      </section>
+  <!-- Contact -->
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>
+      Connect with me on <a href="https://github.com/MoeAbdelrazek" target="_blank">GitHub</a>  
+      or email me at <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a>.
+    </p>
+    <form>
+      <label for="message">Send me a message:</label><br />
+      <textarea id="message" name="message" rows="4" placeholder="Your message here..."></textarea><br />
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-      <section>
-        <h2>Contact</h2>
-        <p>
-          Connect with me on <a href="https://github.com/MoeAbdelrazek" target="_blank">GitHub</a>  
-          or reach out via <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a>.
-        </p>
-        <form>
-          <label for="message">Send me a message:</label><br />
-          <textarea id="message" name="message" rows="4" cols="40" placeholder="Your message here..."></textarea><br />
-          <button type="submit">Send</button>
-        </form>
-      </section>
-    </main>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Moe Abdelrazek</p>
+    <button id="toggle-theme">Toggle Dark Mode</button>
+  </footer>
 
-    <footer>
-      <p>© 2025 Moe Abdelrazek</p>
-      <button id="toggle-theme">Toggle Dark Mode</button>
-    </footer>
+  <!-- Scripts -->
+  <script>
+    // Dark mode toggle
+    const button = document.getElementById('toggle-theme');
+    button.onclick = () => document.body.classList.toggle('dark');
 
-    <script>
-      // Simple dark mode toggle
-      const button = document.getElementById('toggle-theme');
-      button.onclick = () => document.body.classList.toggle('dark');
-    </script>
-  </body>
+    // Scroll animations
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
 </html>
