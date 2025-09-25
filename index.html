@@ -9,10 +9,9 @@
   <meta name="description" content="Moe Abdelrazek's professional portfolio: AI, Coding, Data Analysis, and Digital Marketing.">
   <meta property="og:title" content="Moe Abdelrazek | Portfolio">
   <meta property="og:description" content="Explore Moe's journey into tech: Python, AI, and digital strategy.">
-  <meta property="og:image" content="profile.jpg">
+  <meta property="og:image" content="moe-abdelrazek.jpg">
 </head>
 <body>
-  <!-- Navigation -->
   <nav>
     <div class="logo">Moe Abdelrazek</div>
     <ul>
@@ -24,17 +23,15 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
   <header class="hero">
     <div class="hero-art"></div>
-    <img src="profile.jpg" alt="Moe Abdelrazek" class="profile-pic">
+    <img src="moe-abdelrazek.jpg" alt="Moe Abdelrazek" class="profile-pic">
     <h1>Shifting into Tech</h1>
     <p>AI – Coding – Data Analysis – Digital Marketing</p>
     <a href="#projects" class="cta-btn">View My Work</a>
     <a href="Moe-Abdelrazek-Resume.pdf" class="cta-btn secondary" target="_blank">View Resume</a>
   </header>
 
-  <!-- About -->
   <section id="about" class="card">
     <h2>About Me</h2>
     <p>
@@ -44,7 +41,6 @@
     </p>
   </section>
 
-  <!-- Certifications -->
   <section id="certifications" class="card">
     <h2>Certifications</h2>
     <div class="progress">
@@ -61,7 +57,6 @@
     </div>
   </section>
 
-  <!-- Skills -->
   <section id="skills" class="card">
     <h2>Skills</h2>
     <div class="skills-block">
@@ -84,7 +79,6 @@
     </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects" class="card">
     <h2>Projects</h2>
     <div class="project-grid">
@@ -101,7 +95,6 @@
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="card">
     <h2>Contact</h2>
     <p>
@@ -115,15 +108,12 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 Moe Abdelrazek</p>
     <button id="toggle-theme">Toggle Dark Mode</button>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Dark mode toggle with memory
     const button = document.getElementById('toggle-theme');
     if(localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
     button.onclick = () => {
@@ -131,7 +121,6 @@
       localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
     };
 
-    // Scroll animations
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
