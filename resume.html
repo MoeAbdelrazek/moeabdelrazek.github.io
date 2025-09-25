@@ -7,8 +7,7 @@
   :root {
     --bg: #0f172a;       /* dark navy background */
     --text: #f8fafc;     /* light text */
-    --primary: #60a5fa;  /* diamond blue */
-    --accent: #0ea5e9;   /* ocean teal */
+    --gold: #FFD700;     /* gold for headings */
     --muted: #94a3b8;    /* muted gray */
     --card: #1e293b;     /* dark card background */
   }
@@ -17,39 +16,47 @@
     font-family: Calibri, Inter, Arial, sans-serif;
     background: var(--bg);
     color: var(--text);
-    line-height: 1.5;
+    line-height: 1.6;
+    font-size: 18px; /* increased one degree */
   }
   h1, h2 {
     font-family: "Times New Roman", Times, serif;
     margin: 0 0 10px;
   }
   h1 {
-    font-size: 34px;
+    font-size: 36px;
     text-align: center;
-    color: var(--primary);
+    color: var(--gold);
+    animation: shine 3s infinite linear;
+    background: linear-gradient(90deg, #FFD700, #fff, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   h2 {
-    font-size: 20px;
-    color: var(--accent);
-    border-bottom: 2px solid var(--primary);
+    font-size: 22px;
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
     padding-bottom: 4px;
     margin-bottom: 10px;
+    animation: fadeInUp 1s ease forwards;
   }
   .motto {
     text-align: center;
     font-style: italic;
     color: var(--muted);
     margin-bottom: 20px;
+    animation: fadeIn 2s ease forwards;
   }
   .profile-pic {
     display: block;
     margin: 0 auto 20px;
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--primary);
-    box-shadow: 0 0 10px rgba(96,165,250,0.6);
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 15px rgba(255,215,0,0.7);
+    animation: fadeIn 2s ease forwards;
   }
   .grid {
     display: grid;
@@ -58,15 +65,32 @@
   }
   .card {
     background: var(--card);
-    padding: 16px;
+    padding: 18px;
     border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
   }
   ul { list-style: none; padding: 0; margin: 0; }
   li { margin: 8px 0; }
-  a { color: var(--primary); text-decoration: none; }
+  a { color: var(--gold); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .role { font-weight: 700; color: var(--text); }
-  .date { color: var(--muted); font-size: 13px; }
+  .date { color: var(--muted); font-size: 14px; }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes shine {
+    0% { background-position: -200px; }
+    100% { background-position: 200px; }
+  }
 </style>
 </head>
 <body>
