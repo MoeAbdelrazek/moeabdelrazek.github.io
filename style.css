@@ -1,7 +1,7 @@
 :root {
   --bg1: #0f172a;
   --bg2: #1e293b;
-  --text: #f8fafc;
+  --text: #ffffff;
   --gold: #FFD700;
   --gold-glow: #FFEA70;
   --accent-soft: #fff8dc;
@@ -9,7 +9,7 @@
   --card: #1e293b;
 }
 
-/* Base styles */
+/* Preserve your ocean background */
 body {
   font-family: 'Times New Roman', serif;
   margin: 0;
@@ -20,13 +20,6 @@ body {
   animation: backgroundShift 20s ease infinite;
 }
 
-@keyframes backgroundShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Ocean background */
 body::before {
   content: "";
   position: fixed;
@@ -36,13 +29,18 @@ body::before {
   z-index: -2;
 }
 
-/* Soft overlay */
 body::after {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
   z-index: -1;
+}
+
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Navigation */
@@ -81,7 +79,7 @@ nav li a:hover {
   color: var(--gold);
 }
 
-/* Hero section */
+/* Hero */
 .hero {
   margin-top: 60px;
   text-align: center;
@@ -265,21 +263,21 @@ nav li a:hover {
 }
 
 .project-card p {
-  color: #ddd;
+  color: var(--text);
   line-height: 1.5;
 }
 
 .project-card a {
   display: inline-block;
   margin-top: 1rem;
-  color: var(--gold);
+  color: var(--text);
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .project-card a:hover {
-  color: var(--accent-soft);
+  color: var(--gold);
   text-shadow: 0 0 6px var(--gold), 0 0 12px var(--gold-glow);
   text-decoration: underline;
 }
@@ -299,9 +297,18 @@ nav li a:hover {
   font-weight: bold;
 }
 
+.contact-value a {
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-value a:hover {
+  color: var(--gold);
+  text-shadow: 0 0 6px var(--gold), 0 0 12px var(--gold-glow);
+}
+
 /* Footer */
 footer {
   text-align: center;
   padding: 2rem;
-  background: var(--card);
- 
