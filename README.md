@@ -15,6 +15,6 @@ The long-term vision driving this portfolio is to secure a stable, high-paying t
 Explore More: How leadership and resilience shaped my tech path
 https://github.com/MoeAbdelrazek/Career-journey.md/blob/main/README.md
 
-##View My Resume https://github.com/MoeAbdelrazek/Moe-s-Resume
+##View My Resume [https://github.com/MoeAbdelrazek/Moe-s-Resume](https://moeabdelrazek.github.io/resume.html)
 
 ##Certifications Files
