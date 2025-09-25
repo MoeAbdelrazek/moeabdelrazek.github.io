@@ -64,10 +64,10 @@ nav li a {
   font-size: 0.9rem;
   padding: 6px 12px;
   border-radius: 6px;
-  background-color: rgba(255, 215, 0, 0.1);
-  color: var(--text);
-  font-weight: normal;
-  transition: background 0.3s ease;
+  background-color: rgba(255, 215, 0, 0.2);
+  color: var(--gold);
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
   text-decoration: none;
 }
 
@@ -152,7 +152,7 @@ nav li a:hover {
 
 .card p,
 .card li {
-  font-size: 20px;
+  font-size: 17px;
   color: var(--text);
   font-weight: normal;
 }
@@ -186,7 +186,7 @@ li::before {
 
 .contact-label {
   font-weight: bold;
-  color: silver;
+  color: #fff;
   display: block;
   margin-top: 6px;
 }
@@ -196,6 +196,16 @@ li::before {
   display: inline-block;
   color: #fff;
   font-weight: normal;
+}
+
+.contact-value a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.contact-value a:hover {
+  color: var(--gold);
 }
 
 .lang-tag {
