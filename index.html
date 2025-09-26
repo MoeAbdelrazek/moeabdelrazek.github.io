@@ -5,6 +5,15 @@
   <title>Mohamed Abdelrazek — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Mohamed Abdelrazek — Python developer, engineer, and multidisciplinary professional with expertise in AI, data analysis, and digital marketing." />
+  
+  <!-- Manifest for mobile app mode -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="theme-color" content="#FFD700">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,6 +21,7 @@
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="site-title">👋 Welcome to Moe's Portfolio</div>
+    <button id="themeToggle" class="cta-btn theme-toggle">🌙 Mode</button>
     <div class="nav-links">
       <ul>
         <li><a href="#about">About Me</a></li>
@@ -20,7 +30,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 
   <!-- Hero Section -->
@@ -28,13 +37,13 @@
     <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
     <h1>Mohamed Abdelrazek</h1>
     <p class="motto"><em>Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</em></p>
-  </section>
 
-  <!-- CTA Buttons -->
-  <div class="cta-buttons">
-    <a href="https://moeabdelrazek.github.io/resume.html" target="_blank" class="cta-btn">📄 Resume</a>
-    <a href="#projects" class="cta-btn">💻 Work</a>
-  </div>
+    <!-- Buttons moved below motto, above sections -->
+    <div class="hero-buttons">
+      <a href="resume.html" class="cta-btn">📄 Resume</a>
+      <a href="#projects" class="cta-btn">💻 Work</a>
+    </div>
+  </section>
 
   <div class="separator"></div>
 
@@ -117,7 +126,7 @@
     const themeToggle = document.getElementById("themeToggle");
     function applyTheme(theme) {
       document.documentElement.setAttribute("data-theme", theme);
-      themeToggle.textContent = theme === "light" ? "☀️" : "🌙";
+      themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
     }
     function toggleTheme() {
       const current = document.documentElement.getAttribute("data-theme");
