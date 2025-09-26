@@ -22,6 +22,16 @@
       animation: backgroundShift 20s ease infinite;
       color: var(--text);
       line-height: 1.5;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('hero-bg.jpg') center/cover no-repeat;
+      opacity: 0.12;
+      z-index: -2;
     }
 
     @keyframes backgroundShift {
@@ -31,45 +41,70 @@
     }
 
     header {
-      text-align: center;
-      padding: 40px 20px 20px;
-    }
-
-    header h2.welcome {
-      font-size: 22px;
-      font-weight: bold;
-      margin: 0 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
     }
 
     header h1 {
-      font-size: 32px;
-      color: var(--gold);
-      margin: 0 0 10px;
-    }
-
-    header p {
+      font-size: 22px;
       font-weight: bold;
+      color: var(--gold);
       margin: 0;
     }
 
-    nav {
-      text-align: center;
-      margin: 20px 0;
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
     }
 
-    nav a {
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
       color: var(--text);
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
+      position: relative;
+      padding-bottom: 4px;
     }
 
-    nav a:hover {
+    nav ul li a:hover {
       color: var(--gold);
     }
 
+    /* Active link highlight */
+    nav ul li a.active {
+      color: var(--gold);
+    }
+    nav ul li a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--gold);
+    }
+
+    .profile-pic {
+      display: block;
+      margin: 20px auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 10px rgba(255,215,0,0.6);
+    }
+
     .container {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 20px;
       display: flex;
@@ -77,11 +112,11 @@
     }
 
     .left-column {
-      width: 35%;
+      width: 30%;
     }
 
     .right-column {
-      width: 65%;
+      width: 70%;
     }
 
     .card {
@@ -123,16 +158,18 @@
 <body>
 
   <header>
-    <h2 class="welcome">👋 Welcome to Moe's Portfolio</h2>
-    <h1>Mohamed Abdelrazek</h1>
-    <p>Athlete’s discipline. Engineering mindset. Lifelong learner.</p>
+    <h1>👋 Welcome to Moe's Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about" class="active">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
 
   <div class="container">
     <div class="left-column">
@@ -162,6 +199,16 @@
         </p>
       </div>
 
+      <div class="card" id="projects">
+        <h2>📂 Projects</h2>
+        <ul>
+          <li><strong>Portfolio & Resume Website</strong> — Fully responsive, light/dark mode, unified branding.</li>
+          <li><strong>Resume Builder Tool</strong> — Modular, cross-format resume generator with adaptive design.</li>
+          <li><strong>Web Design Refinements</strong> — Iterative accessibility and responsive layout improvements.</li>
+          <li><strong>Python Automation Scripts</strong> — Debugging, validation, and workflow automation.</li>
+        </ul>
+      </div>
+
       <div class="card" id="contact">
         <h2>📇 Contact</h2>
         <p>Email: <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></p>
@@ -175,6 +222,29 @@
   <footer>
     © 2025 Mohamed Abdelrazek — All Rights Reserved
   </footer>
+
+  <script>
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll("section, .card[id]");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
