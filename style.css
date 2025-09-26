@@ -32,8 +32,8 @@ body {
   background: linear-gradient(135deg, var(--bg1), var(--bg2));
   background-size: 400% 400%;
   animation: backgroundShift 20s ease infinite;
-  color: var(--gold);
-  line-height: 1.8;
+  color: var(--text);
+  line-height: 1.7; /* more spacing between lines */
 }
 
 body::before {
@@ -66,7 +66,7 @@ body::before {
 }
 
 .site-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: var(--gold);
 }
@@ -80,71 +80,57 @@ body::before {
 }
 
 .nav-links a {
-  color: var(--gold);
+  color: var(--gold); /* links in gold */
   font-weight: bold;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  text-decoration: none; /* remove underline on hover */
+  outline: none;
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
   margin: 2rem auto;
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .motto {
   font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 50px; /* add spacing below */
+  color: var(--text);
   font-style: italic;
-  font-weight: bold;
-  margin-bottom: 3rem;
 }
 
-/* CTA Buttons Section */
-.cta-buttons {
-  text-align: center;
-  margin-bottom: 3rem;
+.hero-buttons {
+  margin-bottom: 3rem; /* distance above sections */
 }
 
-.cta-btn {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.7rem 1.5rem;
-  background: var(--accent);
-  color: var(--card);
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  transition: transform 0.3s ease;
-}
-
-.cta-btn:hover,
-.cta-btn:focus {
-  transform: translateY(-2px);
-  outline: none;
-}
-
-/* Theme Toggle */
-.theme-toggle {
-  font-size: 1.2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--gold);
-  transition: transform 0.3s ease;
-  margin-left: auto;
-}
-
-.theme-toggle:hover,
-.theme-toggle:focus {
-  transform: scale(1.2);
-  outline: none;
+/* Profile Pic */
+.profile-pic {
+  display: block;
+  margin: 0 auto 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
 }
 
 /* Cards */
 .card {
   background: var(--card);
-  padding: 1.2rem;
+  padding: 1rem;
   margin: 2rem auto;
   border-radius: 6px;
   max-width: 900px;
@@ -158,85 +144,73 @@ body::before {
   transform: translateY(0);
 }
 
-/* Lists */
+/* Headings in gold only */
+h1, h2, h3 {
+  color: var(--gold);
+}
+
+/* Lists & Texts */
 ul {
   list-style-type: none;
   padding-left: 15px;
   margin: 0;
 }
-
 li::before {
   content: "• ";
   color: var(--gold);
   font-weight: bold;
 }
-
-li {
-  margin: 10px 0;
-  font-size: 16px;
+li, p, .contact-value, .motto {
+  color: var(--text);
+  margin-bottom: 10px; /* spacing for lines */
 }
 
-/* Contact Labels */
-.contact-label {
-  font-weight: bold;
-  color: var(--gold);
+/* CTA Buttons */
+.cta-btn {
   display: inline-block;
-  margin-right: 6px;
-}
-.contact-value {
-  display: inline-block;
-  font-weight: normal;
-}
-
-/* Language Tags */
-.lang-tag {
-  display: inline-block;
-  background-color: var(--gold);
+  margin: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  background: var(--accent);
   color: #000;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 14px;
   font-weight: bold;
-  margin: 4px 6px 4px 0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.level-tag {
-  display: inline-block;
-  background-color: #fff;
-  color: #000;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: bold;
-  margin: 4px 12px 4px 0;
+
+/* Theme Toggle */
+.theme-toggle {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
 }
 
 /* Separator & Footer */
 .separator {
   height: 2px;
   background: var(--accent);
-  margin: 3rem auto;
+  margin: 2rem auto;
   width: 80%;
   opacity: 0.5;
 }
 
 footer {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding: 1rem;
   font-size: 0.9rem;
-  color: var(--gold);
+  color: var(--text);
   border-top: 1px solid rgba(255,215,0,0.2);
   background: var(--card);
   border-radius: 6px 6px 0 0;
+  box-shadow: 0 -2px 6px var(--shadow);
 }
 
-/* Final Note */
+/* Wrapup Message */
 .wrapup-message {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gold);
   text-align: center;
-  margin-top: 10px;
 }
 
 /* Mobile Optimization */
@@ -246,41 +220,17 @@ footer {
     align-items: flex-start;
     gap: 0.5rem;
   }
-
   .nav-links ul {
     flex-wrap: wrap;
     gap: 0.8rem;
   }
-
   h1 { font-size: 24px; }
   h2 { font-size: 18px; }
-
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
-
-  .motto { font-size: 1rem; }
-
+  .profile-pic { width: 100px; height: 100px; }
+  .motto { font-size: 1rem; margin-bottom: 20px; }
   .card { margin: 1rem; }
-
-  .lang-tag,
-  .level-tag {
-    font-size: 12px;
-    padding: 2px 6px;
-  }
-
-  .cta-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-  }
-
-  .contact-label,
-  .contact-value {
-    font-size: 14px;
-  }
-
-  .wrapup-message {
-    font-size: 0.95rem;
-  }
+  .lang-tag, .level-tag { font-size: 12px; padding: 2px 6px; }
+  .cta-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
+  .contact-label, .contact-value { font-size: 14px; }
+  .wrapup-message { font-size: 0.95rem; }
 }
