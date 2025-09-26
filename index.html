@@ -7,52 +7,63 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <div class="welcome">Welcome to Moe's Portfolio</div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero">
-    <img src="profile.jpg" alt="Mohamed Abdelrazek" class="profile-pic" />
+  <header class="hero">
+    <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
+    <h1>Welcome to Moe's</h1>
     <h1>Mohamed Abdelrazek</h1>
-    <p class="motto">Building a better future through code and care</p>
-    <div class="cta-group">
-      <a href="#projects" class="cta-btn">💼 View My Work</a>
-      <a href="resume.html" class="cta-btn">📄 View My Resume</a>
-      <a href="#" class="cta-btn theme-toggle" onclick="toggleTheme()" title="Toggle Light/Dark Mode">🌟</a>
+    <div class="motto">“Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.”</div>
+    <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
+    <a href="#projects" class="cta-btn">View My Work</a>
+    <a href="resume.html" class="cta-btn">View My Resume</a>
+    <!-- 🌟 Theme Toggle Button -->
+    <a href="#" class="cta-btn theme-toggle" onclick="toggleTheme()" title="Toggle Light/Dark Mode">🌟</a>
+  </header>
+
+  <section id="about" class="card">
+    <h2>👤 About Me</h2>
+    <p>
+      Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance shaped by professional football.
+      Actively pursuing certifications to bridge technology with business impact.
+    </p>
+    <p>
+      <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
+      <span class="lang-tag">English</span> <span class="level-tag">Near Native</span>
+      <span class="lang-tag">German</span> <span class="level-tag">B2 – Intermediate</span>
+    </p>
+  </section>
+
+  <div class="separator"></div>
+
+  <section id="skills" class="card">
+    <h2>🛠 Skills</h2>
+    <ul>
+      <li>Python Development</li>
+      <li>Web Design & Accessibility</li>
+      <li>Digital Marketing & E-Commerce</li>
+      <li>Resilience & Discipline</li>
+      <li>Team Leadership</li>
+      <li>Languages: Arabic, English, German</li>
+    </ul>
+  </section>
+
+  <div class="separator"></div>
+
+  <section id="projects" class="card">
+    <h2>🌟 Projects</h2>
+    <div class="project-card">
+      <h3>✨ Python Labs: Conditionals, Loops & Sorting</h3>
+      <p>Hands-on exercises exploring control flow and sorting algorithms in Python.</p>
+      <a href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">🔗 View on GitHub</a>
     </div>
   </section>
 
   <div class="separator"></div>
 
-  <section id="about" class="card">
-    <h2>✨ About Me</h2>
-    <p>Multidisciplinary professional blending engineering, Python, AI, and digital design. Former pro athlete turned tech-driven mentor and builder. Passionate about empowering others and creating accessible, high-impact solutions.</p>
-  </section>
-
-  <section id="projects" class="card">
-    <h2>🚀 Projects</h2>
-    <div class="project-card">
-      <h3>Responsive Resume Builder</h3>
-      <p>Modular, print-friendly resume with adaptive layout and theme switching.</p>
-      <a href="https://github.com/moeabdelrazek/resume-builder" target="_blank">View on GitHub</a>
-    </div>
-    <div class="project-card">
-      <h3>English Tutor Toolkit</h3>
-      <p>Custom question sets and teaching resources for learners worldwide.</p>
-      <a href="https://github.com/moeabdelrazek/english-tutor-kit" target="_blank">View on GitHub</a>
-    </div>
-  </section>
-
   <section id="contact" class="card">
     <h2>📇 Contact</h2>
     <p><span class="contact-label">Email:</span><span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
     <p><span class="contact-label">Phone:</span><span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
-    <p><span class="contact-label">Website:</span><span class="contact-value"><a href="https://moeabdelrazek.github.io/" target="_blank">Portfolio Website</a></span></p>
+    <p><span class="contact-label">Website:</span><span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
     <p><span class="contact-label">Address:</span><span class="contact-value">Alexandria, Egypt</span></p>
   </section>
 
