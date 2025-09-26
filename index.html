@@ -9,19 +9,6 @@
 </head>
 <body>
 
-  <!-- Splash Screen -->
-  <div id="splash">
-    <div class="splash-content">
-      <h1>Mohamed Abdelrazek</h1>
-      <div class="loader">
-        <span class="gear">⚙️</span>
-        <span class="dots"><span>.</span><span>.</span><span>.</span></span>
-      </div>
-      <p>Loading your experience...</p>
-    </div>
-  </div>
-  <audio id="splashSound" src="swoosh.mp3" preload="auto"></audio>
-
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="site-title">👋 Moe's Portfolio</div>
@@ -98,9 +85,6 @@
     <p><span class="contact-label">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
   </div>
 
-  <!-- Back to Top -->
-  <button id="backToTop" aria-label="Back to top">⬆️</button>
-
   <!-- Footer -->
   <footer>
     © 2025 Mohamed Abdelrazek — All Rights Reserved
@@ -135,26 +119,6 @@
       });
     }, { threshold: 0.1 });
     scrollElements.forEach(el => observer.observe(el));
-
-    // Back to top
-    const backToTopBtn = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) backToTopBtn.classList.add("show");
-      else backToTopBtn.classList.remove("show");
-    });
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    // Splash screen
-    window.addEventListener("load", () => {
-      const splash = document.getElementById("splash");
-      const splashSound = document.getElementById("splashSound");
-      setTimeout(() => {
-        splash.classList.add("fade-out");
-        splashSound.play().catch(()=>{});
-      }, 1200);
-    });
   </script>
 </body>
 </html>
