@@ -1,96 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohamed Abdelrazek | Portfolio</title>
+  <title>Mohamed Abdelrazek</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav>
-    <div class="welcome">Welcome to Moe’s</div>
+    <div class="welcome">Welcome to Moe's Portfolio</div>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="resume.html">Resume</a></li>
     </ul>
   </nav>
 
-  <header class="hero">
-    <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
+  <section class="hero">
+    <img src="profile.jpg" alt="Mohamed Abdelrazek" class="profile-pic" />
     <h1>Mohamed Abdelrazek</h1>
-    <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
-    <a href="#projects" class="cta-btn">View My Work</a>
-    <a href="resume.html" class="cta-btn">View My Resume</a>
-  </header>
-
-  <section id="about" class="card">
-    <h2>✨ Professional Summary</h2>
-    <p>
-      Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.
-      Resilient, disciplined, and deeply committed to continuous learning, with a decade of leadership and performance shaped by professional football.
-      Actively pursuing certifications to bridge technology with business impact.
-    </p>
-    <p>
-      <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
-      <span class="lang-tag">English</span> <span class="level-tag">Near Native</span>
-      <span class="lang-tag">German</span> <span class="level-tag">B2 – Intermediate</span>
-    </p>
-  </section>
-
-  <div class="separator"></div>
-
-  <section id="certifications" class="card">
-    <h2>🎓 Certifications</h2>
-    <ul>
-      <li>Microsoft Python Development Professional Certificate</li>
-      <li>Google IT Automation with Python</li>
-      <li>Google Digital Marketing & E-Commerce</li>
-    </ul>
-  </section>
-
-  <div class="separator"></div>
-
-  <section id="skills" class="card">
-    <h2>🛠️ Core Skills</h2>
-    <ul>
-      <li>Python (Debugging, Automation)</li>
-      <li>Data Analysis Fundamentals</li>
-      <li>AI Fundamentals</li>
-      <li>GitHub & Version Control</li>
-      <li>Microsoft Suite</li>
-      <li>Digital Marketing & E-Commerce</li>
-      <li>Resilience & Discipline</li>
-      <li>Team Leadership</li>
-    </ul>
-  </section>
-
-  <div class="separator"></div>
-
-  <section id="projects" class="card">
-    <h2>🌟 Projects</h2>
-    <div class="project-card">
-      <h3>✨ Python Labs: Conditionals, Loops & Sorting</h3>
-      <p>Hands-on exercises exploring control flow and sorting algorithms in Python.</p>
-      <a href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">🔗 View on GitHub</a>
+    <p class="motto">Building a better future through code and care</p>
+    <div class="cta-group">
+      <a href="#projects" class="cta-btn">💼 View My Work</a>
+      <a href="resume.html" class="cta-btn">📄 View My Resume</a>
+      <a href="#" class="cta-btn theme-toggle" onclick="toggleTheme()" title="Toggle Light/Dark Mode">🌟</a>
     </div>
   </section>
 
   <div class="separator"></div>
 
+  <section id="about" class="card">
+    <h2>✨ About Me</h2>
+    <p>Multidisciplinary professional blending engineering, Python, AI, and digital design. Former pro athlete turned tech-driven mentor and builder. Passionate about empowering others and creating accessible, high-impact solutions.</p>
+  </section>
+
+  <section id="projects" class="card">
+    <h2>🚀 Projects</h2>
+    <div class="project-card">
+      <h3>Responsive Resume Builder</h3>
+      <p>Modular, print-friendly resume with adaptive layout and theme switching.</p>
+      <a href="https://github.com/moeabdelrazek/resume-builder" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <h3>English Tutor Toolkit</h3>
+      <p>Custom question sets and teaching resources for learners worldwide.</p>
+      <a href="https://github.com/moeabdelrazek/english-tutor-kit" target="_blank">View on GitHub</a>
+    </div>
+  </section>
+
   <section id="contact" class="card">
     <h2>📇 Contact</h2>
     <p><span class="contact-label">Email:</span><span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
     <p><span class="contact-label">Phone:</span><span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
-    <p><span class="contact-label">Website:</span><span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+    <p><span class="contact-label">Website:</span><span class="contact-value"><a href="https://moeabdelrazek.github.io/" target="_blank">Portfolio Website</a></span></p>
     <p><span class="contact-label">Address:</span><span class="contact-value">Alexandria, Egypt</span></p>
   </section>
 
   <footer>
-    <p>© 2025 Mohamed Abdelrazek</p>
+    <p>© 2025 Mohamed Abdelrazek. Built with passion and purpose.</p>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", next);
+    }
+  </script>
 </body>
 </html>
