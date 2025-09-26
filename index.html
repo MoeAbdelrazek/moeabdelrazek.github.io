@@ -43,6 +43,11 @@
       Deeply committed to continuous learning and real-world impact.
       Currently pursuing certifications to bridge technology with business outcomes.
     </p>
+    <div class="language-tags">
+      <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
+      <span class="lang-tag">English</span> <span class="level-tag">Near Native</span>
+      <span class="lang-tag">German</span> <span class="level-tag">B2 – Intermediate</span>
+    </div>
   </div>
 
   <div class="separator"></div>
@@ -52,6 +57,9 @@
     <h2>🛠️ Skills</h2>
     <ul>
       <li>Python (Debugging, Automation)</li>
+      <li>Data Analysis Fundamentals</li>
+      <li>AI Fundamentals</li>
+      <li>GitHub & Version Control</li>
       <li>Microsoft Suite</li>
       <li>Digital Marketing & E-Commerce</li>
       <li>Resilience & Discipline</li>
@@ -85,6 +93,16 @@
     <p><span class="contact-label">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
   </div>
 
+  <div class="separator"></div>
+
+  <!-- Final Note -->
+  <div class="card scroll-fade" id="wrapup">
+    <h2>🌟 Final Note</h2>
+    <p class="wrapup-message">
+      Thank you for exploring my journey. This portfolio is more than a showcase — it's a reflection of discipline, precision, and passion. Let's build something extraordinary together.
+    </p>
+  </div>
+
   <!-- Footer -->
   <footer>
     © 2025 Mohamed Abdelrazek — All Rights Reserved
@@ -92,7 +110,6 @@
 
   <!-- Scripts -->
   <script>
-    // Theme toggle with persistence
     const themeToggle = document.getElementById("themeToggle");
     function applyTheme(theme) {
       document.documentElement.setAttribute("data-theme", theme);
@@ -111,7 +128,6 @@
       applyTheme(saved || (prefersLight ? "light" : "dark"));
     });
 
-    // Scroll fade-in
     const scrollElements = document.querySelectorAll(".scroll-fade");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
