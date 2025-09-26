@@ -1,36 +1,241 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Mohamed Abdelrazek — Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume — Mohamed Abdelrazek</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --bg1: #2a2a2a;
+      --bg2: #3a3a3a;
+      --text: #ffffff;
+      --gold: #FFD700;
+      --card: #444;
+    }
+
+    body {
+      margin: 20px;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 16px;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      background-size: 400% 400%;
+      animation: backgroundShift 20s ease infinite;
+      color: var(--text);
+      line-height: 1.4;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('hero-bg.jpg') center/cover no-repeat;
+      opacity: 0.12;
+      z-index: -2;
+    }
+
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 30px;
+      text-align: center;
+      color: var(--gold);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 19px;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .motto {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      display: block;
+      margin: 0 auto 20px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 10px rgba(255,215,0,0.6);
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .left-column {
+      width: 30%;
+      padding-right: 20px;
+      min-width: 250px;
+    }
+
+    .right-column {
+      width: 70%;
+      padding-left: 20px;
+      border-left: 1px solid rgba(255,215,0,0.2);
+      min-width: 300px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 0.8rem;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 15px;
+      margin: 0;
+    }
+
+    li::before {
+      content: "• ";
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    li {
+      margin: 4px 0;
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--gold);
+    }
+
+    .role {
+      font-weight: bold;
+    }
+
+    .date {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .contact-label {
+      font-weight: bold;
+      color: var(--gold);
+      display: block;
+      margin-top: 6px;
+    }
+
+    .contact-value {
+      margin-left: 10px;
+      display: inline-block;
+    }
+
+    .lang-tag {
+      display: inline-block;
+      background-color: var(--gold);
+      color: #000;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 4px;
+    }
+
+    .level-tag {
+      display: inline-block;
+      background-color: #666;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 13px;
+      margin-right: 12px;
+    }
+
+    .download-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .download-link a {
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .download-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .grid {
+        flex-direction: column;
+      }
+      .left-column, .right-column {
+        width: 100%;
+        padding: 0;
+        border: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Top bar -->
-  <div class="top-bar">
-    <div class="site-title">Mohamed Abdelrazek — Resume</div>
-    <nav class="nav-links">
-      <ul>
-        <li><a href="index.html">🏠 Home</a></li>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
 
-  <!-- Hero -->
-  <header class="hero">
-    <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
-    <h1>Mohamed Abdelrazek</h1>
-    <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
-  </header>
+  <h1>Mohamed Abdelrazek</h1>
+  <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
+  <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
 
-  <main class="grid">
-    <!-- Left column -->
+  <div class="grid">
     <div class="left-column">
+      <div class="card">
+        <h2>🛠️ Skills</h2>
+        <ul>
+          <li>Python (Debugging, Automation)</li>
+          <li>Data Analysis Fundamentals</li>
+          <li>AI Fundamentals</li>
+          <li>GitHub & Version Control</li>
+          <li>Microsoft Suite</li>
+          <li>Digital Marketing & E-Commerce</li>
+          <li>Resilience & Discipline</li>
+          <li>Team Leadership</li>
+        </ul>
+      </div>
+
       <div class="card">
         <h2>🎓 Certifications</h2>
         <ul>
@@ -40,7 +245,16 @@
         </ul>
       </div>
 
-      <div class="card" id="contact">
+      <div class="card">
+        <h2>🌐 Languages</h2>
+        <ul>
+          <li>Arabic</li>
+          <li>English</li>
+          <li>German</li>
+        </ul>
+      </div>
+
+      <div class="card">
         <h2>📇 Contact</h2>
         <p><span class="contact-label">Email:</span><span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
         <p><span class="contact-label">Phone:</span><span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
@@ -49,9 +263,8 @@
       </div>
     </div>
 
-    <!-- Right column -->
     <div class="right-column">
-      <div class="card" id="summary">
+      <div class="card">
         <h2>✨ Professional Summary</h2>
         <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Deeply committed to continuous learning and real-world impact.<br>
         Currently pursuing certifications to bridge technology with business outcomes.</p>
@@ -62,7 +275,7 @@
         </p>
       </div>
 
-      <div class="card" id="experience">
+      <div class="card">
         <h2>💼 Professional Experience</h2>
         <p><span class="role">Engoo — Online Tutor</span> <span class="date">(2021–Present)</span></p>
         <ul>
@@ -79,7 +292,7 @@
         </ul>
       </div>
 
-      <div class="card" id="education">
+      <div class="card">
         <h2>🏫 Education</h2>
         <p><span class="role">Alexandria University — Engineering Studies</span></p>
         <ul>
@@ -89,14 +302,11 @@
         </ul>
       </div>
     </div>
-  </main>
-
-  <div class="download-link">
-    <a href="resume.pdf" download>📥 Download PDF Version</a>
   </div>
 
-  <footer>
-    <p>© 2025 Mohamed Abdelrazek. Built with passion and purpose.</p>
-  </footer>
+  <div class="download-link">
+    <a href="Mohamed_Abdelrazek_Resume.pdf" download>📄 Download PDF Resume</a>
+  </div>
+
 </body>
 </html>
