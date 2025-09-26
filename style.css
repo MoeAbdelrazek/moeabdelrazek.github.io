@@ -33,7 +33,7 @@ body {
   background-size: 400% 400%;
   animation: backgroundShift 20s ease infinite;
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.8; /* Increased line spacing */
 }
 
 body::before {
@@ -56,7 +56,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 1.2rem;
+  padding: 1rem 2rem;
   background: var(--card);
   border-bottom: 1px solid rgba(255,215,0,0.2);
   position: sticky;
@@ -66,9 +66,10 @@ body::before {
 }
 
 .site-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--gold);
+  text-shadow: 0 0 6px var(--gold);
 }
 
 .nav-links ul {
@@ -76,27 +77,19 @@ body::before {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .nav-links a {
-  color: var(--text);
+  color: var(--gold); /* always shiny gold */
   font-weight: bold;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 4px var(--gold);
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  color: var(--gold);
-  text-decoration: underline;
-  outline: none;
-}
-
-/* Hero Section */
 .hero {
   text-align: center;
-  margin: 2rem auto;
+  margin: 3rem auto;
   animation: fadeIn 1.5s ease;
 }
 
@@ -106,48 +99,63 @@ body::before {
 }
 
 .motto {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: var(--motto);
+  font-style: italic;
+  margin: 20px 0 40px 0;
+  color: var(--gold);
+  text-shadow: 0 0 8px var(--gold);
+  display: inline-block;
 }
 
 .profile-pic {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 30px;
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--gold);
-  box-shadow: 0 0 10px rgba(255,215,0,0.6);
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 20px var(--gold);
   transition: transform 0.3s;
 }
 .profile-pic:hover {
   transform: scale(1.05);
 }
 
+/* Hero CTA Buttons Below Motto */
+.hero-cta {
+  margin-top: 40px; /* move below motto */
+}
+
 /* Cards */
 .card {
   background: var(--card);
-  padding: 0.8rem;
-  margin: 1rem auto;
-  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border-radius: 12px;
   max-width: 900px;
   opacity: 0;
   transform: translateY(20px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 .card.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+.card h2 {
+  margin-bottom: 1rem;
+  color: var(--gold);
+  text-shadow: 0 0 6px var(--gold);
+}
+
 /* Lists */
 ul {
   list-style-type: none;
-  padding-left: 15px;
+  padding-left: 20px;
   margin: 0;
 }
 
@@ -158,21 +166,22 @@ li::before {
 }
 
 li {
-  margin: 4px 0;
+  margin: 10px 0; /* more spacing */
   font-size: 16px;
   color: var(--text);
 }
 
 /* Links */
 a {
-  color: var(--text);
-  text-decoration: none;
+  color: var(--gold); /* always gold */
   font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0 4px var(--gold);
 }
+
 a:hover,
 a:focus {
   text-decoration: underline;
-  color: var(--gold);
   outline: none;
 }
 
@@ -181,7 +190,7 @@ a:focus {
   font-weight: bold;
   color: var(--gold);
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 .contact-value {
   display: inline-block;
@@ -193,57 +202,60 @@ a:focus {
   display: inline-block;
   background-color: var(--gold);
   color: #000;
-  padding: 4px 10px;
-  border-radius: 12px;
+  padding: 5px 12px;
+  border-radius: 14px;
   font-size: 14px;
   font-weight: bold;
-  margin: 4px 6px 4px 0;
+  margin: 6px 8px 6px 0;
 }
 .level-tag {
   display: inline-block;
   background-color: #fff;
   color: #000;
-  padding: 4px 10px;
-  border-radius: 12px;
+  padding: 5px 12px;
+  border-radius: 14px;
   font-size: 13px;
   font-weight: bold;
-  margin: 4px 12px 4px 0;
+  margin: 6px 12px 6px 0;
 }
 
 /* CTA Buttons */
 .cta-btn {
   display: inline-block;
-  margin: 0.5rem;
-  padding: 0.7rem 1.5rem;
-  background: var(--accent);
+  margin: 0.7rem;
+  padding: 0.9rem 2rem;
+  background: var(--gold);
   color: #000;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 0 0 6px var(--shadow);
+  box-shadow: 0 0 12px var(--gold);
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 .cta-btn:hover,
 .cta-btn:focus {
-  background: #fff8dc;
-  box-shadow: 0 0 8px var(--shadow);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   outline: none;
 }
 
 /* Theme Toggle */
 .theme-toggle {
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--gold);
+  box-shadow: 0 0 8px var(--gold);
+  cursor: pointer;
 }
 
 /* Separator & Footer */
 .separator {
   height: 2px;
-  background: var(--accent);
-  margin: 2rem auto;
+  background: var(--gold);
+  margin: 3rem auto;
   width: 80%;
   opacity: 0.5;
 }
@@ -252,22 +264,30 @@ footer {
   text-align: center;
   margin-top: 2rem;
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text);
   border-top: 1px solid rgba(255,215,0,0.2);
   background: var(--card);
   border-radius: 6px 6px 0 0;
-  box-shadow: 0 -2px 6px var(--shadow);
+  box-shadow: 0 -2px 12px var(--gold);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Final Note */
 .wrapup-message {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: var(--gold);
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
+  text-shadow: 0 0 6px var(--gold);
+}
+
+/* Desktop glow effects only */
+@media (min-width: 701px) {
+  .card:hover {
+    box-shadow: 0 12px 28px var(--gold);
+  }
 }
 
 /* Mobile Optimization */
@@ -304,6 +324,7 @@ footer {
   .cta-btn {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
+    box-shadow: none; /* remove glow for mobile */
   }
 
   .contact-label,
@@ -313,5 +334,6 @@ footer {
 
   .wrapup-message {
     font-size: 0.95rem;
+    text-shadow: none; /* remove glow for mobile */
   }
 }
