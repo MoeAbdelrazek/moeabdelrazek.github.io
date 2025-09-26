@@ -20,7 +20,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <button id="themeToggle" class="theme-toggle">🌙</button>
+    <button id="themeToggle" class="theme-toggle">🌙 Mode</button>
   </div>
 
   <!-- Hero Section -->
@@ -28,11 +28,13 @@
     <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
     <h1>Mohamed Abdelrazek</h1>
     <p class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</p>
-    <div class="hero-cta">
-      <a href="https://moeabdelrazek.github.io/resume.html" target="_blank" class="cta-btn">📄 View My Resume</a>
-      <a href="#projects" class="cta-btn">💻 Work</a>
-    </div>
   </section>
+
+  <!-- CTA Buttons Above Sections -->
+  <div class="hero-cta">
+    <a href="https://moeabdelrazek.github.io/resume.html" target="_blank" class="cta-btn">📄 Resume</a>
+    <a href="#projects" class="cta-btn">💻 Work</a>
+  </div>
 
   <div class="separator"></div>
 
@@ -40,9 +42,9 @@
   <div class="card scroll-fade" id="about">
     <h2>✨ About Me</h2>
     <p>
-      Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.<br><br>
-      Resilient and disciplined, with a decade of high-performance experience shaped by professional football.<br><br>
-      Deeply committed to continuous learning and real-world impact.<br><br>
+      Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.
+      Resilient and disciplined, with a decade of high-performance experience shaped by professional football.
+      Deeply committed to continuous learning and real-world impact.
       Currently pursuing certifications to bridge technology with business outcomes.
     </p>
     <div class="language-tags">
@@ -113,7 +115,7 @@
     const themeToggle = document.getElementById("themeToggle");
     function applyTheme(theme) {
       document.documentElement.setAttribute("data-theme", theme);
-      themeToggle.textContent = theme === "light" ? "☀️" : "🌙";
+      themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
     }
     function toggleTheme() {
       const current = document.documentElement.getAttribute("data-theme");
