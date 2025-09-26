@@ -1,87 +1,140 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moe's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Mohamed Abdelrazek — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Mohamed Abdelrazek — Python developer, engineer, and multidisciplinary professional with expertise in AI, data analysis, and digital marketing." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="top-bar">
-    <div class="site-title">Welcome to Moe's Portfolio</div>
-    <nav class="nav-links">
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="site-title">👋 Moe's Portfolio</div>
+    <div class="nav-links">
       <ul>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
-    <button class="theme-toggle" id="themeToggle">🌙</button>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-    <p class="motto">“Turning vision into reality with passion and precision.”</p>
-    <div class="hero-icons">
-      <a href="https://moeabdelrazek.github.io/resume.html" target="_blank" class="cta-btn">📄 Resume</a>
-      <a href="https://github.com/MoeAbdelrazek" target="_blank" class="cta-btn">💻 GitHub</a>
     </div>
+    <button id="themeToggle" class="cta-btn theme-toggle">🌙 Mode</button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
+    <h1>Mohamed Abdelrazek</h1>
+    <p class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</p>
+    <a href="https://moeabdelrazek.github.io/resume.html" target="_blank" class="cta-btn">📄 Resume</a>
+    <a href="#projects" class="cta-btn">💻 Work</a>
   </section>
+
+  <div class="separator"></div>
 
   <!-- About -->
-  <section id="about" class="card">
-    <h2>About Me</h2>
-    <p>Hello! I’m Moe, passionate about technology, football, and continuous learning. I love building meaningful projects that connect people and ideas.</p>
-  </section>
+  <div class="card scroll-fade" id="about">
+    <h2>✨ About Me</h2>
+    <p>
+      Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.
+      Resilient and disciplined, with a decade of high-performance experience shaped by professional football.
+      Deeply committed to continuous learning and real-world impact.
+      Currently pursuing certifications to bridge technology with business outcomes.
+    </p>
+    <div class="language-tags">
+      <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
+      <span class="lang-tag">English</span> <span class="level-tag">Near Native</span>
+      <span class="lang-tag">German</span> <span class="level-tag">B2 – Intermediate</span>
+    </div>
+  </div>
+
+  <div class="separator"></div>
 
   <!-- Skills -->
-  <section id="skills" class="card">
-    <h2>Skills</h2>
+  <div class="card scroll-fade" id="skills">
+    <h2>🛠️ Skills</h2>
     <ul>
-      <li>Generative AI & Python</li>
-      <li>Social Media Management</li>
-      <li>Project Management</li>
-      <li>Coaching & Leadership</li>
-      <li>Multilingual Communication</li>
+      <li>Python (Debugging, Automation)</li>
+      <li>Data Analysis Fundamentals</li>
+      <li>AI Fundamentals</li>
+      <li>GitHub & Version Control</li>
+      <li>Microsoft Suite</li>
+      <li>Digital Marketing & E-Commerce</li>
+      <li>Resilience & Discipline</li>
+      <li>Team Leadership</li>
     </ul>
-  </section>
+  </div>
+
+  <div class="separator"></div>
 
   <!-- Projects -->
-  <section id="projects" class="card">
-    <h2>Projects</h2>
+  <div class="card scroll-fade" id="projects">
+    <h2>📂 Projects</h2>
     <ul>
-      <li><a href="#">AI Chatbot Assistant</a></li>
-      <li><a href="#">Elite Football Academy Website</a></li>
-      <li><a href="#">Social Media Campaigns</a></li>
+      <li>
+        <strong>python-labs-conditionals-loops-sorting-</strong> —
+        <a class="gold-link" href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">
+          GitHub Repository
+        </a>
+      </li>
     </ul>
-  </section>
+  </div>
+
+  <div class="separator"></div>
 
   <!-- Contact -->
-  <section id="contact" class="card">
-    <h2>Contact</h2>
-    <p><span class="contact-label">Email:</span> <span class="contact-value">Moe-Abdelrazek@outlook.com</span></p>
-    <p><span class="contact-label">Phone:</span> <span class="contact-value">+20 1017286384</span></p>
-  </section>
+  <div class="card scroll-fade" id="contact">
+    <h2>📇 Contact</h2>
+    <p><span class="contact-label">Email:</span> <span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+    <p><span class="contact-label">Phone:</span> <span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
+    <p><span class="contact-label">Website:</span> <span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+    <p><span class="contact-label">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
+  </div>
+
+  <div class="separator"></div>
+
+  <!-- Final Note -->
+  <div class="card scroll-fade" id="wrapup">
+    <h2>🌟 Final Note</h2>
+    <p class="wrapup-message">
+      Thank you for exploring my journey. This portfolio is more than a showcase — it's a reflection of discipline, precision, and passion. Let's build something extraordinary together.
+    </p>
+  </div>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Moe Abdelrazek. All Rights Reserved.</p>
+    © 2025 Mohamed Abdelrazek — All Rights Reserved
   </footer>
 
+  <!-- Scripts -->
   <script>
-    const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('click', () => {
-      document.body.dataset.theme =
-        document.body.dataset.theme === "light" ? "dark" : "light";
-      toggle.textContent =
-        document.body.dataset.theme === "light" ? "☀️" : "🌙";
+    const themeToggle = document.getElementById("themeToggle");
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
+    }
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      const newTheme = current === "light" ? "dark" : "light";
+      applyTheme(newTheme);
+      localStorage.setItem("theme", newTheme);
+    }
+    themeToggle.addEventListener("click", toggleTheme);
+    window.addEventListener("DOMContentLoaded", () => {
+      const saved = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      applyTheme(saved || (prefersLight ? "light" : "dark"));
     });
-  </script>
 
+    const scrollElements = document.querySelectorAll(".scroll-fade");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.1 });
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
