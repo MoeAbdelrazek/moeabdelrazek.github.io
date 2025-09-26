@@ -1,32 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Mohamed Abdelrazek — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Mohamed Abdelrazek — Python developer, engineer, and multidisciplinary professional with expertise in AI, data analysis, and digital marketing." />
-  <meta name="keywords" content="Mohamed Abdelrazek, Python Developer, AI, Data Analysis, Portfolio, Digital Marketing, Engineering" />
-  <meta name="author" content="Mohamed Abdelrazek" />
-
-  <!-- Open Graph (LinkedIn, Facebook) -->
-  <meta property="og:title" content="Mohamed Abdelrazek — Portfolio" />
-  <meta property="og:description" content="Explore the portfolio of Mohamed Abdelrazek — Python developer, engineer, and AI enthusiast." />
-  <meta property="og:image" content="profile.jpg" />
-  <meta property="og:url" content="https://moeabdelrazek.github.io/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mohamed Abdelrazek — Portfolio" />
-  <meta name="twitter:description" content="Explore the portfolio of Mohamed Abdelrazek — Python developer, engineer, and AI enthusiast." />
-  <meta name="twitter:image" content="profile.jpg" />
-
-  <!-- Favicon + Manifest -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="manifest" href="manifest.json" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -42,7 +20,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <button id="themeToggle" class="cta-btn theme-toggle">🌙 Mode</button>
   </div>
 
   <!-- Hero Section -->
@@ -111,16 +88,8 @@
     <h2>📇 Contact</h2>
     <p><span class="contact-label">Email:</span> <span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
     <p><span class="contact-label">Phone:</span> <span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
-    <p><span class="contact-label">Website:</span> <span class="contact-value"><a href="https://moeabdelrazek.github.io/" target="_blank">Portfolio Website</a></span></p>
+    <p><span class="contact-label">Website:</span> <span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
     <p><span class="contact-label">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
-
-    <!-- Contact Form -->
-    <form class="contact-form" action="https://formspree.io/f/yourID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="cta-btn">Send Message</button>
-    </form>
   </div>
 
   <div class="separator"></div>
@@ -140,25 +109,7 @@
 
   <!-- Scripts -->
   <script>
-    const themeToggle = document.getElementById("themeToggle");
-    function applyTheme(theme) {
-      document.documentElement.setAttribute("data-theme", theme);
-      themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
-    }
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute("data-theme");
-      const newTheme = current === "light" ? "dark" : "light";
-      applyTheme(newTheme);
-      localStorage.setItem("theme", newTheme);
-    }
-    themeToggle.addEventListener("click", toggleTheme);
-    window.addEventListener("DOMContentLoaded", () => {
-      const saved = localStorage.getItem("theme");
-      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-      applyTheme(saved || (prefersLight ? "light" : "dark"));
-    });
-
-    // Scroll fade animations
+    // Scroll fade-in effect
     const scrollElements = document.querySelectorAll(".scroll-fade");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
