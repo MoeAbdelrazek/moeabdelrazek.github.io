@@ -1,279 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <title>Mohamed Abdelrazek — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    :root {
-      --bg1: #2a2a2a;
-      --bg2: #3a3a3a;
-      --text: #ffffff;
-      --gold: #FFD700;
-      --card: #444;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Times New Roman", Times, serif;
-      font-size: 16px;
-      background: linear-gradient(135deg, var(--bg1), var(--bg2));
-      background-size: 400% 400%;
-      animation: backgroundShift 20s ease infinite;
-      color: var(--text);
-      line-height: 1.5;
-      position: relative;
-      transition: background 0.5s, color 0.5s;
-    }
-
-    body.light {
-      --bg1: #f9f9f9;
-      --bg2: #eaeaea;
-      --text: #000;
-      --card: #fff;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('hero-bg.jpg') center/cover no-repeat;
-      opacity: 0.12;
-      z-index: -2;
-    }
-
-    @keyframes backgroundShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-    }
-
-    header h1 {
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--gold);
-      margin: 0;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      color: var(--gold);
-    }
-
-    .profile-pic {
-      display: block;
-      margin: 20px auto 10px;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--gold);
-      box-shadow: 0 0 10px rgba(255,215,0,0.6);
-    }
-
-    .name {
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      margin: 5px 0;
-      background: linear-gradient(90deg, #FFD700, #fff, #FFD700);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 3s linear infinite;
-      background-size: 200%;
-    }
-
-    @keyframes shine {
-      0% { background-position: -200px; }
-      100% { background-position: 200px; }
-    }
-
-    .motto {
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .actions {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .actions a {
-      display: inline-block;
-      margin: 5px 8px;
-      padding: 6px 10px;
-      font-size: 14px;
-      background: var(--gold);
-      color: #000;
-      font-weight: bold;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: transform 0.2s;
-    }
-
-    .actions a:hover {
-      transform: scale(1.05);
-      background: #e6c200;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 1rem;
-      margin-bottom: 20px;
-      border-radius: 6px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s forwards;
-    }
-
-    .separator {
-      height: 2px;
-      background: linear-gradient(to right, transparent, var(--gold), transparent);
-      margin: 30px 0;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    h2 {
-      color: var(--gold);
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 15px;
-    }
-
-    li::before {
-      content: "• ";
-      color: var(--gold);
-      font-weight: bold;
-    }
-
-    li {
-      margin: 5px 0;
-    }
-
-    /* Contact styling */
-    #contact p {
-      color: #fff;
-      margin: 6px 0;
-    }
-
-    #contact a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: normal;
-    }
-
-    #contact a:hover {
-      color: var(--gold);
-      text-decoration: none;
-    }
-
-    .contact-label {
-      font-weight: bold;
-    }
-
-    .contact-value {
-      font-weight: normal;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      border-top: 1px solid rgba(255,215,0,0.2);
-      margin-top: 30px;
-    }
-  </style>
+  <meta name="description" content="Portfolio of Mohamed Abdelrazek — Python developer, engineer, and multidisciplinary professional with expertise in AI, data analysis, and digital marketing." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>👋 Welcome to Moe's Portfolio</h1>
-    <nav>
+  <!-- Splash Screen -->
+  <div id="splash">
+    <div class="splash-content">
+      <h1>Mohamed Abdelrazek</h1>
+      <div class="loader">
+        <span class="gear">⚙️</span>
+        <span class="dots"><span>.</span><span>.</span><span>.</span></span>
+      </div>
+      <p>Loading your experience...</p>
+    </div>
+  </div>
+  <audio id="splashSound" src="swoosh.mp3" preload="auto"></audio>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="site-title">👋 Moe's Portfolio</div>
+    <div class="nav-links">
       <ul>
         <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
-  <div class="name">Mohamed Abdelrazek</div>
-  <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
-
-  <div class="actions">
-    <a href="Mohamed_Abdelrazek_Resume.pdf" target="_blank">📄 Resume</a>
-    <a href="#projects">💻 Work</a>
-    <a href="javascript:void(0)" onclick="toggleMode()">🌗 Mode</a>
+    </div>
+    <button id="themeToggle" class="cta-btn theme-toggle">🌙 Mode</button>
   </div>
 
-  <div class="container">
-    <div class="card" id="about">
-      <h2>✨ About Me</h2>
-      <p>
-        Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. 
-        Resilient and disciplined, with a decade of high-performance experience shaped by professional football. 
-        Deeply committed to continuous learning and real-world impact. 
-        Currently pursuing certifications to bridge technology with business outcomes.
-      </p>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
+    <h1>Mohamed Abdelrazek</h1>
+    <p class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</p>
+    <a href="Mohamed_Abdelrazek_Resume.pdf" target="_blank" class="cta-btn">📄 Resume</a>
+    <a href="#projects" class="cta-btn">💻 Work</a>
+  </section>
 
-    <div class="separator"></div>
+  <div class="separator"></div>
 
-    <div class="card" id="projects">
-      <h2>📂 Projects</h2>
-      <ul>
-        <li>
-          <strong>python-labs-conditionals-loops-sorting-</strong> — 
-          <a href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">
-            GitHub Repository
-          </a>
-        </li>
-      </ul>
-    </div>
+  <!-- About -->
+  <div class="card scroll-fade" id="about">
+    <h2>✨ About Me</h2>
+    <p>
+      Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.
+      Resilient and disciplined, with a decade of high-performance experience shaped by professional football.
+      Deeply committed to continuous learning and real-world impact.
+      Currently pursuing certifications to bridge technology with business outcomes.
+    </p>
+  </div>
 
-    <div class="separator"></div>
+  <div class="separator"></div>
 
-    <div class="card" id="contact">
-      <h2>📇 Contact</h2>
-      <p><span class="contact-label">Email:</span> <span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
-      <p><span class="contact-label">Phone:</span> <span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
-      <
+  <!-- Skills -->
+  <div class="card scroll-fade" id="skills">
+    <h2>🛠️ Skills</h2>
+    <ul>
+      <li>Python (Debugging, Automation)</li>
+      <li>Microsoft Suite</li>
+      <li>Digital Marketing & E-Commerce</li>
+      <li>Resilience & Discipline</li>
+      <li>Team Leadership</li>
+    </ul>
+  </div>
+
+  <div class="separator"></div>
+
+  <!-- Projects -->
+  <div class="card scroll-fade" id="projects">
+    <h2>📂 Projects</h2>
+    <ul>
+      <li>
+        <strong>python-labs-conditionals-loops-sorting-</strong> —
+        <a class="gold-link" href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">
+          GitHub Repository
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="separator"></div>
+
+  <!-- Contact -->
+  <div class="card scroll-fade" id="contact">
+    <h2>📇 Contact</h2>
+    <p><span class="contact-label">Email:</span> <span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+    <p><span class="contact-label">Phone:</span> <span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
+    <p><span class="contact-label">Website:</span> <span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+    <p><span class="contact-label">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
+  </div>
+
+  <!-- Back to Top -->
+  <button id="backToTop" aria-label="Back to top">⬆️</button>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Mohamed Abdelrazek — All Rights Reserved
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Theme toggle with persistence
+    const themeToggle = document.getElementById("themeToggle");
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
+    }
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      const newTheme = current === "light" ? "dark" : "light";
+      applyTheme(newTheme);
+      localStorage.setItem("theme", newTheme);
+    }
+    themeToggle.addEventListener("click", toggleTheme);
+    window.addEventListener("DOMContentLoaded", () => {
+      const saved = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      applyTheme(saved || (prefersLight ? "light" : "dark"));
+    });
+
+    // Scroll fade-in
+    const scrollElements = document.querySelectorAll(".scroll-fade");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.1 });
+    scrollElements.forEach(el => observer.observe(el));
+
+    // Back to top
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) backToTopBtn.classList.add("show");
+      else backToTopBtn.classList.remove("show");
+    });
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Splash screen
+    window.addEventListener("load", () => {
+      const splash = document.getElementById("splash");
+      const splashSound = document.getElementById("splashSound");
+      setTimeout(() => {
+        splash.classList.add("fade-out");
+        splashSound.play().catch(()=>{});
+      }, 1200);
+    });
+  </script>
+</body>
+</html>
