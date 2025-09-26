@@ -1,350 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Mohamed Abdelrazek — Resume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    :root {
-      --bg1: #2a2a2a;
-      --bg2: #3a3a3a;
-      --text: #ffffff;
-      --gold: #FFD700;
-      --card: #444;
-    }
+:root {
+  --bg1: #2a2a2a;
+  --bg2: #3a3a3a;
+  --text: #ffffff;
+  --accent: #FFD700;
+  --card: #444;
+  --motto: #ffffff;
+  --shadow: rgba(255, 215, 0, 0.3);
+}
 
-    body {
-      margin: 20px;
-      font-family: "Times New Roman", Times, serif;
-      font-size: 16px;
-      background: linear-gradient(135deg, var(--bg1), var(--bg2));
-      background-size: 400% 400%;
-      animation: backgroundShift 20s ease infinite;
-      color: var(--text);
-      line-height: 1.4;
-      position: relative;
-    }
+/* 🌞 Light Mode Variables */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg1: #fdf6e3;
+    --bg2: #fbeec1;
+    --text: #222222;
+    --accent: #FFB300;
+    --card: #fff8e1;
+    --motto: #00BFFF;
+    --shadow: rgba(255, 179, 0, 0.3);
+  }
+}
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('hero-bg.jpg') center/cover no-repeat;
-      opacity: 0.12;
-      z-index: -2;
-    }
+/* 🔘 Manual Toggle Support */
+[data-theme="light"] {
+  --bg1: #fdf6e3;
+  --bg2: #fbeec1;
+  --text: #222222;
+  --accent: #FFB300;
+  --card: #fff8e1;
+  --motto: #00BFFF;
+  --shadow: rgba(255, 179, 0, 0.3);
+}
 
-    @keyframes backgroundShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+[data-theme="dark"] {
+  --bg1: #2a2a2a;
+  --bg2: #3a3a3a;
+  --text: #ffffff;
+  --accent: #FFD700;
+  --card: #444;
+  --motto: #ffffff;
+  --shadow: rgba(255, 215, 0, 0.3);
+}
 
-    h1 {
-      font-size: 30px;
-      text-align: center;
-      color: var(--gold);
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+/* 🌈 Base Styling */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', serif;
+  font-size: 20px;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  background-size: 400% 400%;
+  animation: backgroundShift 20s ease infinite;
+  color: var(--text);
+  scroll-behavior: smooth;
+  transition: background 0.4s ease, color 0.4s ease;
+}
 
-    h2 {
-      font-size: 19px;
-      color: var(--gold);
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    .motto {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+.resume-container {
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--shadow);
+  border-left: 4px solid var(--accent);
+}
 
-    .profile-pic {
-      display: block;
-      margin: 0 auto 20px;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--gold);
-      box-shadow: 0 0 10px rgba(255,215,0,0.6);
-    }
+h1, h2, h3 {
+  color: var(--accent);
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
 
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+h1 {
+  font-size: 2.2rem;
+  text-align: center;
+}
 
-    .left-column,
-    .right-column {
-      box-sizing: border-box;
-      padding: 0 10px;
-    }
+h2 {
+  font-size: 1.6rem;
+}
 
-    .left-column {
-      width: 30%;
-    }
+h3 {
+  font-size: 1.3rem;
+}
 
-    .right-column {
-      width: 70%;
-      border-left: 1px solid rgba(255,215,0,0.2);
-    }
+p, li {
+  font-size: 17px;
+  color: var(--text);
+}
 
-    .card {
-      background: var(--card);
-      padding: 0.8rem;
-      margin-bottom: 15px;
-      border-radius: 6px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-    }
+.motto {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+  color: var(--motto);
+}
 
-    .card:nth-child(1) { animation-delay: 0.2s; }
-    .card:nth-child(2) { animation-delay: 0.4s; }
-    .card:nth-child(3) { animation-delay: 0.6s; }
-    .card:nth-child(4) { animation-delay: 0.8s; }
-    .card:nth-child(5) { animation-delay: 1s; }
+.profile-pic {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  object-fit: cover;
+  box-shadow: 0 0 6px var(--shadow);
+}
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.section {
+  margin-bottom: 2rem;
+}
 
-    ul {
-      list-style-type: none;
-      padding-left: 15px;
-      margin: 0;
-    }
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
 
-    li::before {
-      content: "• ";
-      color: var(--gold);
-      font-weight: bold;
-    }
+.lang-tag {
+  background-color: var(--accent);
+  color: #000;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 4px;
+}
 
-    li {
-      margin: 4px 0;
-      font-size: 16px;
-      color: var(--text);
-    }
+.level-tag {
+  background-color: #666;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  margin-right: 12px;
+}
 
-    p {
-      font-size: 16px;
-      color: var(--text);
-    }
+.download-link {
+  text-align: center;
+  margin-top: 2rem;
+}
 
-    a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: bold;
-    }
+.download-link a {
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 0 6px var(--shadow);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
 
-    a:hover {
-      text-decoration: underline;
-      color: var(--gold);
-    }
+.download-link a:hover {
+  background: #fff8dc;
+  box-shadow: 0 0 8px var(--shadow);
+  transform: translateY(-2px);
+}
 
-    .role {
-      font-weight: bold;
-    }
+/* 📱 Mobile Optimization */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 0 1rem;
+  }
 
-    .date {
-      font-size: 15px;
-      font-weight: bold;
-    }
+  h1 {
+    font-size: 1.8rem;
+  }
 
-    .contact-label {
-      font-weight: bold;
-      color: var(--gold);
-      display: block;
-      margin-top: 6px;
-    }
+  h2 {
+    font-size: 1.4rem;
+  }
 
-    .contact-value {
-      margin-left: 10px;
-      display: inline-block;
-    }
+  h3 {
+    font-size: 1.2rem;
+  }
 
-    .lang-tag {
-      display: inline-block;
-      background-color: var(--gold);
-      color: #000;
-      padding: 3px 8px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: bold;
-      margin-right: 4px;
-    }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
 
-    .level-tag {
-      display: inline-block;
-      background-color: #666;
-      color: #fff;
-      padding: 3px 8px;
-      border-radius: 12px;
-      font-size: 13px;
-      margin-right: 12px;
-    }
+  .motto {
+    font-size: 1rem;
+    color: #00BFFF;
+    font-weight: bold;
+  }
 
-    .download-link {
-      text-align: center;
-      margin-top: 30px;
-    }
+  p, li {
+    font-size: 15px;
+  }
 
-    .download-link a {
-      color: var(--gold);
-      font-weight: bold;
-      font-size: 16px;
-      text-decoration: none;
-    }
+  .lang-tag,
+  .level-tag {
+    font-size: 12px;
+    padding: 2px 6px;
+  }
 
-    .download-link a:hover {
-      text-decoration: underline;
-    }
+  .download-link a {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
 
-    @media (max-width: 600px) {
-      body {
-        margin: 10px;
-        font-size: 15px;
-      }
+  .contact-label,
+  .contact-value {
+    font-size: 14px;
+  }
 
-      h1 {
-        font-size: 24px;
-      }
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
 
-      h2 {
-        font-size: 17px;
-      }
+  .download-link {
+    margin-top: 1.5rem;
+  }
 
-      .profile-pic {
-        width: 100px;
-        height: 100px;
-      }
-
-      .grid {
-        flex-direction: column;
-      }
-
-      .left-column,
-      .right-column {
-        width: 100%;
-        padding: 0;
-        border: none;
-      }
-
-      .card {
-        padding: 1rem;
-        margin-bottom: 20px;
-      }
-
-      li,
-      p {
-        font-size: 15px;
-      }
-
-      .lang-tag,
-      .level-tag {
-        font-size: 12px;
-        padding: 2px 6px;
-      }
-
-      .download-link a {
-        font-size: 15px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Mohamed Abdelrazek</h1>
-  <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
-  <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
-
-  <div class="grid">
-    <div class="left-column">
-      <div class="card">
-        <h2>🛠️ Skills</h2>
-        <ul>
-          <li>Python (Debugging, Automation)</li>
-          <li>Data Analysis Fundamentals</li>
-          <li>AI Fundamentals</li>
-          <li>GitHub & Version Control</li>
-          <li>Microsoft Suite</li>
-          <li>Digital Marketing & E-Commerce</li>
-          <li>Resilience & Discipline</li>
-          <li>Team Leadership</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>🎓 Certifications</h2>
-        <ul>
-          <li>Google IT Automation with Python</li>
-          <li>Microsoft Python Development</li>
-          <li>Google Digital Marketing & E-Commerce</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>📇 Contact</h2>
-        <p><span class="contact-label">Email:</span><span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
-        <p><span class="contact-label">Phone:</span><span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
-        <p><span class="contact-label">Website:</span><span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
-        <p><span class="contact-label">Address:</span><span class="contact-value">Alexandria, Egypt</span></p>
-      </div>
-    </div>
-
-    <div class="right-column">
-      <div class="card">
-        <h2>✨ Professional Summary</h2>
-        <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Deeply committed to continuous learning and real-world impact. impact. Currently pursuing certifications to bridge technology with business outcomes and deliver practical, scalable solutions. <p>
-        Currently pursuing certifications to bridge technology with business outcomes.</p>
-          <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
-          <span class="lang-tag">English</span> <span class="level-tag">Near Native</span>
-          <span class="lang-tag">German</span> <span class="level-tag">B2 – Intermediate</span>
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>💼 Professional Experience</h2>
-        <p><span class="role">Engoo — Online Tutor</span> <span class="date">(2021–Present)</span></p>
-        <ul>
-          <li>Delivered personalized lessons to diverse learners; strengthened communication and adaptability.</li>
-          <li>Leveraged digital tools to improve outcomes and track progress.</li>
-          <li>Maintained high session quality and learner satisfaction across hundreds of lessons.</li>
-        </ul>
-
-        <p><span class="role">Professional Athlete — Football</span> <span class="date">(2011–2022)</span></p>
-        <ul>
-          <li>Competed at a high level for over a decade; developed discipline and resilience under pressure.</li>
-          <li>Led and collaborated within dynamic teams; honed leadership and teamwork.</li>
-          <li>Transferred performance mindset to technology learning and delivery.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>🏫 Education</h2>
-        <p><span class="role">Alexandria University — Engineering Studies</span></p>
-        <ul>
-          <li>Completed 4 years, 48 rigorous courses; degree not finalized.</li>
-          <li>Focus areas: Systems Thinking, Analytical Methods, Problem-Solving.</li>
-          <li>Applied engineering discipline to software development workflows.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="download-link">
-    <a href="Mohamed_Abdelrazek_Resume.pdf" download>
-      📄 Download PDF Resume
-    </a>
-  </div>
-
-</body>
-</html>
+  .download-link a {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+}
