@@ -5,37 +5,51 @@
   <title>Mohamed Abdelrazek — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Mohamed Abdelrazek — Python developer, engineer, and multidisciplinary professional with expertise in AI, data analysis, and digital marketing." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph for SEO -->
+  <meta property="og:title" content="Mohamed Abdelrazek — Portfolio" />
+  <meta property="og:description" content="Portfolio of Mohamed Abdelrazek — Python developer, engineer, and multidisciplinary professional with expertise in AI, data analysis, and digital marketing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://moeabdelrazek.github.io/" />
+  <meta property="og:image" content="profile.jpg" />
 </head>
 <body>
 
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="site-title">👋 Moe's Portfolio</div>
-    <div class="nav-links">
+    <nav class="nav-links">
       <ul>
         <li><a href="#about">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-    <button id="themeToggle" class="cta-btn theme-toggle">🌙 Mode</button>
+    </nav>
+    <button id="themeToggle" class="cta-btn theme-toggle" aria-label="Toggle theme">🌙 Mode</button>
   </div>
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
+    <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" loading="lazy" />
     <h1>Mohamed Abdelrazek</h1>
     <p class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</p>
-    <a href="Mohamed_Abdelrazek_Resume.pdf" target="_blank" class="cta-btn">📄 Resume</a>
-    <a href="#projects" class="cta-btn">💻 Work</a>
+    <div class="hero-buttons">
+      <a href="Mohamed_Abdelrazek_Resume.pdf" target="_blank" class="cta-btn">📄 Resume</a>
+      <a href="#projects" class="cta-btn">💻 Work</a>
+    </div>
   </section>
 
   <div class="separator"></div>
 
   <!-- About -->
-  <div class="card scroll-fade" id="about">
+  <section class="card scroll-fade" id="about">
     <h2>✨ About Me</h2>
     <p>
       Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.
@@ -48,12 +62,12 @@
       <span class="lang-tag">English</span> <span class="level-tag">Near Native</span>
       <span class="lang-tag">German</span> <span class="level-tag">B2 – Intermediate</span>
     </div>
-  </div>
+  </section>
 
   <div class="separator"></div>
 
   <!-- Skills -->
-  <div class="card scroll-fade" id="skills">
+  <section class="card scroll-fade" id="skills">
     <h2>🛠️ Skills</h2>
     <ul>
       <li>Python (Debugging, Automation)</li>
@@ -65,43 +79,46 @@
       <li>Resilience & Discipline</li>
       <li>Team Leadership</li>
     </ul>
-  </div>
+  </section>
 
   <div class="separator"></div>
 
   <!-- Projects -->
-  <div class="card scroll-fade" id="projects">
+  <section class="card scroll-fade" id="projects">
     <h2>📂 Projects</h2>
-    <ul>
-      <li>
-        <strong>python-labs-conditionals-loops-sorting-</strong> —
-        <a class="gold-link" href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">
-          GitHub Repository
-        </a>
-      </li>
-    </ul>
-  </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Python Labs: Conditionals, Loops & Sorting</h3>
+        <p>Hands-on Python practice exploring conditionals, loops, and sorting algorithms.</p>
+        <a class="cta-btn" href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">🔗 GitHub Repo</a>
+      </div>
+      <!-- Future projects can be added in similar project-card divs -->
+    </div>
+  </section>
 
   <div class="separator"></div>
 
   <!-- Contact -->
-  <div class="card scroll-fade" id="contact">
+  <section class="card scroll-fade" id="contact">
     <h2>📇 Contact</h2>
-    <p><span class="contact-label">Email:</span> <span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
-    <p><span class="contact-label">Phone:</span> <span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
-    <p><span class="contact-label">Website:</span> <span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
-    <p><span class="contact-label">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
-  </div>
+    <p><span class="contact-label">Email:</span> <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></p>
+    <p><span class="contact-label">Phone:</span> <a href="tel:+201017286384">+20 1017286384</a></p>
+    <p><span class="contact-label">Location:</span> Alexandria, Egypt</p>
+    <div class="social-links">
+      <a href="https://github.com/MoeAbdelrazek" target="_blank">🐙 GitHub</a>
+      <a href="https://linkedin.com/in/" target="_blank">💼 LinkedIn</a>
+    </div>
+  </section>
 
   <div class="separator"></div>
 
   <!-- Final Note -->
-  <div class="card scroll-fade" id="wrapup">
+  <section class="card scroll-fade" id="wrapup">
     <h2>🌟 Final Note</h2>
     <p class="wrapup-message">
       Thank you for exploring my journey. This portfolio is more than a showcase — it's a reflection of discipline, precision, and passion. Let's build something extraordinary together.
     </p>
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -128,6 +145,7 @@
       applyTheme(saved || (prefersLight ? "light" : "dark"));
     });
 
+    // Scroll fade effect
     const scrollElements = document.querySelectorAll(".scroll-fade");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
