@@ -23,6 +23,14 @@
       color: var(--text);
       line-height: 1.5;
       position: relative;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    body.light {
+      --bg1: #f9f9f9;
+      --bg2: #eaeaea;
+      --text: #000;
+      --card: #fff;
     }
 
     body::before {
@@ -62,10 +70,6 @@
       gap: 20px;
     }
 
-    nav ul li {
-      display: inline;
-    }
-
     nav ul li a {
       color: var(--text);
       text-decoration: none;
@@ -89,9 +93,19 @@
 
     .name {
       text-align: center;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
       margin: 5px 0;
+      background: linear-gradient(90deg, #FFD700, #fff, #FFD700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+      background-size: 200%;
+    }
+
+    @keyframes shine {
+      0% { background-position: -200px; }
+      100% { background-position: 200px; }
     }
 
     .motto {
@@ -107,16 +121,19 @@
 
     .actions a {
       display: inline-block;
-      margin: 5px 10px;
-      padding: 8px 14px;
+      margin: 5px 8px;
+      padding: 6px 10px;
+      font-size: 14px;
       background: var(--gold);
       color: #000;
       font-weight: bold;
       border-radius: 4px;
       text-decoration: none;
+      transition: transform 0.2s;
     }
 
     .actions a:hover {
+      transform: scale(1.05);
       background: #e6c200;
     }
 
@@ -131,6 +148,22 @@
       padding: 1rem;
       margin-bottom: 20px;
       border-radius: 6px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .separator {
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin: 30px 0;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h2 {
@@ -204,12 +237,12 @@
 
   <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
   <div class="name">Mohamed Abdelrazek</div>
-  <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner.</div>
+  <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
 
   <div class="actions">
-    <a href="Mohamed_Abdelrazek_Resume.pdf" target="_blank">📄 View My Resume</a>
-    <a href="#projects">💻 View My Work</a>
-    <a href="#contact">📇 Contact Me</a>
+    <a href="Mohamed_Abdelrazek_Resume.pdf" target="_blank">📄 Resume</a>
+    <a href="#projects">💻 Work</a>
+    <a href="javascript:void(0)" onclick="toggleMode()">🌗 Mode</a>
   </div>
 
   <div class="container">
@@ -223,6 +256,8 @@
       </p>
     </div>
 
+    <div class="separator"></div>
+
     <div class="card" id="projects">
       <h2>📂 Projects</h2>
       <ul>
@@ -235,29 +270,10 @@
       </ul>
     </div>
 
+    <div class="separator"></div>
+
     <div class="card" id="contact">
       <h2>📇 Contact</h2>
       <p><span class="contact-label">Email:</span> <span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
       <p><span class="contact-label">Phone:</span> <span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
-      <p><span class="contact-label">Website:</span> <span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
-      <p><span class="contact-label">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
-    </div>
-
-    <div class="card" id="skills">
-      <h2>🛠️ Skills</h2>
-      <ul>
-        <li>Python (Debugging, Automation)</li>
-        <li>Data Analysis Fundamentals</li>
-        <li>AI Fundamentals</li>
-        <li>GitHub & Version Control</li>
-        <li>Microsoft Suite</li>
-        <li>Digital Marketing & E-Commerce</li>
-        <li>Resilience & Discipline</li>
-        <li>Team Leadership</li>
-      </ul>
-    </div>
-  </div>
-
-  <footer>
-    © 2025 Mohamed Abdelrazek — All Rights Reserved
-  </footer
+      <
