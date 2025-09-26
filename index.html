@@ -78,7 +78,7 @@
 
     .profile-pic {
       display: block;
-      margin: 20px auto;
+      margin: 20px auto 10px;
       width: 120px;
       height: 120px;
       border-radius: 50%;
@@ -87,20 +87,43 @@
       box-shadow: 0 0 10px rgba(255,215,0,0.6);
     }
 
+    .name {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .motto {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .actions {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .actions a {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 8px 14px;
+      background: var(--gold);
+      color: #000;
+      font-weight: bold;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .actions a:hover {
+      background: #e6c200;
+    }
+
     .container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 20px;
-      display: flex;
-      gap: 20px;
-    }
-
-    .left-column {
-      width: 30%;
-    }
-
-    .right-column {
-      width: 70%;
     }
 
     .card {
@@ -113,6 +136,7 @@
     h2 {
       color: var(--gold);
       margin-bottom: 10px;
+      font-weight: bold;
     }
 
     ul {
@@ -128,6 +152,31 @@
 
     li {
       margin: 5px 0;
+    }
+
+    /* Contact styling */
+    #contact p {
+      color: #fff;
+      margin: 6px 0;
+    }
+
+    #contact a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    #contact a:hover {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .contact-label {
+      font-weight: bold;
+    }
+
+    .contact-value {
+      font-weight: normal;
     }
 
     footer {
@@ -146,66 +195,69 @@
     <nav>
       <ul>
         <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
+  <div class="name">Mohamed Abdelrazek</div>
+  <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner.</div>
+
+  <div class="actions">
+    <a href="Mohamed_Abdelrazek_Resume.pdf" target="_blank">📄 View My Resume</a>
+    <a href="#projects">💻 View My Work</a>
+    <a href="#contact">📇 Contact Me</a>
+  </div>
 
   <div class="container">
-    <div class="left-column">
-      <div class="card" id="skills">
-        <h2>🛠️ Skills</h2>
-        <ul>
-          <li>Python (Debugging, Automation)</li>
-          <li>Data Analysis Fundamentals</li>
-          <li>AI Fundamentals</li>
-          <li>GitHub & Version Control</li>
-          <li>Microsoft Suite</li>
-          <li>Digital Marketing & E-Commerce</li>
-          <li>Resilience & Discipline</li>
-          <li>Team Leadership</li>
-        </ul>
-      </div>
+    <div class="card" id="about">
+      <h2>✨ About Me</h2>
+      <p>
+        Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. 
+        Resilient and disciplined, with a decade of high-performance experience shaped by professional football. 
+        Deeply committed to continuous learning and real-world impact. 
+        Currently pursuing certifications to bridge technology with business outcomes.
+      </p>
     </div>
 
-    <div class="right-column">
-      <div class="card" id="about">
-        <h2>✨ About Me</h2>
-        <p>
-          Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. 
-          Resilient and disciplined, with a decade of high-performance experience shaped by professional football. 
-          Deeply committed to continuous learning and real-world impact. 
-          Currently pursuing certifications to bridge technology with business outcomes.
-        </p>
-      </div>
+    <div class="card" id="projects">
+      <h2>📂 Projects</h2>
+      <ul>
+        <li>
+          <strong>python-labs-conditionals-loops-sorting-</strong> — 
+          <a href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">
+            GitHub Repository
+          </a>
+        </li>
+      </ul>
+    </div>
 
-      <div class="card" id="projects">
-        <h2>📂 Projects</h2>
-        <ul>
-          <li><strong>Portfolio & Resume Website</strong> — Fully responsive, light/dark mode, unified branding.</li>
-          <li><strong>Resume Builder Tool</strong> — Modular, cross-format resume generator with adaptive design.</li>
-          <li><strong>Web Design Refinements</strong> — Iterative accessibility and responsive layout improvements.</li>
-          <li><strong>Python Automation Scripts</strong> — Debugging, validation, and workflow automation.</li>
-        </ul>
-      </div>
+    <div class="card" id="contact">
+      <h2>📇 Contact</h2>
+      <p><span class="contact-label">Email:</span> <span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+      <p><span class="contact-label">Phone:</span> <span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
+      <p><span class="contact-label">Website:</span> <span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+      <p><span class="contact-label">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
+    </div>
 
-      <div class="card" id="contact">
-        <h2>📇 Contact</h2>
-        <p>Email: <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></p>
-        <p>Phone: <a href="tel:+201017286384">+20 1017286384</a></p>
-        <p>Website: <a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></p>
-        <p>Location: Alexandria, Egypt</p>
-      </div>
+    <div class="card" id="skills">
+      <h2>🛠️ Skills</h2>
+      <ul>
+        <li>Python (Debugging, Automation)</li>
+        <li>Data Analysis Fundamentals</li>
+        <li>AI Fundamentals</li>
+        <li>GitHub & Version Control</li>
+        <li>Microsoft Suite</li>
+        <li>Digital Marketing & E-Commerce</li>
+        <li>Resilience & Discipline</li>
+        <li>Team Leadership</li>
+      </ul>
     </div>
   </div>
 
   <footer>
     © 2025 Mohamed Abdelrazek — All Rights Reserved
-  </footer>
-
-</body>
-</html>
+  </footer
