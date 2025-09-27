@@ -13,11 +13,11 @@
   --bg1: #fdfdfd;
   --bg2: #f0f0f0;
   --text: #000000;
-  --accent: #FFB300;
+  --accent: #005f5f; /* Petrol for light mode */
   --card: #ffffff;
-  --motto: #006C7F;
-  --shadow: rgba(0, 108, 127, 0.3);
-  --gold: #FFB300;
+  --motto: #000000; /* black for light mode */
+  --shadow: rgba(0, 95, 95, 0.3);
+  --gold: #005f5f; /* Petrol for light mode */
 }
 
 /* Global Reset & Transitions */
@@ -275,7 +275,7 @@ footer {
 }
 
 .white-text {
-  color: #ffffff !important;
+  color: var(--text) !important;
 }
 
 .bold-text {
