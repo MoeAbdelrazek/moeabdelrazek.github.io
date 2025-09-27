@@ -265,9 +265,21 @@ footer {
 .wrapup-message {
   font-size: 1rem;
   font-weight: bold;
-  color: var(--gold);
   text-align: center;
   margin-top: 10px;
+}
+
+/* Custom Color Classes */
+.gold-text {
+  color: var(--gold) !important;
+}
+
+.white-text {
+  color: #ffffff !important;
+}
+
+.bold-text {
+  font-weight: bold !important;
 }
 
 /* Mobile Optimization */
