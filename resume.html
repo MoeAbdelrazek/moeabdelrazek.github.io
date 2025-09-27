@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <title>Mohamed Abdelrazek — Resume</title>
@@ -13,6 +13,14 @@
       --card: #444;
     }
 
+    [data-theme="light"] {
+      --gold: #005f5f; /* petrol */
+      --text: #000000; /* black */
+      --bg1: #fdfdfd;
+      --bg2: #f0f0f0;
+      --card: #ffffff;
+    }
+
     body {
       margin: 20px;
       font-family: "Times New Roman", Times, serif;
@@ -23,6 +31,7 @@
       color: var(--text);
       line-height: 1.4;
       position: relative;
+      transition: background 0.4s ease, color 0.4s ease;
     }
 
     body::before {
@@ -57,8 +66,9 @@
 
     .motto {
       text-align: center;
-      font-weight: bold; /* no italic */
+      font-weight: bold;
       margin-bottom: 20px;
+      color: var(--gold);
     }
 
     .profile-pic {
@@ -76,17 +86,17 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      max-width: 1200px; /* widened */
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .left-column {
-      width: 35%; /* increased */
+      width: 35%;
       padding-right: 20px;
     }
 
     .right-column {
-      width: 65%; /* increased */
+      width: 65%;
       padding-left: 20px;
       border-left: 1px solid rgba(255,215,0,0.2);
     }
@@ -132,14 +142,13 @@
     }
 
     a {
-      color: var(--text);
+      color: var(--gold);
       text-decoration: none;
       font-weight: bold;
     }
 
     a:hover {
       text-decoration: underline;
-      color: var(--gold);
     }
 
     .role {
@@ -161,6 +170,7 @@
     .contact-value {
       margin-left: 10px;
       display: inline-block;
+      color: var(--text);
     }
 
     .lang-tag {
@@ -199,18 +209,35 @@
     .download-link a:hover {
       text-decoration: underline;
     }
+
+    /* Toggle Button */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .bold-text { font-weight: bold; }
+    .white-text { color: var(--text); }
+    .gold-text { color: var(--gold); }
   </style>
 </head>
 <body>
 
-  <h1>Mohamed Abdelrazek</h1>
-  <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
+  <button id="themeToggle" class="theme-toggle">🌙 Mode</button>
+
+  <h1 class="gold-text">Mohamed Abdelrazek</h1>
+  <div class="motto gold-text">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
   <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
 
   <div class="grid">
     <div class="left-column">
       <div class="card">
-        <h2>🛠️ Skills</h2>
+        <h2 class="gold-text">Skills</h2>
         <ul>
           <li>Python (Debugging, Automation)</li>
           <li>Data Analysis Fundamentals</li>
@@ -224,7 +251,7 @@
       </div>
 
       <div class="card">
-        <h2>🎓 Certifications</h2>
+        <h2 class="gold-text">Certifications</h2>
         <ul>
           <li>Google IT Automation with Python</li>
           <li>Microsoft Python Development</li>
@@ -232,21 +259,19 @@
         </ul>
       </div>
 
-      <!-- Languages card removed -->
-
       <div class="card">
-        <h2>📇 Contact</h2>
-        <p><span class="contact-label">Email:</span><span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
-        <p><span class="contact-label">Phone:</span><span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
-        <p><span class="contact-label">Website:</span><span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
-        <p><span class="contact-label">Address:</span><span class="contact-value">Alexandria, Egypt</span></p>
+        <h2 class="gold-text">Contact</h2>
+        <p><span class="contact-label gold-text">Email:</span><span class="contact-value"> <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+        <p><span class="contact-label gold-text">Phone:</span><span class="contact-value"> <a href="tel:+201017286384">+20 1017286384</a></span></p>
+        <p><span class="contact-label gold-text">Website:</span><span class="contact-value"> <a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+        <p class="bold-text">Alexandria, Egypt</p>
       </div>
     </div>
 
     <div class="right-column">
       <div class="card">
-        <h2>✨ Professional Summary</h2>
-        <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Deeply committed to continuous learning and real-world impact.<br>
+        <h2 class="gold-text">Professional Summary</h2>
+        <p class="white-text">Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Deeply committed to continuous learning and real-world impact.<br>
         Currently pursuing certifications to bridge technology with business outcomes.</p>
         <p>
           <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
@@ -256,7 +281,7 @@
       </div>
 
       <div class="card">
-        <h2>💼 Professional Experience</h2>
+        <h2 class="gold-text">Professional Experience</h2>
         <p><span class="role">Engoo — Online Tutor</span> <span class="date">(2021–Present)</span></p>
         <ul>
           <li>Delivered personalized lessons to diverse learners; strengthened communication and adaptability.</li>
@@ -273,7 +298,7 @@
       </div>
 
       <div class="card">
-        <h2>🏫 Education</h2>
+        <h2 class="gold-text">Education</h2>
         <p><span class="role">Alexandria University — Engineering Studies</span></p>
         <ul>
           <li>Completed 4 years, 48 rigorous courses; degree not finalized.</li>
@@ -285,8 +310,28 @@
   </div>
 
   <div class="download-link">
-    <a href="Mohamed_Abdelrazek_Resume.pdf" download>📄 Download PDF Resume</a>
+    <a href="Mohamed_Abdelrazek_Resume.pdf" download>Download PDF Resume</a>
   </div>
+
+  <script>
+    const themeToggle = document.getElementById("themeToggle");
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
+    }
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      const newTheme = current === "light" ? "dark" : "light";
+      applyTheme(newTheme);
+      localStorage.setItem("theme", newTheme);
+    }
+    themeToggle.addEventListener("click", toggleTheme);
+    window.addEventListener("DOMContentLoaded", () => {
+      const saved = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      applyTheme(saved || (prefersLight ? "light" : "dark"));
+    });
+  </script>
 
 </body>
 </html>
