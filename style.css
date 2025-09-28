@@ -37,7 +37,7 @@
 body {
   font-family: "Times New Roman", Times, serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
   background: linear-gradient(135deg, var(--bg1), var(--bg2));
   background-size: 400% 400%;
   animation: backgroundShift 20s ease infinite;
@@ -129,8 +129,23 @@ body::before {
 .motto {
   font-size: 1.3rem; /* increased by 1 */
   margin-bottom: 20px;
-  line-height: 1.4; /* reduced spacing */
+  line-height: 1.4;
 }
+
+/* Restore profile picture to original */
+.profile-pic {
+  display: block;
+  margin: 0 auto 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 10px var(--shadow);
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover { transform: scale(1.05); }
 
 /* Resume & Work buttons smaller icons */
 .cta-btn.resume, .cta-btn.work {
@@ -162,29 +177,29 @@ body::before {
 /* About text spacing reduced */
 .about-text {
   line-height: 1.35; /* tighter spacing */
-  font-size: 1.05rem; /* slightly bigger than default */
+  font-size: 1.05rem; /* slightly bigger */
 }
 
-/* Language tags */
+/* Language tags with icons */
 .language-tags {
   margin-top: 10px;
 }
 
-.lang-tag {
-  font-weight: bold;
-  margin-right: 5px;
-  color: var(--gold); /* dark mode */
+.lang-tag::before {
+  content: "🌐 "; /* language icon */
+  margin-right: 3px;
+  color: var(--gold);
 }
 
-.level-tag {
-  font-weight: normal;
-  margin-right: 10px;
-  color: #fff; /* dark mode */
+.level-tag::before {
+  content: "💬 "; /* level icon */
+  margin-right: 3px;
+  color: #fff;
 }
 
 /* Light mode overrides */
-[data-theme="light"] .lang-tag { color: var(--gold); }
-[data-theme="light"] .level-tag { color: #000; }
+[data-theme="light"] .lang-tag::before { color: var(--gold); }
+[data-theme="light"] .level-tag::before { color: #000; }
 
 /* ==============================
    Lists
@@ -198,7 +213,7 @@ li::before {
 
 li {
   margin: 5px 0;
-  font-size: 15px; /* reduced by 1 */
+  font-size: 16px; /* increased by 1 */
   font-weight: normal;
 }
 
@@ -220,12 +235,12 @@ a:focus {
 
 /* Project title */
 .project-title {
-  font-size: 1.9rem; /* increased by 2 */
-  font-weight: bold;
+  font-size: 16px; /* reduced by 2 */
+  font-weight: normal;
 }
 
 .project-link {
-  font-weight: bold;
+  font-weight: normal;
   color: var(--gold);
 }
 
@@ -233,8 +248,8 @@ a:focus {
    Contact
 ============================== */
 .contact-label {
-  font-weight: bold;
-  font-size: 1.2rem; /* increased by 2 */
+  font-weight: normal;
+  font-size: 0.95rem; /* reduced by 1 */
   color: var(--gold);
   display: inline-block;
   margin-right: 6px;
@@ -242,7 +257,7 @@ a:focus {
 
 .contact-value {
   font-weight: normal;
-  font-size: 0.95rem; /* reduced by 1 */
+  font-size: 1.05rem; /* increased by 1 */
 }
 
 /* ==============================
@@ -299,12 +314,7 @@ footer {
   font-weight: normal;
   text-align: center;
   margin-top: 10px;
-  font-size: 1.05rem; /* slightly bigger */
-}
-
-.header-link {
-  color: var(--gold);
-  font-size: 1.25rem; /* increased by 2 */
+  font-size: 1.05rem;
 }
 
 /* ==============================
@@ -315,12 +325,12 @@ footer {
   .nav-links ul { flex-wrap: wrap; gap: 0.8rem; }
   h1.hero-name { font-size: 1.7rem; }
   h2 { font-size: 18px; }
-  .profile-pic { width: 100px; height: 100px; }
+  .profile-pic { width: 120px; height: 120px; } /* restored original */
   .motto { font-size: 1.1rem; }
   .card { margin: 1rem; }
   .lang-tag, .level-tag { font-size: 12px; padding: 2px 6px; }
   .cta-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
-  .contact-label { font-size: 1rem; }
-  .contact-value { font-size: 0.9rem; }
+  .contact-label { font-size: 0.95rem; }
+  .contact-value { font-size: 1.05rem; }
   .wrapup-message { font-size: 1rem; }
 }
