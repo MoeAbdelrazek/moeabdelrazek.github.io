@@ -10,7 +10,7 @@
   --motto: #ffffff;
   --shadow: rgba(255, 215, 0, 0.3);
   --gold: #FFD700;
-  --petrol: #005f5f; /* for light mode replacement */
+  --petrol: #005f5f;
 }
 
 [data-theme="light"] {
@@ -72,31 +72,26 @@ body::before {
   position: sticky;
   top: 0;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .site-title {
-  font-size: 1.3rem; /* increased by 2 */
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--gold);
-  font-family: "Times New Roman", Times, serif;
 }
 
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
   color: var(--text);
-  font-family: "Times New Roman", Times, serif;
   font-weight: normal;
   text-decoration: none;
-}
-
-.nav-links a.header-link {
-  color: var(--gold);
-  font-size: 1.25rem; /* increased by 2 */
 }
 
 .nav-links a:hover,
@@ -110,8 +105,9 @@ body::before {
 ============================== */
 .hero {
   text-align: center;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   animation: fadeIn 1.5s ease;
+  max-width: 95%;
 }
 
 @keyframes fadeIn {
@@ -119,20 +115,17 @@ body::before {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.hero h1.hero-name {
-  font-family: "Times New Roman", Times, serif;
+.hero-name {
+  font-size: 2rem;
   font-weight: bold;
-  font-size: 2rem; /* bigger and bold */
-  color: var(--gold);
+  margin-bottom: 0.5rem;
 }
 
 .motto {
-  font-size: 1.3rem; /* increased by 1 */
-  margin-bottom: 20px;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
 }
 
-/* Restore profile picture to original */
 .profile-pic {
   display: block;
   margin: 0 auto 20px;
@@ -147,10 +140,24 @@ body::before {
 
 .profile-pic:hover { transform: scale(1.05); }
 
-/* Resume & Work buttons smaller icons */
-.cta-btn.resume, .cta-btn.work {
-  font-size: 0.85rem;
+.cta-btn {
+  display: inline-block;
+  margin: 0.5rem;
   padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: normal;
+  box-shadow: 0 0 6px var(--shadow);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  background: #fff8dc;
+  box-shadow: 0 0 8px var(--shadow);
+  transform: translateY(-2px);
+  outline: none;
 }
 
 /* ==============================
@@ -166,7 +173,6 @@ body::before {
   transform: translateY(20px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: opacity 0.8s ease, transform 0.8s ease;
-  font-family: "Times New Roman", Times, serif;
 }
 
 .card.visible {
@@ -174,47 +180,62 @@ body::before {
   transform: translateY(0);
 }
 
-/* About text spacing reduced */
-.about-text {
-  line-height: 1.35; /* tighter spacing */
-  font-size: 1.05rem; /* slightly bigger */
-}
-
-/* Language tags with icons */
-.language-tags {
-  margin-top: 10px;
-}
-
-.lang-tag::before {
-  content: "🌐 "; /* language icon */
-  margin-right: 3px;
-  color: var(--gold);
-}
-
-.level-tag::before {
-  content: "💬 "; /* level icon */
-  margin-right: 3px;
-  color: #fff;
-}
-
-/* Light mode overrides */
-[data-theme="light"] .lang-tag::before { color: var(--gold); }
-[data-theme="light"] .level-tag::before { color: #000; }
-
 /* ==============================
    Lists
 ============================== */
 ul { list-style-type: none; padding-left: 15px; }
 
-li::before {
-  content: "• ";
-  color: var(--gold);
+.skills-list li {
+  margin: 6px 0;
+  font-size: 17px; /* increased by 1 */
+  font-weight: normal;
 }
 
-li {
-  margin: 5px 0;
-  font-size: 16px; /* increased by 1 */
+.project-title {
+  font-size: 16px; /* reduced by 2 */
   font-weight: normal;
+}
+
+/* ==============================
+   About Me Text
+============================== */
+.about-text {
+  line-height: 1.35;
+}
+
+/* ==============================
+   Language Tags
+============================== */
+.language-tags {
+  margin-top: 5px;
+}
+
+.lang-tag {
+  color: var(--gold);
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.level-tag {
+  color: var(--text);
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+[data-theme="light"] .lang-tag { color: var(--petrol); }
+[data-theme="light"] .level-tag { color: #000; }
+
+/* ==============================
+   Contact
+============================== */
+.contact-label {
+  font-weight: normal;
+  font-size: 15px; /* reduced by 1 */
+}
+
+.contact-value {
+  font-weight: normal;
+  font-size: 17px; /* increased by 1 */
 }
 
 /* ==============================
@@ -223,66 +244,12 @@ li {
 a {
   color: var(--text);
   text-decoration: none;
-  font-weight: normal;
-  font-family: "Times New Roman", Times, serif;
 }
 
 a:hover,
 a:focus {
   color: var(--gold);
   text-decoration: underline;
-}
-
-/* Project title */
-.project-title {
-  font-size: 16px; /* reduced by 2 */
-  font-weight: normal;
-}
-
-.project-link {
-  font-weight: normal;
-  color: var(--gold);
-}
-
-/* ==============================
-   Contact
-============================== */
-.contact-label {
-  font-weight: normal;
-  font-size: 0.95rem; /* reduced by 1 */
-  color: var(--gold);
-  display: inline-block;
-  margin-right: 6px;
-}
-
-.contact-value {
-  font-weight: normal;
-  font-size: 1.05rem; /* increased by 1 */
-}
-
-/* ==============================
-   CTA Buttons
-============================== */
-.cta-btn {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.8rem 1.8rem;
-  background: var(--accent);
-  color: #000;
-  font-weight: normal;
-  border-radius: 6px;
-  text-decoration: none;
-  font-family: "Times New Roman", Times, serif;
-  box-shadow: 0 0 6px var(--shadow);
-  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.cta-btn:hover,
-.cta-btn:focus {
-  background: #fff8dc;
-  box-shadow: 0 0 8px var(--shadow);
-  transform: translateY(-2px);
-  outline: none;
 }
 
 /* ==============================
@@ -310,27 +277,20 @@ footer {
 /* ==============================
    Final Note
 ============================== */
-.wrapup-message {
-  font-weight: normal;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 1.05rem;
-}
+.wrapup-message { font-weight: normal; text-align: center; margin-top: 10px; }
 
 /* ==============================
    Mobile Optimization
 ============================== */
 @media (max-width: 700px) {
-  .top-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-  .nav-links ul { flex-wrap: wrap; gap: 0.8rem; }
-  h1.hero-name { font-size: 1.7rem; }
-  h2 { font-size: 18px; }
-  .profile-pic { width: 120px; height: 120px; } /* restored original */
-  .motto { font-size: 1.1rem; }
-  .card { margin: 1rem; }
+  .top-bar { flex-direction: column; align-items: center; gap: 0.5rem; }
+  .nav-links ul { flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .hero-name { font-size: 1.8rem; }
+  .profile-pic { width: 120px; height: 120px; } /* restored original size */
+  .motto { font-size: 1rem; }
+  .card { margin: 1rem; padding: 0.8rem; }
   .lang-tag, .level-tag { font-size: 12px; padding: 2px 6px; }
   .cta-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
-  .contact-label { font-size: 0.95rem; }
-  .contact-value { font-size: 1.05rem; }
-  .wrapup-message { font-size: 1rem; }
+  .skills-list li { font-size: 16px; }
+  .wrapup-message { font-size: 0.95rem; }
 }
