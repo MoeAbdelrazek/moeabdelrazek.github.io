@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Mohamed Abdelrazek — Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg1: #2a2a2a;
@@ -23,7 +24,7 @@
 
     body {
       margin: 20px;
-      font-family: "Times New Roman", Times, serif;
+      font-family: "Poppins", sans-serif;
       font-size: 16px;
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
       background-size: 400% 400%;
@@ -53,7 +54,7 @@
       font-size: 30px;
       text-align: center;
       color: var(--gold);
-      font-weight: bold;
+      font-weight: 700;
       margin-bottom: 10px;
     }
 
@@ -61,12 +62,12 @@
       font-size: 19px;
       color: var(--gold);
       margin-bottom: 10px;
-      font-weight: bold;
+      font-weight: 700;
     }
 
     .motto {
       text-align: center;
-      font-weight: bold;
+      font-weight: 600;
       margin-bottom: 20px;
       color: var(--gold);
     }
@@ -142,7 +143,7 @@
     }
 
     a {
-      color: var(--gold);
+      color: var(--text);
       text-decoration: none;
       font-weight: bold;
     }
@@ -152,16 +153,16 @@
     }
 
     .role {
-      font-weight: bold;
+      font-weight: 700;
     }
 
     .date {
       font-size: 15px;
-      font-weight: bold;
+      font-weight: 700;
     }
 
     .contact-label {
-      font-weight: bold;
+      font-weight: 700;
       color: var(--gold);
       display: block;
       margin-top: 6px;
@@ -171,6 +172,7 @@
       margin-left: 10px;
       display: inline-block;
       color: var(--text);
+      font-weight: 700;
     }
 
     .lang-tag {
@@ -180,7 +182,7 @@
       padding: 3px 8px;
       border-radius: 12px;
       font-size: 14px;
-      font-weight: bold;
+      font-weight: 700;
       margin-right: 4px;
     }
 
@@ -201,9 +203,10 @@
 
     .download-link a {
       color: var(--gold);
-      font-weight: bold;
+      font-weight: 700;
       font-size: 16px;
       text-decoration: none;
+      margin-right: 10px;
     }
 
     .download-link a:hover {
@@ -217,27 +220,44 @@
       right: 20px;
       z-index: 1000;
       padding: 0.5rem 1rem;
-      font-weight: bold;
+      font-weight: 700;
       cursor: pointer;
+      background: var(--gold);
+      border: none;
+      border-radius: 6px;
+      color: #000;
     }
 
-    .bold-text { font-weight: bold; }
-    .white-text { color: var(--text); }
-    .gold-text { color: var(--gold); }
+    /* Light mode adjustments for resume content */
+    [data-theme="light"] h1,
+    [data-theme="light"] h2,
+    [data-theme="light"] .motto,
+    [data-theme="light"] .contact-label,
+    [data-theme="light"] .download-link a,
+    [data-theme="light"] li::before {
+      color: var(--gold);
+    }
+
+    [data-theme="light"] .contact-value,
+    [data-theme="light"] li,
+    [data-theme="light"] p {
+      color: var(--text);
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
 
   <button id="themeToggle" class="theme-toggle">🌙 Mode</button>
 
-  <h1 class="gold-text">Mohamed Abdelrazek</h1>
-  <div class="motto gold-text">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
+  <h1>Mohamed Abdelrazek</h1>
+  <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
   <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
 
   <div class="grid">
     <div class="left-column">
       <div class="card">
-        <h2 class="gold-text">Skills</h2>
+        <h2>Skills</h2>
         <ul>
           <li>Python (Debugging, Automation)</li>
           <li>Data Analysis Fundamentals</li>
@@ -251,7 +271,7 @@
       </div>
 
       <div class="card">
-        <h2 class="gold-text">Certifications</h2>
+        <h2>Certifications</h2>
         <ul>
           <li>Google IT Automation with Python</li>
           <li>Microsoft Python Development</li>
@@ -260,18 +280,18 @@
       </div>
 
       <div class="card">
-        <h2 class="gold-text">Contact</h2>
-        <p><span class="contact-label gold-text">Email:</span><span class="contact-value"> <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
-        <p><span class="contact-label gold-text">Phone:</span><span class="contact-value"> <a href="tel:+201017286384">+20 1017286384</a></span></p>
-        <p><span class="contact-label gold-text">Website:</span><span class="contact-value"> <a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
-        <p class="bold-text">Alexandria, Egypt</p>
+        <h2>Contact</h2>
+        <p><span class="contact-label">Email:</span><span class="contact-value"> <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+        <p><span class="contact-label">Phone:</span><span class="contact-value"> <a href="tel:+201017286384">+20 1017286384</a></span></p>
+        <p><span class="contact-label">Website:</span><span class="contact-value"> <a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+        <p><span class="contact-label">Location:</span><span class="contact-value"> Alexandria, Egypt</span></p>
       </div>
     </div>
 
     <div class="right-column">
       <div class="card">
-        <h2 class="gold-text">Professional Summary</h2>
-        <p class="white-text">Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Deeply committed to continuous learning and real-world impact.<br>
+        <h2>Professional Summary</h2>
+        <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Deeply committed to continuous learning and real-world impact.<br>
         Currently pursuing certifications to bridge technology with business outcomes.</p>
         <p>
           <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
@@ -281,7 +301,7 @@
       </div>
 
       <div class="card">
-        <h2 class="gold-text">Professional Experience</h2>
+        <h2>Professional Experience</h2>
         <p><span class="role">Engoo — Online Tutor</span> <span class="date">(2021–Present)</span></p>
         <ul>
           <li>Delivered personalized lessons to diverse learners; strengthened communication and adaptability.</li>
@@ -298,7 +318,7 @@
       </div>
 
       <div class="card">
-        <h2 class="gold-text">Education</h2>
+        <h2>Education</h2>
         <p><span class="role">Alexandria University — Engineering Studies</span></p>
         <ul>
           <li>Completed 4 years, 48 rigorous courses; degree not finalized.</li>
@@ -310,7 +330,8 @@
   </div>
 
   <div class="download-link">
-    <a href="Mohamed_Abdelrazek_Resume.pdf" download>Download PDF Resume</a>
+    <a href="D-Mohamed_Abdelrazek_Resume.pdf" download>Download Dark Resume</a>
+    <a href="L-Mohamed_Abdelrazek_Resume.pdf" download>Download Light Resume</a>
   </div>
 
   <script>
