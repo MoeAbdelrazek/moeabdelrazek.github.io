@@ -27,7 +27,7 @@
     <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
     <h1 class="gold-text">Mohamed Abdelrazek</h1>
     <p class="motto gold-text">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</p>
-    <a href="https://moeabdelrazek.github.io/resume.html" target="_blank" class="cta-btn resume">Resume</a>
+    <a href="#" id="downloadResume" class="cta-btn resume">Download Resume</a>
     <a href="#projects" class="cta-btn work">Work</a>
   </section>
 
@@ -86,10 +86,22 @@
   <!-- Contact -->
   <div class="card scroll-fade" id="contact">
     <h2 class="gold-text">📇 Contact</h2>
-    <p><span class="contact-label gold-text">Email:</span> <span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
-    <p><span class="contact-label gold-text">Phone:</span> <span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
-    <p><span class="contact-label gold-text">Website:</span> <span class="contact-value"><a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
-    <p class="bold-text">Alexandria, Egypt</p>
+    <p>
+      <span class="contact-label gold-text">Email:</span>
+      <span class="contact-value contact-info">moe-abdelrazek@outlook.com</span>
+    </p>
+    <p>
+      <span class="contact-label gold-text">Phone:</span>
+      <span class="contact-value contact-info">+20 1017286384</span>
+    </p>
+    <p>
+      <span class="contact-label gold-text">Website:</span>
+      <span class="contact-value contact-info">Portfolio Website</span>
+    </p>
+    <p>
+      <span class="contact-label gold-text">Location:</span>
+      <span class="contact-value contact-info">Alexandria, Egypt</span>
+    </p>
   </div>
 
   <div class="separator"></div>
@@ -110,30 +122,55 @@
   <!-- Scripts -->
   <script>
     const themeToggle = document.getElementById("themeToggle");
+    const downloadBtn = document.getElementById("downloadResume");
+
+    function updateDownloadLink(theme) {
+      downloadBtn.href = theme === "light"
+        ? "L-Mohamed_Abdelrazek_Resume.pdf"
+        : "D-Mohamed_Abdelrazek_Resume.pdf";
+    }
+
     function applyTheme(theme) {
       document.documentElement.setAttribute("data-theme", theme);
       themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
+      updateDownloadLink(theme);
+
+      // Boldness adjustments
+      if(theme === "light") {
+        document.querySelectorAll(".contact-info, #skills ul li, #projects ul li, #about p, #wrapup p").forEach(el => {
+          el.style.fontWeight = "normal";
+        });
+      } else {
+        document.querySelectorAll(".contact-info").forEach(el => el.style.fontWeight = "normal");
+        document.querySelectorAll("#skills ul li, #projects ul li, #about p, #wrapup p").forEach(el => {
+          el.style.fontWeight = "bold";
+        });
+      }
     }
-    function toggleTheme() {
+
+    themeToggle.addEventListener("click", () => {
       const current = document.documentElement.getAttribute("data-theme");
       const newTheme = current === "light" ? "dark" : "light";
       applyTheme(newTheme);
       localStorage.setItem("theme", newTheme);
-    }
-    themeToggle.addEventListener("click", toggleTheme);
+    });
+
     window.addEventListener("DOMContentLoaded", () => {
       const saved = localStorage.getItem("theme");
       const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
       applyTheme(saved || (prefersLight ? "light" : "dark"));
-    });
 
-    const scrollElements = document.querySelectorAll(".scroll-fade");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
+      // Scroll Fade-In
+      document.querySelectorAll(".scroll-fade").forEach(el => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if(entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        }, { threshold: 0.1 });
+        observer.observe(el);
       });
-    }, { threshold: 0.1 });
-    scrollElements.forEach(el => observer.observe(el));
+    });
   </script>
+
 </body>
 </html>
