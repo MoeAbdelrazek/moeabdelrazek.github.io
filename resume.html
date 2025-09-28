@@ -56,7 +56,7 @@
       color: var(--gold);
       font-weight: 700;
       margin-bottom: 10px;
-      margin-top: 80px; /* moved down from top */
+      margin-top: 80px; /* moved down */
     }
 
     h2 {
@@ -141,6 +141,40 @@
     .theme-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; background: var(--gold); border: none; border-radius: 6px; color: #000; font-family: "Times New Roman", Times, serif; font-size: 18px; }
     [data-theme="dark"] .dark-nobold { font-weight: 400 !important; }
     [data-theme="light"] .light-nobold { font-weight: 400 !important; }
+
+    /* --- RESPONSIVE MOBILE STYLING --- */
+    @media screen and (max-width: 768px) {
+      .grid {
+        flex-direction: column;
+      }
+      .left-column, .right-column {
+        width: 100%;
+        padding: 0;
+        border-left: none;
+      }
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        margin: 20px auto 30px;
+      }
+      h1 {
+        font-size: 28px;
+        margin-top: 60px;
+      }
+      .motto {
+        font-size: 16px;
+      }
+      .card {
+        font-size: 16px;
+      }
+      li, p, a, .role, .date, .contact-label, .contact-value {
+        font-size: 16px;
+      }
+      .lang-tag { font-size: 14px; padding: 2px 6px; }
+      .level-tag { font-size: 13px; padding: 2px 6px; }
+      .download-link a { font-size: 16px; }
+      .theme-toggle { font-size: 16px; padding: 0.4rem 0.8rem; }
+    }
   </style>
 </head>
 <body>
