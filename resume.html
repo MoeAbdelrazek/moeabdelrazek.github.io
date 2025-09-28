@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Mohamed Abdelrazek — Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg1: #2a2a2a;
@@ -24,7 +23,7 @@
 
     body {
       margin: 20px;
-      font-family: "Poppins", sans-serif;
+      font-family: "Times New Roman", Times, serif;
       font-size: 16px;
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
       background-size: 400% 400%;
@@ -51,6 +50,7 @@
     }
 
     h1 {
+      font-family: "Times New Roman", Times, serif;
       font-size: 30px;
       text-align: center;
       color: var(--gold);
@@ -59,6 +59,7 @@
     }
 
     h2 {
+      font-family: "Times New Roman", Times, serif;
       font-size: 19px;
       color: var(--gold);
       margin-bottom: 10px;
@@ -66,6 +67,7 @@
     }
 
     .motto {
+      font-family: "Times New Roman", Times, serif;
       text-align: center;
       font-weight: 600;
       margin-bottom: 20px;
@@ -110,127 +112,30 @@
       opacity: 0;
       transform: translateY(20px);
       animation: fadeInUp 1s ease forwards;
+      font-family: "Times New Roman", Times, serif;
     }
 
     @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    ul {
-      list-style-type: none;
-      padding-left: 15px;
-      margin: 0;
-    }
-
-    li::before {
-      content: "• ";
-      color: var(--gold);
-      font-weight: bold;
-    }
-
-    li {
-      margin: 4px 0;
-      font-size: 16px;
-      color: var(--text);
-    }
-
-    p {
-      font-size: 16px;
-      color: var(--text);
-    }
-
-    a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .role {
-      font-weight: 700;
-    }
-
-    .date {
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    .contact-label {
-      font-weight: 700;
-      color: var(--gold);
-      display: block;
-      margin-top: 6px;
-    }
-
-    .contact-value {
-      margin-left: 10px;
-      display: inline-block;
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    .lang-tag {
-      display: inline-block;
-      background-color: var(--gold);
-      color: #000;
-      padding: 3px 8px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 700;
-      margin-right: 4px;
-    }
-
-    .level-tag {
-      display: inline-block;
-      background-color: #666;
-      color: #fff;
-      padding: 3px 8px;
-      border-radius: 12px;
-      font-size: 13px;
-      margin-right: 12px;
-    }
-
-    .download-link {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .download-link a {
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 16px;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .download-link a:hover {
-      text-decoration: underline;
-    }
-
-    /* Toggle Button */
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      padding: 0.5rem 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      background: var(--gold);
-      border: none;
-      border-radius: 6px;
-      color: #000;
-    }
-
-    /* Dark mode: remove bold for certain items */
+    ul { list-style-type: none; padding-left: 15px; margin: 0; }
+    li::before { content: "• "; color: var(--gold); font-weight: bold; }
+    li { margin: 4px 0; font-size: 16px; color: var(--text); font-family: "Times New Roman", Times, serif; }
+    p { font-size: 16px; color: var(--text); font-family: "Times New Roman", Times, serif; }
+    a { color: var(--text); text-decoration: none; font-family: "Times New Roman", Times, serif; }
+    a:hover { text-decoration: underline; }
+    .role { font-weight: 700; font-family: "Times New Roman", Times, serif; }
+    .date { font-size: 15px; font-weight: 700; font-family: "Times New Roman", Times, serif; }
+    .contact-label { font-weight: 700; color: var(--gold); display: block; margin-top: 6px; font-family: "Times New Roman", Times, serif; }
+    .contact-value { margin-left: 10px; display: inline-block; color: var(--text); font-weight: 700; font-family: "Times New Roman", Times, serif; }
+    .lang-tag { display: inline-block; background-color: var(--gold); color: #000; padding: 3px 8px; border-radius: 12px; font-size: 14px; font-weight: 700; margin-right: 4px; font-family: "Times New Roman", Times, serif; }
+    .level-tag { display: inline-block; background-color: #666; color: #fff; padding: 3px 8px; border-radius: 12px; font-size: 13px; margin-right: 12px; font-family: "Times New Roman", Times, serif; }
+    .download-link { text-align: center; margin-top: 30px; font-family: "Times New Roman", Times, serif; }
+    .download-link a { color: var(--gold); font-weight: 700; font-size: 16px; text-decoration: none; cursor: pointer; font-family: "Times New Roman", Times, serif; }
+    .download-link a:hover { text-decoration: underline; }
+    .theme-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; background: var(--gold); border: none; border-radius: 6px; color: #000; font-family: "Times New Roman", Times, serif; }
     [data-theme="dark"] .dark-nobold { font-weight: 400 !important; }
-
-    /* Light mode: remove bold for certain items */
     [data-theme="light"] .light-nobold { font-weight: 400 !important; }
   </style>
 </head>
