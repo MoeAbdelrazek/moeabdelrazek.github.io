@@ -13,10 +13,10 @@
     <div class="site-title gold-text">👋 Moe's Portfolio</div>
     <div class="nav-links">
       <ul>
-        <li><a href="#about" class="gold-text-header">About Me</a></li>
-        <li><a href="#skills" class="gold-text-header">Skills</a></li>
-        <li><a href="#projects" class="gold-text-header">Projects</a></li>
-        <li><a href="#contact" class="gold-text-header">Contact</a></li>
+        <li><a class="gold-text" href="#about">About Me</a></li>
+        <li><a class="gold-text" href="#skills">Skills</a></li>
+        <li><a class="gold-text" href="#projects">Projects</a></li>
+        <li><a class="gold-text" href="#contact">Contact</a></li>
       </ul>
     </div>
     <button id="themeToggle" class="cta-btn theme-toggle">🌙 Mode</button>
@@ -74,8 +74,8 @@
   <div class="card scroll-fade" id="projects">
     <h2 class="gold-text">📂 Projects</h2>
     <ul>
-      <li class="project-title">
-        python-labs-conditionals-loops-sorting => 
+      <li>
+        <span class="project-title">python-labs-conditionals-loops-sorting</span> => 
         <a class="gold-text" href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">
           GitHub Repository
         </a>
@@ -129,7 +129,7 @@
 
     window.addEventListener("DOMContentLoaded", () => {
       const saved = localStorage.getItem("theme");
-      applyTheme(saved || "dark"); // force dark as default
+      applyTheme(saved || "dark");
 
       const scrollElements = document.querySelectorAll(".scroll-fade");
       const observer = new IntersectionObserver((entries) => {
