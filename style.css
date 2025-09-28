@@ -1,329 +1,176 @@
-:root {
-  --bg1: #2a2a2a;
-  --bg2: #3a3a3a;
-  --text: #ffffff;
-  --accent: #FFD700;
-  --card: #444;
-  --motto: #ffffff;
-  --shadow: rgba(255, 215, 0, 0.3);
-  --gold: #FFD700;
-}
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Abdelrazek — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-[data-theme="light"] {
-  --bg1: #fdfdfd;
-  --bg2: #f0f0f0;
-  --text: #000000;
-  --accent: #005f5f; /* Petrol for light mode */
-  --card: #ffffff;
-  --motto: #000000; /* black for light mode */
-  --shadow: rgba(0, 95, 95, 0.3);
-  --gold: #005f5f; /* Petrol for light mode */
-}
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="site-title gold-text">👋 Moe's Portfolio</div>
+    <div class="nav-links">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <button id="themeToggle" class="cta-btn theme-toggle">🌙 Mode</button>
+  </div>
 
-/* Global Reset & Transitions */
-* {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
+    <h1 class="gold-text">Mohamed Abdelrazek</h1>
+    <p class="motto gold-text">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</p>
+    <a href="#" id="downloadResume" class="cta-btn resume">Download Resume</a>
+    <a href="#projects" class="cta-btn work">Work</a>
+  </section>
 
-body {
-  margin: 0;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
-  background: linear-gradient(135deg, var(--bg1), var(--bg2));
-  background-size: 400% 400%;
-  animation: backgroundShift 20s ease infinite;
-  color: var(--text);
-  line-height: 1.5;
-}
+  <div class="separator"></div>
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url('hero-bg.jpg') center/cover no-repeat;
-  opacity: 0.12;
-  z-index: -2;
-}
+  <!-- About -->
+  <div class="card scroll-fade" id="about">
+    <h2 class="gold-text">✨ About Me</h2>
+    <p>
+      Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.
+      Resilient and disciplined, with a decade of high-performance experience shaped by professional football.
+      Deeply committed to continuous learning and real-world impact.
+      Currently pursuing certifications to bridge technology with business outcomes.
+    </p>
+    <div class="language-tags">
+      <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
+      <span class="lang-tag">English</span> <span class="level-tag">Near Native</span>
+      <span class="lang-tag">German</span> <span class="level-tag">B2 – Intermediate</span>
+    </div>
+  </div>
 
-@keyframes backgroundShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+  <div class="separator"></div>
 
-/* Top Bar */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 1.2rem;
-  background: var(--card);
-  border-bottom: 1px solid rgba(255,215,0,0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <!-- Skills -->
+  <div class="card scroll-fade" id="skills">
+    <h2 class="gold-text">🛠️ Skills</h2>
+    <ul>
+      <li>Python (Debugging, Automation)</li>
+      <li>Data Analysis Fundamentals</li>
+      <li>AI Fundamentals</li>
+      <li>GitHub & Version Control</li>
+      <li>Microsoft Suite</li>
+      <li>Digital Marketing & E-Commerce</li>
+      <li>Resilience & Discipline</li>
+      <li>Team Leadership</li>
+    </ul>
+  </div>
 
-.site-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--gold);
-}
+  <div class="separator"></div>
 
-.nav-links ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1.2rem;
-}
+  <!-- Projects -->
+  <div class="card scroll-fade" id="projects">
+    <h2 class="gold-text">📂 Projects</h2>
+    <ul>
+      <li>
+        <strong>python-labs-conditionals-loops-sorting-</strong> —
+        <a class="gold-text" href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">
+          GitHub Repository
+        </a>
+      </li>
+    </ul>
+  </div>
 
-.nav-links a {
-  color: var(--text);
-  font-weight: bold;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <div class="separator"></div>
 
-.nav-links a:hover,
-.nav-links a:focus {
-  color: var(--gold);
-  text-decoration: underline;
-  outline: none;
-}
+  <!-- Contact -->
+  <div class="card scroll-fade" id="contact">
+    <h2 class="gold-text">📇 Contact</h2>
+    <p>
+      <span class="contact-label gold-text">Email:</span>
+      <span class="contact-value contact-info">moe-abdelrazek@outlook.com</span>
+    </p>
+    <p>
+      <span class="contact-label gold-text">Phone:</span>
+      <span class="contact-value contact-info">+20 1017286384</span>
+    </p>
+    <p>
+      <span class="contact-label gold-text">Website:</span>
+      <span class="contact-value contact-info">Portfolio Website</span>
+    </p>
+    <p>
+      <span class="contact-label gold-text">Location:</span>
+      <span class="contact-value contact-info">Alexandria, Egypt</span>
+    </p>
+  </div>
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  margin: 2rem auto;
-  animation: fadeIn 1.5s ease;
-}
+  <div class="separator"></div>
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  <!-- Final Note -->
+  <div class="card scroll-fade" id="wrapup">
+    <h2 class="gold-text">🌟 Final Note</h2>
+    <p class="white-text wrapup-message">
+      Thank you for exploring my journey. This portfolio is more than a showcase — it's a reflection of discipline, precision, and passion. Let's build something extraordinary together.
+    </p>
+  </div>
 
-.motto {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: var(--motto);
-}
+  <!-- Footer -->
+  <footer class="gold-text">
+    © 2025 Mohamed Abdelrazek — All Rights Reserved
+  </footer>
 
-.profile-pic {
-  display: block;
-  margin: 0 auto 20px;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--gold);
-  box-shadow: 0 0 10px rgba(255,215,0,0.6);
-  transition: transform 0.3s;
-}
-.profile-pic:hover {
-  transform: scale(1.05);
-}
+  <!-- Scripts -->
+  <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const downloadBtn = document.getElementById("downloadResume");
 
-/* Cards */
-.card {
-  background: var(--card);
-  padding: 0.8rem;
-  margin: 1rem auto;
-  border-radius: 6px;
-  max-width: 900px;
-  opacity: 0;
-  transform: translateY(20px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+    function updateDownloadLink(theme) {
+      downloadBtn.href = theme === "light"
+        ? "L-Mohamed_Abdelrazek_Resume.pdf"
+        : "D-Mohamed_Abdelrazek_Resume.pdf";
+    }
 
-/* Lists */
-ul {
-  list-style-type: none;
-  padding-left: 15px;
-  margin: 0;
-}
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
+      updateDownloadLink(theme);
 
-li::before {
-  content: "• ";
-  color: var(--gold);
-  font-weight: bold;
-}
+      // Boldness adjustments
+      if(theme === "light") {
+        document.querySelectorAll(".contact-info, #skills ul li, #projects ul li, #about p, #wrapup p").forEach(el => {
+          el.style.fontWeight = "normal";
+        });
+      } else {
+        document.querySelectorAll(".contact-info").forEach(el => el.style.fontWeight = "normal");
+        document.querySelectorAll("#skills ul li, #projects ul li, #about p, #wrapup p").forEach(el => {
+          el.style.fontWeight = "bold";
+        });
+      }
+    }
 
-li {
-  margin: 4px 0;
-  font-size: 16px;
-  color: var(--text);
-}
+    themeToggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      const newTheme = current === "light" ? "dark" : "light";
+      applyTheme(newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
 
-/* Links */
-a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: bold;
-}
-a:hover,
-a:focus {
-  text-decoration: underline;
-  color: var(--gold);
-  outline: none;
-}
+    window.addEventListener("DOMContentLoaded", () => {
+      const saved = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      applyTheme(saved || (prefersLight ? "light" : "dark"));
 
-/* Contact Labels */
-.contact-label {
-  font-weight: bold;
-  color: var(--gold);
-  display: inline-block;
-  margin-right: 6px;
-}
-.contact-value {
-  display: inline-block;
-  font-weight: normal;
-}
+      // Scroll Fade-In
+      document.querySelectorAll(".scroll-fade").forEach(el => {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if(entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        }, { threshold: 0.1 });
+        observer.observe(el);
+      });
+    });
+  </script>
 
-/* Language Tags */
-.lang-tag {
-  display: inline-block;
-  background-color: var(--gold);
-  color: #000;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: bold;
-  margin: 4px 6px 4px 0;
-}
-.level-tag {
-  display: inline-block;
-  background-color: #fff;
-  color: #000;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: bold;
-  margin: 4px 12px 4px 0;
-}
-
-/* CTA Buttons */
-.cta-btn {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.7rem 1.5rem;
-  background: var(--accent);
-  color: #000;
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 0 0 6px var(--shadow);
-  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-.cta-btn:hover,
-.cta-btn:focus {
-  background: #fff8dc;
-  box-shadow: 0 0 8px var(--shadow);
-  transform: translateY(-2px);
-  outline: none;
-}
-
-/* Theme Toggle */
-.theme-toggle {
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Separator & Footer */
-.separator {
-  height: 2px;
-  background: var(--accent);
-  margin: 2rem auto;
-  width: 80%;
-  opacity: 0.5;
-}
-
-footer {
-  text-align: center;
-  margin-top: 2rem;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: var(--text);
-  border-top: 1px solid rgba(255,215,0,0.2);
-  background: var(--card);
-  border-radius: 6px 6px 0 0;
-  box-shadow: 0 -2px 6px var(--shadow);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Final Note */
-.wrapup-message {
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* Custom Color Classes */
-.gold-text {
-  color: var(--gold) !important;
-}
-
-.white-text {
-  color: var(--text) !important;
-}
-
-.bold-text {
-  font-weight: bold !important;
-}
-
-/* Mobile Optimization */
-@media (max-width: 700px) {
-  .top-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .nav-links ul {
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-
-  h1 { font-size: 24px; }
-  h2 { font-size: 18px; }
-
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
-
-  .motto { font-size: 1rem; }
-
-  .card { margin: 1rem; }
-
-  .lang-tag,
-  .level-tag {
-    font-size: 12px;
-    padding: 2px 6px;
-  }
-
-  .cta-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-  }
-
-  .contact-label,
-  .contact-value {
-    font-size: 14px;
-  }
-
-  .wrapup-message {
-    font-size: 0.95rem;
-  }
-}
+</body>
+</html>
