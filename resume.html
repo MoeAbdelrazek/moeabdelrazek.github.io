@@ -24,7 +24,7 @@
     body {
       margin: 20px;
       font-family: "Times New Roman", Times, serif;
-      font-size: 18px; /* increased */
+      font-size: 18px;
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
       background-size: 400% 400%;
       animation: backgroundShift 20s ease infinite;
@@ -56,6 +56,7 @@
       color: var(--gold);
       font-weight: 700;
       margin-bottom: 10px;
+      margin-top: 80px; /* moved down from top */
     }
 
     h2 {
@@ -73,11 +74,12 @@
       margin-bottom: 20px;
       color: var(--gold);
       font-size: 18px; /* increased */
+      margin-top: 10px; /* spacing below name */
     }
 
     .profile-pic {
       display: block;
-      margin: 0 auto 20px;
+      margin: 20px auto 40px; /* more space below pic */
       width: 120px;
       height: 120px;
       border-radius: 50%;
@@ -114,7 +116,7 @@
       transform: translateY(20px);
       animation: fadeInUp 1s ease forwards;
       font-family: "Times New Roman", Times, serif;
-      font-size: 18px; /* increased */
+      font-size: 18px;
     }
 
     @keyframes fadeInUp {
@@ -123,20 +125,20 @@
 
     ul { list-style-type: none; padding-left: 15px; margin: 0; }
     li::before { content: "• "; color: var(--gold); font-weight: bold; }
-    li { margin: 4px 0; font-size: 18px; color: var(--text); font-family: "Times New Roman", Times, serif; } /* increased */
-    p { font-size: 18px; color: var(--text); font-family: "Times New Roman", Times, serif; } /* increased */
-    a { color: var(--text); text-decoration: none; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
+    li { margin: 4px 0; font-size: 18px; color: var(--text); font-family: "Times New Roman", Times, serif; }
+    p { font-size: 18px; color: var(--text); font-family: "Times New Roman", Times, serif; }
+    a { color: var(--text); text-decoration: none; font-family: "Times New Roman", Times, serif; font-size: 18px; }
     a:hover { text-decoration: underline; }
-    .role { font-weight: 700; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
-    .date { font-size: 17px; font-weight: 700; font-family: "Times New Roman", Times, serif; } /* increased */
-    .contact-label { font-weight: 700; color: var(--gold); display: block; margin-top: 6px; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
-    .contact-value { margin-left: 10px; display: inline-block; color: var(--text); font-weight: 700; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
-    .lang-tag { display: inline-block; background-color: var(--gold); color: #000; padding: 3px 8px; border-radius: 12px; font-size: 16px; font-weight: 700; margin-right: 4px; font-family: "Times New Roman", Times, serif; } /* increased */
-    .level-tag { display: inline-block; background-color: #666; color: #fff; padding: 3px 8px; border-radius: 12px; font-size: 15px; margin-right: 12px; font-family: "Times New Roman", Times, serif; } /* increased */
-    .download-link { text-align: center; margin-top: 30px; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
-    .download-link a { color: var(--gold); font-weight: 700; font-size: 18px; text-decoration: none; cursor: pointer; font-family: "Times New Roman", Times, serif; } /* increased */
+    .role { font-weight: 700; font-family: "Times New Roman", Times, serif; font-size: 18px; }
+    .date { font-size: 17px; font-weight: 700; font-family: "Times New Roman", Times, serif; }
+    .contact-label { font-weight: 700; color: var(--gold); display: block; margin-top: 6px; font-family: "Times New Roman", Times, serif; font-size: 18px; }
+    .contact-value { margin-left: 10px; display: inline-block; color: var(--text); font-weight: 700; font-family: "Times New Roman", Times, serif; font-size: 18px; }
+    .lang-tag { display: inline-block; background-color: var(--gold); color: #000; padding: 3px 8px; border-radius: 12px; font-size: 16px; font-weight: 700; margin-right: 4px; font-family: "Times New Roman", Times, serif; }
+    .level-tag { display: inline-block; background-color: #666; color: #fff; padding: 3px 8px; border-radius: 12px; font-size: 15px; margin-right: 12px; font-family: "Times New Roman", Times, serif; }
+    .download-link { text-align: center; margin-top: 30px; font-family: "Times New Roman", Times, serif; font-size: 18px; }
+    .download-link a { color: var(--gold); font-weight: 700; font-size: 18px; text-decoration: none; cursor: pointer; font-family: "Times New Roman", Times, serif; }
     .download-link a:hover { text-decoration: underline; }
-    .theme-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; background: var(--gold); border: none; border-radius: 6px; color: #000; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
+    .theme-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; background: var(--gold); border: none; border-radius: 6px; color: #000; font-family: "Times New Roman", Times, serif; font-size: 18px; }
     [data-theme="dark"] .dark-nobold { font-weight: 400 !important; }
     [data-theme="light"] .light-nobold { font-weight: 400 !important; }
   </style>
