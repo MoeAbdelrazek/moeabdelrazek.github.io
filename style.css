@@ -75,22 +75,29 @@ body::before {
 }
 
 .site-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* increased font */
   font-weight: bold;
   color: var(--gold);
-  font-family: "Times New Roman", Times, serif;
 }
 
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.5rem; /* increased gap */
 }
 
-.nav-links li {
-  font-size: 1.2rem;
+.header-link {
+  font-size: 1.1rem; /* increase font by 1 */
   font-weight: bold;
+  text-decoration: none;
   color: var(--gold);
+}
+
+[data-theme="light"] .header-link { color: var(--petrol); }
+
+.nav-links a:hover,
+.nav-links a:focus {
+  text-decoration: underline;
 }
 
 /* ==============================
@@ -107,16 +114,17 @@ body::before {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.hero h1 {
-  font-family: "Times New Roman", Times, serif;
+.hero h1.hero-name {
+  font-size: 2rem; /* bigger font */
   font-weight: bold;
-  font-size: 2rem;
   color: var(--gold);
 }
 
+[data-theme="light"] .hero h1.hero-name { color: var(--petrol); }
+
 .motto {
   font-size: 1rem;
-  color: var(--text);
+  color: var(--motto);
   margin-bottom: 25px;
 }
 
@@ -147,7 +155,6 @@ body::before {
   transform: translateY(20px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: opacity 0.8s ease, transform 0.8s ease;
-  font-family: "Times New Roman", Times, serif;
 }
 
 .card.visible {
@@ -156,42 +163,48 @@ body::before {
 }
 
 /* ==============================
-   About Section
+   Sections Headers
+============================== */
+.section-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+[data-theme="light"] .section-header { color: var(--petrol); }
+
+/* ==============================
+   About Me Text
 ============================== */
 .about-text {
-  font-size: 1.1rem;
-  line-height: 1.3rem;
-  margin-bottom: 15px;
+  font-size: 1.1rem; /* increased by 1 */
+  line-height: 1.3; /* remove extra distance */
 }
 
 .language-tags {
   display: flex;
-  gap: 1rem;
-  margin-top: 10px;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
 }
 
-.lang-item {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.lang-flag {
-  font-size: 1.2rem;
+.lang-tag {
+  font-weight: bold;
   color: var(--gold);
 }
 
 .level-tag {
-  font-weight: normal;
   color: #fff;
 }
 
+[data-theme="light"] .lang-tag { color: var(--petrol); }
+[data-theme="light"] .level-tag { color: #000; }
+
 /* ==============================
-   Skills
+   Skills List
 ============================== */
-.skills-list {
-  list-style-type: none;
-  padding-left: 15px;
+.skills-list li {
+  margin: 6px 0;
+  font-size: 17px; /* increased by 1 */
 }
 
 .skills-list li::before {
@@ -199,27 +212,20 @@ body::before {
   color: var(--gold);
 }
 
-.skills-list li {
-  margin: 4px 0;
-  font-size: 1.1rem;
-  font-weight: normal;
-}
+[data-theme="light"] .skills-list li::before { color: var(--petrol); }
 
 /* ==============================
-   Links
+   Projects
 ============================== */
-a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: normal;
-  font-family: "Times New Roman", Times, serif;
+.project-title {
+  font-size: 1.1rem; /* increased by 1 */
 }
 
-a:hover,
-a:focus {
+.github-link {
   color: var(--gold);
-  text-decoration: underline;
 }
+
+[data-theme="light"] .github-link { color: var(--petrol); }
 
 /* ==============================
    Contact
@@ -227,13 +233,13 @@ a:focus {
 .contact-label {
   font-weight: bold;
   color: var(--gold);
-  display: inline-block;
-  margin-right: 6px;
 }
 
 .contact-value {
   font-weight: normal;
 }
+
+[data-theme="light"] .contact-label { color: var(--petrol); }
 
 /* ==============================
    CTA Buttons
@@ -241,13 +247,12 @@ a:focus {
 .cta-btn {
   display: inline-block;
   margin: 0.5rem;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.8rem;
   background: var(--accent);
   color: #000;
   font-weight: normal;
   border-radius: 6px;
   text-decoration: none;
-  font-family: "Times New Roman", Times, serif;
   box-shadow: 0 0 6px var(--shadow);
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
