@@ -10,17 +10,18 @@
   --motto: #ffffff;
   --shadow: rgba(255, 215, 0, 0.3);
   --gold: #FFD700;
+  --petrol: #005f5f;
 }
 
 [data-theme="light"] {
   --bg1: #fdfdfd;
   --bg2: #f0f0f0;
   --text: #000000;
-  --accent: #005f5f;
+  --accent: var(--petrol);
   --card: #ffffff;
   --motto: #000000;
   --shadow: rgba(0, 95, 95, 0.3);
-  --gold: #005f5f;
+  --gold: var(--petrol);
 }
 
 /* ==============================
@@ -74,7 +75,7 @@ body::before {
 }
 
 .site-title {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* bigger name */
   font-weight: bold;
   color: var(--gold);
   font-family: "Times New Roman", Times, serif;
@@ -83,20 +84,19 @@ body::before {
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.5rem; /* separate them a bit */
 }
 
 .nav-links a {
-  color: var(--text);
+  color: var(--gold); /* header color */
+  font-size: 1.1rem; /* increased by 1 */
   font-family: "Times New Roman", Times, serif;
   font-weight: normal;
-  font-size: 1.1rem;
   text-decoration: none;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  color: var(--gold);
   text-decoration: underline;
 }
 
@@ -106,17 +106,25 @@ body::before {
 .hero {
   text-align: center;
   margin: 2rem auto;
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero h1 {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2.2rem; /* bigger name */
+  color: var(--gold);
 }
 
 .motto {
   font-size: 1.2rem;
   margin-bottom: 25px;
+  color: var(--gold);
 }
 
 .profile-pic {
@@ -127,7 +135,6 @@ body::before {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--gold);
-  box-shadow: 0 0 10px var(--shadow);
   transition: transform 0.3s;
 }
 
@@ -154,6 +161,12 @@ body::before {
   transform: translateY(0);
 }
 
+.card h2 {
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
 /* ==============================
    Lists
 ============================== */
@@ -164,21 +177,16 @@ li::before {
   color: var(--gold);
 }
 
-li { margin: 6px 0; font-size: 1rem; font-weight: normal; }
+li { margin: 6px 0; font-size: 17px; font-weight: normal; } /* slightly bigger font for skills */
 
-/* ==============================
-   Links
-============================== */
 a {
-  color: var(--text);
+  color: var(--gold);
   text-decoration: none;
   font-weight: normal;
-  font-family: "Times New Roman", Times, serif;
 }
 
 a:hover,
 a:focus {
-  color: var(--gold);
   text-decoration: underline;
 }
 
@@ -192,19 +200,9 @@ a:focus {
   margin-right: 6px;
 }
 
-.contact-value { font-weight: normal; }
-
-/* ==============================
-   Language Tags
-============================== */
-.lang-tag {
-  color: var(--gold);
-  margin-right: 0.5rem;
-}
-
-.level-tag {
-  color: #ffffff;
-  margin-right: 1rem;
+.contact-value {
+  font-weight: normal;
+  color: var(--text);
 }
 
 /* ==============================
@@ -213,21 +211,18 @@ a:focus {
 .cta-btn {
   display: inline-block;
   margin: 0.5rem;
-  padding: 0.8rem 1.8rem;
-  background: var(--accent);
+  padding: 0.7rem 1.6rem;
+  background: var(--gold);
   color: #000;
   font-weight: normal;
   border-radius: 6px;
   text-decoration: none;
   font-family: "Times New Roman", Times, serif;
-  box-shadow: 0 0 6px var(--shadow);
-  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cta-btn:hover,
 .cta-btn:focus {
-  background: #fff8dc;
-  box-shadow: 0 0 8px var(--shadow);
   transform: translateY(-2px);
   outline: none;
 }
@@ -257,7 +252,11 @@ footer {
 /* ==============================
    Final Note
 ============================== */
-.wrapup-message { font-weight: normal; text-align: center; margin-top: 10px; }
+.wrapup-message {
+  font-weight: normal;
+  text-align: center;
+  margin-top: 10px;
+}
 
 /* ==============================
    Mobile Optimization
@@ -266,11 +265,11 @@ footer {
   .top-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   .nav-links ul { flex-wrap: wrap; gap: 0.8rem; }
   h1 { font-size: 1.8rem; }
-  h2 { font-size: 18px; }
+  h2 { font-size: 1.2rem; }
   .profile-pic { width: 120px; height: 120px; }
-  .motto { font-size: 1.1rem; }
+  .motto { font-size: 1rem; }
   .card { margin: 1rem; }
-  .lang-tag, .level-tag { font-size: 12px; padding: 2px 6px; }
+  li { font-size: 16px; }
   .cta-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
   .contact-label, .contact-value { font-size: 14px; }
   .wrapup-message { font-size: 0.95rem; }
