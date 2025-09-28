@@ -1,3 +1,6 @@
+/* ==============================
+   Variables & Themes
+============================== */
 :root {
   --bg1: #2a2a2a;
   --bg2: #3a3a3a;
@@ -13,20 +16,24 @@
   --bg1: #fdfdfd;
   --bg2: #f0f0f0;
   --text: #000000;
-  --accent: #005f5f; /* Petrol */
+  --accent: #005f5f; /* Petrol for light mode */
   --card: #ffffff;
   --motto: #000000;
   --shadow: rgba(0, 95, 95, 0.3);
-  --gold: #005f5f; /* Petrol */
+  --gold: #005f5f; /* Petrol for light mode */
 }
 
-/* Global Reset & Transitions */
+/* ==============================
+   Global Reset & Transitions
+============================== */
 * {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, font-weight 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: "Times New Roman", Times, serif;
   font-size: 16px;
   background: linear-gradient(135deg, var(--bg1), var(--bg2));
@@ -51,7 +58,9 @@ body::before {
   100% { background-position: 0% 50%; }
 }
 
-/* Top Bar */
+/* ==============================
+   Top Bar
+============================== */
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -73,8 +82,6 @@ body::before {
 
 .nav-links ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: 1.2rem;
 }
@@ -92,7 +99,9 @@ body::before {
   outline: none;
 }
 
-/* Hero Section */
+/* ==============================
+   Hero Section
+============================== */
 .hero {
   text-align: center;
   margin: 2rem auto;
@@ -122,11 +131,14 @@ body::before {
   box-shadow: 0 0 10px var(--shadow);
   transition: transform 0.3s;
 }
+
 .profile-pic:hover {
   transform: scale(1.05);
 }
 
-/* Cards */
+/* ==============================
+   Cards
+============================== */
 .card {
   background: var(--card);
   padding: 0.8rem;
@@ -138,16 +150,18 @@ body::before {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 .card.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Lists */
+/* ==============================
+   Lists
+============================== */
 ul {
   list-style-type: none;
   padding-left: 15px;
-  margin: 0;
 }
 
 li::before {
@@ -160,36 +174,43 @@ li {
   margin: 4px 0;
   font-size: 16px;
   color: var(--text);
+  font-weight: bold; /* default bold */
 }
 
-/* Links */
+/* ==============================
+   Links
+============================== */
 a {
   color: var(--text);
   text-decoration: none;
   font-weight: bold;
 }
+
 a:hover,
 a:focus {
-  text-decoration: underline;
   color: var(--gold);
+  text-decoration: underline;
   outline: none;
 }
 
-/* Contact Labels & Values */
+/* ==============================
+   Contact
+============================== */
 .contact-label {
   font-weight: bold;
   color: var(--gold);
   display: inline-block;
   margin-right: 6px;
-  transition: color 0.4s ease;
-}
-.contact-value {
-  display: inline-block;
-  font-weight: normal;
-  transition: font-weight 0.4s ease, color 0.4s ease;
 }
 
-/* Language Tags */
+.contact-value {
+  display: inline-block;
+  font-weight: normal; /* always normal for contact */
+}
+
+/* ==============================
+   Language Tags
+============================== */
 .lang-tag {
   display: inline-block;
   background-color: var(--gold);
@@ -200,6 +221,7 @@ a:focus {
   font-weight: bold;
   margin: 4px 6px 4px 0;
 }
+
 .level-tag {
   display: inline-block;
   background-color: #fff;
@@ -211,7 +233,9 @@ a:focus {
   margin: 4px 12px 4px 0;
 }
 
-/* CTA Buttons */
+/* ==============================
+   CTA Buttons
+============================== */
 .cta-btn {
   display: inline-block;
   margin: 0.5rem;
@@ -221,9 +245,11 @@ a:focus {
   font-weight: bold;
   border-radius: 6px;
   text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 0 6px var(--shadow);
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 .cta-btn:hover,
 .cta-btn:focus {
   background: #fff8dc;
@@ -232,13 +258,9 @@ a:focus {
   outline: none;
 }
 
-/* Theme Toggle */
-.theme-toggle {
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-}
-
-/* Separator & Footer */
+/* ==============================
+   Separator & Footer
+============================== */
 .separator {
   height: 2px;
   background: var(--accent);
@@ -257,29 +279,45 @@ footer {
   background: var(--card);
   border-radius: 6px 6px 0 0;
   box-shadow: 0 -2px 6px var(--shadow);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Final Note */
+/* ==============================
+   Final Note
+============================== */
 .wrapup-message {
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
-  transition: font-weight 0.4s ease;
 }
 
-/* Custom Color Classes */
-.gold-text {
-  color: var(--gold) !important;
-}
-.white-text {
-  color: var(--text) !important;
-}
-.bold-text {
-  font-weight: bold !important;
+/* ==============================
+   Dark/Light Specific Text Adjustments
+============================== */
+body[data-theme="dark"] .contact-value,
+body[data-theme="dark"] .normal-dark {
+  font-weight: normal;
 }
 
-/* Mobile Optimization */
+body[data-theme="light"] .summary-light,
+body[data-theme="light"] .skills-light,
+body[data-theme="light"] .certs-light,
+body[data-theme="light"] .experience-light,
+body[data-theme="light"] .education-light {
+  font-weight: normal;
+}
+
+/* ==============================
+   Custom Color Classes
+============================== */
+.gold-text { color: var(--gold) !important; }
+.white-text { color: var(--text) !important; }
+.bold-text { font-weight: bold !important; }
+
+/* ==============================
+   Mobile Optimization
+============================== */
 @media (max-width: 700px) {
   .top-bar {
     flex-direction: column;
@@ -295,32 +333,12 @@ footer {
   h1 { font-size: 24px; }
   h2 { font-size: 18px; }
 
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
-
+  .profile-pic { width: 100px; height: 100px; }
   .motto { font-size: 1rem; }
-
   .card { margin: 1rem; }
 
-  .lang-tag,
-  .level-tag {
-    font-size: 12px;
-    padding: 2px 6px;
-  }
-
-  .cta-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-  }
-
-  .contact-label,
-  .contact-value {
-    font-size: 14px;
-  }
-
-  .wrapup-message {
-    font-size: 0.95rem;
-  }
+  .lang-tag, .level-tag { font-size: 12px; padding: 2px 6px; }
+  .cta-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
+  .contact-label, .contact-value { font-size: 14px; }
+  .wrapup-message { font-size: 0.95rem; }
 }
