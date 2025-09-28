@@ -145,7 +145,6 @@
     a {
       color: var(--text);
       text-decoration: none;
-      font-weight: bold;
     }
 
     a:hover {
@@ -206,7 +205,7 @@
       font-weight: 700;
       font-size: 16px;
       text-decoration: none;
-      margin-right: 10px;
+      cursor: pointer;
     }
 
     .download-link a:hover {
@@ -228,22 +227,11 @@
       color: #000;
     }
 
-    /* Light mode adjustments for resume content */
-    [data-theme="light"] h1,
-    [data-theme="light"] h2,
-    [data-theme="light"] .motto,
-    [data-theme="light"] .contact-label,
-    [data-theme="light"] .download-link a,
-    [data-theme="light"] li::before {
-      color: var(--gold);
-    }
+    /* Dark mode: remove bold for certain items */
+    [data-theme="dark"] .dark-nobold { font-weight: 400 !important; }
 
-    [data-theme="light"] .contact-value,
-    [data-theme="light"] li,
-    [data-theme="light"] p {
-      color: var(--text);
-      font-weight: 700;
-    }
+    /* Light mode: remove bold for certain items */
+    [data-theme="light"] .light-nobold { font-weight: 400 !important; }
   </style>
 </head>
 <body>
@@ -259,39 +247,39 @@
       <div class="card">
         <h2>Skills</h2>
         <ul>
-          <li>Python (Debugging, Automation)</li>
-          <li>Data Analysis Fundamentals</li>
-          <li>AI Fundamentals</li>
-          <li>GitHub & Version Control</li>
-          <li>Microsoft Suite</li>
-          <li>Digital Marketing & E-Commerce</li>
-          <li>Resilience & Discipline</li>
-          <li>Team Leadership</li>
+          <li class="light-nobold">Python (Debugging, Automation)</li>
+          <li class="light-nobold">Data Analysis Fundamentals</li>
+          <li class="light-nobold">AI Fundamentals</li>
+          <li class="light-nobold">GitHub & Version Control</li>
+          <li class="light-nobold">Microsoft Suite</li>
+          <li class="light-nobold">Digital Marketing & E-Commerce</li>
+          <li class="light-nobold">Resilience & Discipline</li>
+          <li class="light-nobold">Team Leadership</li>
         </ul>
       </div>
 
       <div class="card">
         <h2>Certifications</h2>
         <ul>
-          <li>Google IT Automation with Python</li>
-          <li>Microsoft Python Development</li>
-          <li>Google Digital Marketing & E-Commerce</li>
+          <li class="light-nobold">Google IT Automation with Python</li>
+          <li class="light-nobold">Microsoft Python Development</li>
+          <li class="light-nobold">Google Digital Marketing & E-Commerce</li>
         </ul>
       </div>
 
       <div class="card">
         <h2>Contact</h2>
-        <p><span class="contact-label">Email:</span><span class="contact-value"> <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
-        <p><span class="contact-label">Phone:</span><span class="contact-value"> <a href="tel:+201017286384">+20 1017286384</a></span></p>
-        <p><span class="contact-label">Website:</span><span class="contact-value"> <a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
-        <p><span class="contact-label">Location:</span><span class="contact-value"> Alexandria, Egypt</span></p>
+        <p><span class="contact-label">Email:</span><span class="contact-value dark-nobold light-nobold"> <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+        <p><span class="contact-label">Phone:</span><span class="contact-value dark-nobold light-nobold"> <a href="tel:+201017286384">+20 1017286384</a></span></p>
+        <p><span class="contact-label">Website:</span><span class="contact-value dark-nobold light-nobold"> <a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+        <p><span class="contact-label">Location:</span><span class="contact-value dark-nobold light-nobold"> Alexandria, Egypt</span></p>
       </div>
     </div>
 
     <div class="right-column">
       <div class="card">
         <h2>Professional Summary</h2>
-        <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Deeply committed to continuous learning and real-world impact.<br>
+        <p class="light-nobold">Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Deeply committed to continuous learning and real-world impact.<br>
         Currently pursuing certifications to bridge technology with business outcomes.</p>
         <p>
           <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
@@ -304,16 +292,16 @@
         <h2>Professional Experience</h2>
         <p><span class="role">Engoo — Online Tutor</span> <span class="date">(2021–Present)</span></p>
         <ul>
-          <li>Delivered personalized lessons to diverse learners; strengthened communication and adaptability.</li>
-          <li>Leveraged digital tools to improve outcomes and track progress.</li>
-          <li>Maintained high session quality and learner satisfaction across hundreds of lessons.</li>
+          <li class="light-nobold">Delivered personalized lessons to diverse learners; strengthened communication and adaptability.</li>
+          <li class="light-nobold">Leveraged digital tools to improve outcomes and track progress.</li>
+          <li class="light-nobold">Maintained high session quality and learner satisfaction across hundreds of lessons.</li>
         </ul>
 
         <p><span class="role">Professional Athlete — Football</span> <span class="date">(2011–2022)</span></p>
         <ul>
-          <li>Competed at a high level for over a decade; developed discipline and resilience under pressure.</li>
-          <li>Led and collaborated within dynamic teams; honed leadership and teamwork.</li>
-          <li>Transferred performance mindset to technology learning and delivery.</li>
+          <li class="light-nobold">Competed at a high level for over a decade; developed discipline and resilience under pressure.</li>
+          <li class="light-nobold">Led and collaborated within dynamic teams; honed leadership and teamwork.</li>
+          <li class="light-nobold">Transferred performance mindset to technology learning and delivery.</li>
         </ul>
       </div>
 
@@ -321,32 +309,37 @@
         <h2>Education</h2>
         <p><span class="role">Alexandria University — Engineering Studies</span></p>
         <ul>
-          <li>Completed 4 years, 48 rigorous courses; degree not finalized.</li>
-          <li>Focus areas: Systems Thinking, Analytical Methods, Problem-Solving.</li>
-          <li>Applied engineering discipline to software development workflows.</li>
+          <li class="light-nobold">Completed 4 years, 48 rigorous courses; degree not finalized.</li>
+          <li class="light-nobold">Focus areas: Systems Thinking, Analytical Methods, Problem-Solving.</li>
+          <li class="light-nobold">Applied engineering discipline to software development workflows.</li>
         </ul>
       </div>
     </div>
   </div>
 
   <div class="download-link">
-    <a href="D-Mohamed_Abdelrazek_Resume.pdf" download>Download Dark Resume</a>
-    <a href="L-Mohamed_Abdelrazek_Resume.pdf" download>Download Light Resume</a>
+    <a id="downloadResume" download>Download Resume</a>
   </div>
 
   <script>
     const themeToggle = document.getElementById("themeToggle");
+    const downloadLink = document.getElementById("downloadResume");
+
     function applyTheme(theme) {
       document.documentElement.setAttribute("data-theme", theme);
       themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
+      downloadLink.href = theme === "light" ? "L-Mohamed_Abdelrazek_Resume.pdf" : "D-Mohamed_Abdelrazek_Resume.pdf";
     }
+
     function toggleTheme() {
       const current = document.documentElement.getAttribute("data-theme");
       const newTheme = current === "light" ? "dark" : "light";
       applyTheme(newTheme);
       localStorage.setItem("theme", newTheme);
     }
+
     themeToggle.addEventListener("click", toggleTheme);
+
     window.addEventListener("DOMContentLoaded", () => {
       const saved = localStorage.getItem("theme");
       const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
