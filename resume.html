@@ -24,7 +24,7 @@
     body {
       margin: 20px;
       font-family: "Times New Roman", Times, serif;
-      font-size: 18px; /* increased from 16px */
+      font-size: 18px; /* increased */
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
       background-size: 400% 400%;
       animation: backgroundShift 20s ease infinite;
@@ -60,7 +60,7 @@
 
     h2 {
       font-family: "Times New Roman", Times, serif;
-      font-size: 21px; /* increased from 19px */
+      font-size: 21px; /* increased */
       color: var(--gold);
       margin-bottom: 10px;
       font-weight: 700;
@@ -72,7 +72,7 @@
       font-weight: 600;
       margin-bottom: 20px;
       color: var(--gold);
-      font-size: 18px; /* added, increased by 2 */
+      font-size: 18px; /* increased */
     }
 
     .profile-pic {
@@ -114,7 +114,7 @@
       transform: translateY(20px);
       animation: fadeInUp 1s ease forwards;
       font-family: "Times New Roman", Times, serif;
-      font-size: 18px; /* increased from 16px */
+      font-size: 18px; /* increased */
     }
 
     @keyframes fadeInUp {
@@ -123,23 +123,136 @@
 
     ul { list-style-type: none; padding-left: 15px; margin: 0; }
     li::before { content: "• "; color: var(--gold); font-weight: bold; }
-    li { margin: 4px 0; font-size: 18px; color: var(--text); font-family: "Times New Roman", Times, serif; }
-    p { font-size: 18px; color: var(--text); font-family: "Times New Roman", Times, serif; }
-    a { color: var(--text); text-decoration: none; font-family: "Times New Roman", Times, serif; font-size: 18px; }
+    li { margin: 4px 0; font-size: 18px; color: var(--text); font-family: "Times New Roman", Times, serif; } /* increased */
+    p { font-size: 18px; color: var(--text); font-family: "Times New Roman", Times, serif; } /* increased */
+    a { color: var(--text); text-decoration: none; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
     a:hover { text-decoration: underline; }
-    .role { font-weight: 700; font-family: "Times New Roman", Times, serif; font-size: 18px; }
-    .date { font-size: 17px; font-weight: 700; font-family: "Times New Roman", Times, serif; }
-    .contact-label { font-weight: 700; color: var(--gold); display: block; margin-top: 6px; font-family: "Times New Roman", Times, serif; font-size: 18px; }
-    .contact-value { margin-left: 10px; display: inline-block; color: var(--text); font-weight: 700; font-family: "Times New Roman", Times, serif; font-size: 18px; }
-    .lang-tag { display: inline-block; background-color: var(--gold); color: #000; padding: 3px 8px; border-radius: 12px; font-size: 16px; font-weight: 700; margin-right: 4px; font-family: "Times New Roman", Times, serif; }
-    .level-tag { display: inline-block; background-color: #666; color: #fff; padding: 3px 8px; border-radius: 12px; font-size: 15px; margin-right: 12px; font-family: "Times New Roman", Times, serif; }
-    .download-link { text-align: center; margin-top: 30px; font-family: "Times New Roman", Times, serif; font-size: 18px; }
-    .download-link a { color: var(--gold); font-weight: 700; font-size: 18px; text-decoration: none; cursor: pointer; font-family: "Times New Roman", Times, serif; }
+    .role { font-weight: 700; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
+    .date { font-size: 17px; font-weight: 700; font-family: "Times New Roman", Times, serif; } /* increased */
+    .contact-label { font-weight: 700; color: var(--gold); display: block; margin-top: 6px; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
+    .contact-value { margin-left: 10px; display: inline-block; color: var(--text); font-weight: 700; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
+    .lang-tag { display: inline-block; background-color: var(--gold); color: #000; padding: 3px 8px; border-radius: 12px; font-size: 16px; font-weight: 700; margin-right: 4px; font-family: "Times New Roman", Times, serif; } /* increased */
+    .level-tag { display: inline-block; background-color: #666; color: #fff; padding: 3px 8px; border-radius: 12px; font-size: 15px; margin-right: 12px; font-family: "Times New Roman", Times, serif; } /* increased */
+    .download-link { text-align: center; margin-top: 30px; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
+    .download-link a { color: var(--gold); font-weight: 700; font-size: 18px; text-decoration: none; cursor: pointer; font-family: "Times New Roman", Times, serif; } /* increased */
     .download-link a:hover { text-decoration: underline; }
-    .theme-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; background: var(--gold); border: none; border-radius: 6px; color: #000; font-family: "Times New Roman", Times, serif; font-size: 18px; }
+    .theme-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; background: var(--gold); border: none; border-radius: 6px; color: #000; font-family: "Times New Roman", Times, serif; font-size: 18px; } /* increased */
     [data-theme="dark"] .dark-nobold { font-weight: 400 !important; }
     [data-theme="light"] .light-nobold { font-weight: 400 !important; }
   </style>
 </head>
 <body>
-<!-- rest of your HTML unchanged -->
+
+  <button id="themeToggle" class="theme-toggle">🌙 Mode</button>
+
+  <h1>Mohamed Abdelrazek</h1>
+  <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
+  <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
+
+  <div class="grid">
+    <div class="left-column">
+      <div class="card">
+        <h2>Skills</h2>
+        <ul>
+          <li class="light-nobold">Python (Debugging, Automation)</li>
+          <li class="light-nobold">Data Analysis Fundamentals</li>
+          <li class="light-nobold">AI Fundamentals</li>
+          <li class="light-nobold">GitHub & Version Control</li>
+          <li class="light-nobold">Microsoft Suite</li>
+          <li class="light-nobold">Digital Marketing & E-Commerce</li>
+          <li class="light-nobold">Resilience & Discipline</li>
+          <li class="light-nobold">Team Leadership</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Certifications</h2>
+        <ul>
+          <li class="light-nobold">Google IT Automation with Python</li>
+          <li class="light-nobold">Microsoft Python Development</li>
+          <li class="light-nobold">Google Digital Marketing & E-Commerce</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Contact</h2>
+        <p><span class="contact-label">Email:</span><span class="contact-value dark-nobold light-nobold"> <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+        <p><span class="contact-label">Phone:</span><span class="contact-value dark-nobold light-nobold"> <a href="tel:+201017286384">+20 1017286384</a></span></p>
+        <p><span class="contact-label">Website:</span><span class="contact-value dark-nobold light-nobold"> <a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
+        <p><span class="contact-label">Location:</span><span class="contact-value dark-nobold light-nobold"> Alexandria, Egypt</span></p>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="card">
+        <h2>Professional Summary</h2>
+        <p class="light-nobold">Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Deeply committed to continuous learning and real-world impact.<br>
+        Currently pursuing certifications to bridge technology with business outcomes.</p>
+        <p>
+          <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
+          <span class="lang-tag">English</span> <span class="level-tag">Near Native</span>
+          <span class="lang-tag">German</span> <span class="level-tag">B2 – Intermediate</span>
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Professional Experience</h2>
+        <p><span class="role">Engoo — Online Tutor</span> <span class="date">(2021–Present)</span></p>
+        <ul>
+          <li class="light-nobold">Delivered personalized lessons to diverse learners; strengthened communication and adaptability.</li>
+          <li class="light-nobold">Leveraged digital tools to improve outcomes and track progress.</li>
+          <li class="light-nobold">Maintained high session quality and learner satisfaction across hundreds of lessons.</li>
+        </ul>
+
+        <p><span class="role">Professional Athlete — Football</span> <span class="date">(2011–2022)</span></p>
+        <ul>
+          <li class="light-nobold">Competed at a high level for over a decade; developed discipline and resilience under pressure.</li>
+          <li class="light-nobold">Led and collaborated within dynamic teams; honed leadership and teamwork.</li>
+          <li class="light-nobold">Transferred performance mindset to technology learning and delivery.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Education</h2>
+        <p><span class="role">Alexandria University — Engineering Studies</span></p>
+        <ul>
+          <li class="light-nobold">Completed 4 years, 48 rigorous courses; degree not finalized.</li>
+          <li class="light-nobold">Focus areas: Systems Thinking, Analytical Methods, Problem-Solving.</li>
+          <li class="light-nobold">Applied engineering discipline to software development workflows.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="download-link">
+    <a id="downloadResume" download>Download Resume</a>
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const downloadLink = document.getElementById("downloadResume");
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
+      downloadLink.href = theme === "light" ? "L-Mohamed_Abdelrazek_Resume.pdf" : "D-Mohamed_Abdelrazek_Resume.pdf";
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      const newTheme = current === "light" ? "dark" : "light";
+      applyTheme(newTheme);
+      localStorage.setItem("theme", newTheme);
+    }
+
+    themeToggle.addEventListener("click", toggleTheme);
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const saved = localStorage.getItem("theme");
+      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      applyTheme(saved || (prefersLight ? "light" : "dark"));
+    });
+  </script>
+
+</body>
+</html>
