@@ -20,7 +20,7 @@
   --card: #ffffff;
   --motto: #000000;
   --shadow: rgba(0, 95, 95, 0.3);
-  --gold: #005f5f;
+  --gold: #005f5f; /* Petrol for light mode */
 }
 
 /* ==============================
@@ -73,8 +73,9 @@ body::before {
   z-index: 1000;
 }
 
+/* Header font increase (dark/light handled by variable) */
 .site-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem; /* Increased by 2 */
   font-weight: bold;
   color: var(--gold);
   font-family: "Times New Roman", Times, serif;
@@ -119,24 +120,12 @@ body::before {
   font-weight: normal;
 }
 
+.hero h1.gold-text { color: var(--gold); }
+
 .motto {
   font-size: 1.2rem;
   margin-bottom: 25px;
 }
-
-.profile-pic {
-  display: block;
-  margin: 0 auto 20px;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--gold);
-  box-shadow: 0 0 10px var(--shadow);
-  transition: transform 0.3s;
-}
-
-.profile-pic:hover { transform: scale(1.05); }
 
 /* ==============================
    Cards
@@ -157,6 +146,26 @@ body::before {
 .card.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Header increases inside cards */
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2,
+#wrapup h2 {
+  font-size: 1.4rem; /* Increased by 2 */
+}
+
+/* ==============================
+   About Text Increase
+============================== */
+.about-text,
+.language-tags,
+#projects ul li,
+#contact p,
+.wrapup-message {
+  font-size: 17px; /* Increased by 1 */
 }
 
 /* ==============================
