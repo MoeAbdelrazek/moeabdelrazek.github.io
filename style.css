@@ -73,7 +73,6 @@ body::before {
   z-index: 1000;
 }
 
-/* Header font increase (dark/light handled by variable) */
 .site-title {
   font-size: 1.3rem; /* Increased by 2 */
   font-weight: bold;
@@ -148,14 +147,12 @@ body::before {
   transform: translateY(0);
 }
 
-/* Header increases inside cards */
+/* Headers inside cards font increase */
 #about h2,
 #skills h2,
 #projects h2,
 #contact h2,
-#wrapup h2 {
-  font-size: 1.4rem; /* Increased by 2 */
-}
+#wrapup h2 { font-size: 1.4rem; } /* Increased by 2 */
 
 /* ==============================
    About Text Increase
@@ -164,9 +161,7 @@ body::before {
 .language-tags,
 #projects ul li,
 #contact p,
-.wrapup-message {
-  font-size: 17px; /* Increased by 1 */
-}
+.wrapup-message { font-size: 17px; } /* Increased by 1 */
 
 /* ==============================
    Lists
