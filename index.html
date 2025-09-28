@@ -27,7 +27,7 @@
     <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
     <h1 class="gold-text">Mohamed Abdelrazek</h1>
     <p class="motto gold-text">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</p>
-    <a href="#" id="downloadResume" class="cta-btn resume">Download Resume</a>
+    <a href="https://moeabdelrazek.github.io/resume.html" target="_blank" class="cta-btn resume">Resume</a>
     <a href="#projects" class="cta-btn work">Work</a>
   </section>
 
@@ -110,13 +110,10 @@
   <!-- Scripts -->
   <script>
     const themeToggle = document.getElementById("themeToggle");
-    const downloadResume = document.getElementById("downloadResume");
 
     function applyTheme(theme) {
       document.documentElement.setAttribute("data-theme", theme);
       themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
-      // Set download link depending on theme
-      downloadResume.href = theme === "light" ? "L-Mohamed_Abdelrazek_Resume.pdf" : "D-Mohamed_Abdelrazek_Resume.pdf";
     }
 
     function toggleTheme() {
@@ -130,7 +127,6 @@
 
     window.addEventListener("DOMContentLoaded", () => {
       const saved = localStorage.getItem("theme");
-      // Force dark mode as default if nothing saved
       applyTheme(saved || "dark");
 
       // Scroll animations
