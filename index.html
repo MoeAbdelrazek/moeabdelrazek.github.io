@@ -36,7 +36,7 @@
   <!-- About -->
   <div class="card scroll-fade" id="about">
     <h2 class="gold-text">✨ About Me</h2>
-    <p>
+    <p class="about-text">
       Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.
       Resilient and disciplined, with a decade of high-performance experience shaped by professional football.
       Deeply committed to continuous learning and real-world impact.
@@ -54,7 +54,7 @@
   <!-- Skills -->
   <div class="card scroll-fade" id="skills">
     <h2 class="gold-text">🛠️ Skills</h2>
-    <ul>
+    <ul class="skills-list">
       <li>Python (Debugging, Automation)</li>
       <li>Data Analysis Fundamentals</li>
       <li>AI Fundamentals</li>
@@ -86,22 +86,10 @@
   <!-- Contact -->
   <div class="card scroll-fade" id="contact">
     <h2 class="gold-text">📇 Contact</h2>
-    <p>
-      <span class="contact-label gold-text">Email:</span>
-      <span class="contact-value contact-info">moe-abdelrazek@outlook.com</span>
-    </p>
-    <p>
-      <span class="contact-label gold-text">Phone:</span>
-      <span class="contact-value contact-info">+20 1017286384</span>
-    </p>
-    <p>
-      <span class="contact-label gold-text">Website:</span>
-      <span class="contact-value contact-info">Portfolio Website</span>
-    </p>
-    <p>
-      <span class="contact-label gold-text">Location:</span>
-      <span class="contact-value contact-info">Alexandria, Egypt</span>
-    </p>
+    <p><span class="contact-label gold-text">Email:</span> <span class="contact-value">moe-abdelrazek@outlook.com</span></p>
+    <p><span class="contact-label gold-text">Phone:</span> <span class="contact-value">+20 1017286384</span></p>
+    <p><span class="contact-label gold-text">Website:</span> <span class="contact-value">Portfolio Website</span></p>
+    <p><span class="contact-label gold-text">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
   </div>
 
   <div class="separator"></div>
@@ -109,7 +97,7 @@
   <!-- Final Note -->
   <div class="card scroll-fade" id="wrapup">
     <h2 class="gold-text">🌟 Final Note</h2>
-    <p class="white-text wrapup-message">
+    <p class="wrapup-message">
       Thank you for exploring my journey. This portfolio is more than a showcase — it's a reflection of discipline, precision, and passion. Let's build something extraordinary together.
     </p>
   </div>
@@ -122,53 +110,37 @@
   <!-- Scripts -->
   <script>
     const themeToggle = document.getElementById("themeToggle");
-    const downloadBtn = document.getElementById("downloadResume");
-
-    function updateDownloadLink(theme) {
-      downloadBtn.href = theme === "light"
-        ? "L-Mohamed_Abdelrazek_Resume.pdf"
-        : "D-Mohamed_Abdelrazek_Resume.pdf";
-    }
+    const downloadResume = document.getElementById("downloadResume");
 
     function applyTheme(theme) {
       document.documentElement.setAttribute("data-theme", theme);
       themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
-      updateDownloadLink(theme);
-
-      // Boldness adjustments
-      if(theme === "light") {
-        document.querySelectorAll(".contact-info, #skills ul li, #projects ul li, #about p, #wrapup p").forEach(el => {
-          el.style.fontWeight = "normal";
-        });
-      } else {
-        document.querySelectorAll(".contact-info").forEach(el => el.style.fontWeight = "normal");
-        document.querySelectorAll("#skills ul li, #projects ul li, #about p, #wrapup p").forEach(el => {
-          el.style.fontWeight = "bold";
-        });
-      }
+      // Set download link depending on theme
+      downloadResume.href = theme === "light" ? "L-Mohamed_Abdelrazek_Resume.pdf" : "D-Mohamed_Abdelrazek_Resume.pdf";
     }
 
-    themeToggle.addEventListener("click", () => {
+    function toggleTheme() {
       const current = document.documentElement.getAttribute("data-theme");
       const newTheme = current === "light" ? "dark" : "light";
       applyTheme(newTheme);
       localStorage.setItem("theme", newTheme);
-    });
+    }
+
+    themeToggle.addEventListener("click", toggleTheme);
 
     window.addEventListener("DOMContentLoaded", () => {
       const saved = localStorage.getItem("theme");
-      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-      applyTheme(saved || (prefersLight ? "light" : "dark"));
+      // Force dark mode as default if nothing saved
+      applyTheme(saved || "dark");
 
-      // Scroll Fade-In
-      document.querySelectorAll(".scroll-fade").forEach(el => {
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if(entry.isIntersecting) entry.target.classList.add("visible");
-          });
-        }, { threshold: 0.1 });
-        observer.observe(el);
-      });
+      // Scroll animations
+      const scrollElements = document.querySelectorAll(".scroll-fade");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      }, { threshold: 0.1 });
+      scrollElements.forEach(el => observer.observe(el));
     });
   </script>
 
