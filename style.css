@@ -21,7 +21,7 @@
   --card: #ffffff;
   --motto: #000000;
   --shadow: rgba(0, 95, 95, 0.3);
-  --gold: var(--petrol);
+  --gold: #005f5f;
 }
 
 /* ==============================
@@ -75,28 +75,28 @@ body::before {
 }
 
 .site-title {
-  font-size: 1.3rem; /* increased */
+  font-size: 1.3rem; /* increased font */
   font-weight: bold;
   color: var(--gold);
-  font-family: "Times New Roman", Times, serif;
 }
 
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.5rem; /* increased gap */
 }
 
-.nav-links a {
-  color: var(--text);
-  font-family: "Times New Roman", Times, serif;
-  font-weight: normal;
+.header-link {
+  font-size: 1.1rem; /* increase font by 1 */
+  font-weight: bold;
   text-decoration: none;
+  color: var(--gold);
 }
+
+[data-theme="light"] .header-link { color: var(--petrol); }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  color: var(--gold);
   text-decoration: underline;
 }
 
@@ -114,18 +114,17 @@ body::before {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.hero h1 {
-  font-family: "Times New Roman", Times, serif;
+.hero h1.hero-name {
+  font-size: 2rem; /* bigger font */
   font-weight: bold;
-  font-size: 2rem; /* increased and bold */
   color: var(--gold);
 }
 
-.hero .motto {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: normal;
-  font-size: 1.2rem;
-  color: var(--text); /* white in dark mode */
+[data-theme="light"] .hero h1.hero-name { color: var(--petrol); }
+
+.motto {
+  font-size: 1.2rem; /* increased by 1 */
+  color: var(--motto);
   margin-bottom: 25px;
 }
 
@@ -156,7 +155,6 @@ body::before {
   transform: translateY(20px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: opacity 0.8s ease, transform 0.8s ease;
-  font-family: "Times New Roman", Times, serif;
 }
 
 .card.visible {
@@ -165,33 +163,66 @@ body::before {
 }
 
 /* ==============================
-   Lists
+   Sections Headers
 ============================== */
-ul { list-style-type: none; padding-left: 0; }
+.section-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--gold);
+}
 
-li { margin: 6px 0; font-size: 17px; font-weight: normal; }
+[data-theme="light"] .section-header { color: var(--petrol); }
 
-/* Skills List - remove bullets */
-.skills-list {
-  list-style-type: none;
-  padding-left: 0;
+/* ==============================
+   About Me Text
+============================== */
+.about-text {
+  font-size: 1.1rem; /* increased by 1 */
+  line-height: 1.3; /* remove extra distance */
+}
+
+.language-tags {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.lang-tag {
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.level-tag {
+  color: #fff;
+}
+
+[data-theme="light"] .lang-tag { color: var(--petrol); }
+[data-theme="light"] .level-tag { color: #000; }
+
+/* ==============================
+   Skills List
+============================== */
+.skills-list li {
+  margin: 6px 0;
+  font-size: 17px; /* increased by 1 */
+}
+
+.skills-list li::before {
+  content: ""; /* removed white/gold dot */
 }
 
 /* ==============================
-   Links
+   Projects
 ============================== */
-a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: normal;
-  font-family: "Times New Roman", Times, serif;
+.project-title {
+  font-size: 1.1rem; /* increased by 1 */
 }
 
-a:hover,
-a:focus {
+.github-link {
   color: var(--gold);
-  text-decoration: underline;
 }
+
+[data-theme="light"] .github-link { color: var(--petrol); }
 
 /* ==============================
    Contact
@@ -199,11 +230,13 @@ a:focus {
 .contact-label {
   font-weight: bold;
   color: var(--gold);
-  display: inline-block;
-  margin-right: 6px;
 }
 
-.contact-value { font-weight: normal; }
+.contact-value {
+  font-weight: normal;
+}
+
+[data-theme="light"] .contact-label { color: var(--petrol); }
 
 /* ==============================
    CTA Buttons
@@ -211,13 +244,12 @@ a:focus {
 .cta-btn {
   display: inline-block;
   margin: 0.5rem;
-  padding: 0.6rem 1.4rem; /* smaller icons for Resume/Work */
+  padding: 0.8rem 1.8rem;
   background: var(--accent);
   color: #000;
   font-weight: normal;
   border-radius: 6px;
   text-decoration: none;
-  font-family: "Times New Roman", Times, serif;
   box-shadow: 0 0 6px var(--shadow);
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -265,8 +297,8 @@ footer {
   .nav-links ul { flex-wrap: wrap; gap: 0.8rem; }
   h1 { font-size: 24px; }
   h2 { font-size: 18px; }
-  .profile-pic { width: 120px; height: 120px; } /* keep original */
-  .motto { font-size: 1rem; }
+  .profile-pic { width: 120px; height: 120px; }
+  .motto { font-size: 1.2rem; } /* increased by 1 on mobile too */
   .card { margin: 1rem; }
   .lang-tag, .level-tag { font-size: 12px; padding: 2px 6px; }
   .cta-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
