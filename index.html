@@ -13,10 +13,10 @@
     <div class="site-title gold-text">👋 Mohamed Abdelrazek</div>
     <div class="nav-links">
       <ul>
-        <li class="gold-text">About Me</li>
-        <li class="gold-text">Skills</li>
-        <li class="gold-text">Projects</li>
-        <li class="gold-text">Contact</li>
+        <li><a href="#about" class="header-link">About Me</a></li>
+        <li><a href="#skills" class="header-link">Skills</a></li>
+        <li><a href="#projects" class="header-link">Projects</a></li>
+        <li><a href="#contact" class="header-link">Contact</a></li>
       </ul>
     </div>
     <button id="themeToggle" class="cta-btn theme-toggle">🌙 Mode</button>
@@ -25,7 +25,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
-    <h1 class="gold-text">Mohamed Abdelrazek</h1>
+    <h1 class="gold-text hero-name">Mohamed Abdelrazek</h1>
     <p class="motto">
       Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.
     </p>
@@ -37,7 +37,7 @@
 
   <!-- About -->
   <div class="card scroll-fade" id="about">
-    <h2 class="gold-text">✨ About Me</h2>
+    <h2 class="gold-text section-header">✨ About Me</h2>
     <p class="about-text">
       Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.<br>
       Resilient and disciplined, with a decade of high-performance experience shaped by professional football.<br>
@@ -45,18 +45,9 @@
       Currently pursuing certifications to bridge technology with business outcomes.
     </p>
     <div class="language-tags">
-      <div class="lang-item">
-        <span class="lang-flag">🇦🇪</span>
-        <span class="level-tag">Native</span>
-      </div>
-      <div class="lang-item">
-        <span class="lang-flag">🇬🇧</span>
-        <span class="level-tag">Near Native</span>
-      </div>
-      <div class="lang-item">
-        <span class="lang-flag">🇩🇪</span>
-        <span class="level-tag">B2</span>
-      </div>
+      <span class="lang-tag">🇦🇪 Arabic</span> <span class="level-tag">Native</span>
+      <span class="lang-tag">🇬🇧 English</span> <span class="level-tag">Near Native</span>
+      <span class="lang-tag">🇩🇪 German</span> <span class="level-tag">B2</span>
     </div>
   </div>
 
@@ -64,7 +55,7 @@
 
   <!-- Skills -->
   <div class="card scroll-fade" id="skills">
-    <h2 class="gold-text">🛠️ Skills</h2>
+    <h2 class="gold-text section-header">🛠️ Skills</h2>
     <ul class="skills-list">
       <li>Python (Debugging, Automation)</li>
       <li>Data Analysis Fundamentals</li>
@@ -81,11 +72,11 @@
 
   <!-- Projects -->
   <div class="card scroll-fade" id="projects">
-    <h2 class="gold-text">📂 Projects</h2>
+    <h2 class="gold-text section-header">📂 Projects</h2>
     <ul>
       <li>
-        python-labs-conditionals-loops-sorting =>
-        <a class="gold-text" href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">
+        <span class="project-title">python-labs-conditionals-loops-sorting</span> => 
+        <a class="gold-text github-link" href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">
           GitHub Repository
         </a>
       </li>
@@ -96,18 +87,18 @@
 
   <!-- Contact -->
   <div class="card scroll-fade" id="contact">
-    <h2 class="gold-text">📇 Contact</h2>
-    <p><span class="contact-label gold-text">Email:</span> <span class="contact-value">moe-abdelrazek@outlook.com</span></p>
-    <p><span class="contact-label gold-text">Phone:</span> <span class="contact-value">+20 1017286384</span></p>
-    <p><span class="contact-label gold-text">Website:</span> <span class="contact-value">Portfolio Website</span></p>
-    <p><span class="contact-label gold-text">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
+    <h2 class="gold-text section-header">📇 Contact</h2>
+    <p><span class="contact-label">Email:</span> <span class="contact-value">moe-abdelrazek@outlook.com</span></p>
+    <p><span class="contact-label">Phone:</span> <span class="contact-value">+20 1017286384</span></p>
+    <p><span class="contact-label">Website:</span> <span class="contact-value">Portfolio Website</span></p>
+    <p><span class="contact-label">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
   </div>
 
   <div class="separator"></div>
 
   <!-- Final Note -->
   <div class="card scroll-fade" id="wrapup">
-    <h2 class="gold-text">🌟 Final Note</h2>
+    <h2 class="gold-text section-header">🌟 Final Note</h2>
     <p class="wrapup-message">
       Thank you for exploring my journey. This portfolio is more than a showcase — it's a reflection of discipline, precision, and passion. Let's build something extraordinary together.
     </p>
@@ -138,7 +129,7 @@
 
     window.addEventListener("DOMContentLoaded", () => {
       const saved = localStorage.getItem("theme");
-      applyTheme(saved || "dark"); // default dark
+      applyTheme(saved || "dark"); // force dark as default
 
       const scrollElements = document.querySelectorAll(".scroll-fade");
       const observer = new IntersectionObserver((entries) => {
