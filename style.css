@@ -17,11 +17,11 @@
   --bg1: #fdfdfd;
   --bg2: #f0f0f0;
   --text: #000000;
-  --accent: var(--petrol);
+  --accent: #005f5f;
   --card: #ffffff;
   --motto: #000000;
   --shadow: rgba(0, 95, 95, 0.3);
-  --gold: var(--petrol);
+  --gold: #005f5f;
 }
 
 /* ==============================
@@ -75,7 +75,7 @@ body::before {
 }
 
 .site-title {
-  font-size: 1.2rem; /* bigger name */
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--gold);
   font-family: "Times New Roman", Times, serif;
@@ -84,20 +84,13 @@ body::before {
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem; /* separate them a bit */
+  gap: 1.5rem;
 }
 
-.nav-links a {
-  color: var(--gold); /* header color */
-  font-size: 1.1rem; /* increased by 1 */
-  font-family: "Times New Roman", Times, serif;
-  font-weight: normal;
-  text-decoration: none;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  text-decoration: underline;
+.nav-links li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--gold);
 }
 
 /* ==============================
@@ -117,14 +110,14 @@ body::before {
 .hero h1 {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  font-size: 2.2rem; /* bigger name */
+  font-size: 2rem;
   color: var(--gold);
 }
 
 .motto {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color: var(--text);
   margin-bottom: 25px;
-  color: var(--gold);
 }
 
 .profile-pic {
@@ -135,6 +128,7 @@ body::before {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--gold);
+  box-shadow: 0 0 10px var(--shadow);
   transition: transform 0.3s;
 }
 
@@ -161,32 +155,69 @@ body::before {
   transform: translateY(0);
 }
 
-.card h2 {
+/* ==============================
+   About Section
+============================== */
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.language-tags {
+  display: flex;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lang-flag {
+  font-size: 1.2rem;
   color: var(--gold);
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+}
+
+.level-tag {
+  font-weight: normal;
+  color: #fff;
 }
 
 /* ==============================
-   Lists
+   Skills
 ============================== */
-ul { list-style-type: none; padding-left: 15px; }
+.skills-list {
+  list-style-type: none;
+  padding-left: 15px;
+}
 
-li::before {
+.skills-list li::before {
   content: "• ";
   color: var(--gold);
 }
 
-li { margin: 6px 0; font-size: 17px; font-weight: normal; } /* slightly bigger font for skills */
+.skills-list li {
+  margin: 4px 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
 
+/* ==============================
+   Links
+============================== */
 a {
-  color: var(--gold);
+  color: var(--text);
   text-decoration: none;
   font-weight: normal;
+  font-family: "Times New Roman", Times, serif;
 }
 
 a:hover,
 a:focus {
+  color: var(--gold);
   text-decoration: underline;
 }
 
@@ -202,7 +233,6 @@ a:focus {
 
 .contact-value {
   font-weight: normal;
-  color: var(--text);
 }
 
 /* ==============================
@@ -211,18 +241,21 @@ a:focus {
 .cta-btn {
   display: inline-block;
   margin: 0.5rem;
-  padding: 0.7rem 1.6rem;
-  background: var(--gold);
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
   color: #000;
   font-weight: normal;
   border-radius: 6px;
   text-decoration: none;
   font-family: "Times New Roman", Times, serif;
-  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 6px var(--shadow);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .cta-btn:hover,
 .cta-btn:focus {
+  background: #fff8dc;
+  box-shadow: 0 0 8px var(--shadow);
   transform: translateY(-2px);
   outline: none;
 }
@@ -252,11 +285,7 @@ footer {
 /* ==============================
    Final Note
 ============================== */
-.wrapup-message {
-  font-weight: normal;
-  text-align: center;
-  margin-top: 10px;
-}
+.wrapup-message { font-weight: normal; text-align: center; margin-top: 10px; }
 
 /* ==============================
    Mobile Optimization
@@ -264,12 +293,12 @@ footer {
 @media (max-width: 700px) {
   .top-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   .nav-links ul { flex-wrap: wrap; gap: 0.8rem; }
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.2rem; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
   .profile-pic { width: 120px; height: 120px; }
   .motto { font-size: 1rem; }
   .card { margin: 1rem; }
-  li { font-size: 16px; }
+  .lang-tag, .level-tag { font-size: 12px; padding: 2px 6px; }
   .cta-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
   .contact-label, .contact-value { font-size: 14px; }
   .wrapup-message { font-size: 0.95rem; }
