@@ -13,10 +13,10 @@
     <div class="site-title gold-text">👋 Mohamed Abdelrazek</div>
     <div class="nav-links">
       <ul>
-        <li><a href="#about" class="gold-text">About Me</a></li>
-        <li><a href="#skills" class="gold-text">Skills</a></li>
-        <li><a href="#projects" class="gold-text">Projects</a></li>
-        <li><a href="#contact" class="gold-text">Contact</a></li>
+        <li class="gold-text">About Me</li>
+        <li class="gold-text">Skills</li>
+        <li class="gold-text">Projects</li>
+        <li class="gold-text">Contact</li>
       </ul>
     </div>
     <button id="themeToggle" class="cta-btn theme-toggle">🌙 Mode</button>
@@ -26,7 +26,7 @@
   <section class="hero">
     <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
     <h1 class="gold-text">Mohamed Abdelrazek</h1>
-    <p class="motto gold-text">
+    <p class="motto">
       Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.
     </p>
     <a href="https://moeabdelrazek.github.io/resume.html" target="_blank" class="cta-btn resume">Resume</a>
@@ -39,15 +39,24 @@
   <div class="card scroll-fade" id="about">
     <h2 class="gold-text">✨ About Me</h2>
     <p class="about-text">
-      Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.<br><br>
-      Resilient and disciplined, with a decade of high-performance experience shaped by professional football.<br><br>
-      Deeply committed to continuous learning and real-world impact.<br><br>
+      Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing.<br>
+      Resilient and disciplined, with a decade of high-performance experience shaped by professional football.<br>
+      Deeply committed to continuous learning and real-world impact.<br>
       Currently pursuing certifications to bridge technology with business outcomes.
     </p>
     <div class="language-tags">
-      <span class="lang-tag gold-text">Arabic</span> <span class="level-tag white-text">Native</span>
-      <span class="lang-tag gold-text">English</span> <span class="level-tag white-text">Near Native</span>
-      <span class="lang-tag gold-text">German</span> <span class="level-tag white-text">B2 – Intermediate</span>
+      <div class="lang-item">
+        <span class="lang-flag">🇦🇪</span>
+        <span class="level-tag">Native</span>
+      </div>
+      <div class="lang-item">
+        <span class="lang-flag">🇬🇧</span>
+        <span class="level-tag">Near Native</span>
+      </div>
+      <div class="lang-item">
+        <span class="lang-flag">🇩🇪</span>
+        <span class="level-tag">B2</span>
+      </div>
     </div>
   </div>
 
@@ -75,7 +84,7 @@
     <h2 class="gold-text">📂 Projects</h2>
     <ul>
       <li>
-        python-labs-conditionals-loops-sorting => 
+        python-labs-conditionals-loops-sorting =>
         <a class="gold-text" href="https://github.com/MoeAbdelrazek/python-labs-conditionals-loops-sorting-" target="_blank">
           GitHub Repository
         </a>
@@ -129,7 +138,7 @@
 
     window.addEventListener("DOMContentLoaded", () => {
       const saved = localStorage.getItem("theme");
-      applyTheme(saved || "dark"); // dark as default
+      applyTheme(saved || "dark"); // default dark
 
       const scrollElements = document.querySelectorAll(".scroll-fade");
       const observer = new IntersectionObserver((entries) => {
