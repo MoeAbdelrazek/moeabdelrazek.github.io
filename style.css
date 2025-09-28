@@ -10,18 +10,17 @@
   --motto: #ffffff;
   --shadow: rgba(255, 215, 0, 0.3);
   --gold: #FFD700;
-  --petrol: #005f5f;
 }
 
 [data-theme="light"] {
   --bg1: #fdfdfd;
   --bg2: #f0f0f0;
   --text: #000000;
-  --accent: var(--petrol);
+  --accent: #005f5f;
   --card: #ffffff;
   --motto: #000000;
   --shadow: rgba(0, 95, 95, 0.3);
-  --gold: var(--petrol);
+  --gold: #005f5f;
 }
 
 /* ==============================
@@ -75,35 +74,29 @@ body::before {
 }
 
 .site-title {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: var(--gold);
   font-family: "Times New Roman", Times, serif;
 }
 
-/* Navigation Links - Header Words */
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav-links a {
-  color: var(--gold);
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-decoration: none;
-  text-shadow: 0 0 8px var(--gold);
+  color: var(--text);
   font-family: "Times New Roman", Times, serif;
-}
-
-[data-theme="light"] .nav-links a {
-  color: var(--petrol);
-  text-shadow: 0 0 8px var(--petrol);
+  font-weight: normal;
+  font-size: 1.1rem;
+  text-decoration: none;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
+  color: var(--gold);
   text-decoration: underline;
 }
 
@@ -113,28 +106,16 @@ body::before {
 .hero {
   text-align: center;
   margin: 2rem auto;
-  animation: fadeIn 1.5s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero h1 {
-  font-size: 2.2rem;
+  font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  color: var(--gold);
-  text-shadow: 0 0 10px var(--gold);
+  font-size: 2.2rem;
 }
 
-[data-theme="light"] .hero h1 {
-  color: var(--petrol);
-  text-shadow: 0 0 10px var(--petrol);
-}
-
-.hero .motto {
-  font-size: 1.3rem;
+.motto {
+  font-size: 1.2rem;
   margin-bottom: 25px;
 }
 
@@ -168,73 +149,22 @@ body::before {
   font-family: "Times New Roman", Times, serif;
 }
 
-.card h2 {
-  font-size: 1.8rem;
-  color: var(--gold);
-  text-shadow: 0 0 8px var(--gold);
-}
-
-[data-theme="light"] .card h2 {
-  color: var(--petrol);
-  text-shadow: 0 0 8px var(--petrol);
-}
-
 .card.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* About Me paragraph */
-.about-text {
-  font-size: 1.2rem;
-  line-height: 1.4;
-}
-
-/* Language Tags */
-.language-tags {
-  margin-top: 10px;
-  display: flex;
-  gap: 1rem;
-}
-
-.lang-tag {
-  font-size: 1rem;
-  color: var(--gold);
-  text-shadow: 0 0 6px var(--gold);
-}
-
-.level-tag {
-  font-size: 1rem;
-  color: #fff;
-  text-shadow: 0 0 6px #fff;
-}
-
-[data-theme="light"] .lang-tag { 
-  color: var(--petrol);
-  text-shadow: 0 0 6px var(--petrol);
-}
-
-[data-theme="light"] .level-tag { 
-  color: #000;
-  text-shadow: 0 0 6px #000;
-}
-
 /* ==============================
-   Lists & Skills
+   Lists
 ============================== */
 ul { list-style-type: none; padding-left: 15px; }
 
 li::before {
   content: "• ";
   color: var(--gold);
-  margin-right: 6px;
 }
 
-[data-theme="light"] li::before {
-  color: var(--petrol);
-}
-
-li { margin: 6px 0; font-size: 1.1rem; font-weight: normal; }
+li { margin: 6px 0; font-size: 1rem; font-weight: normal; }
 
 /* ==============================
    Links
@@ -252,26 +182,29 @@ a:focus {
   text-decoration: underline;
 }
 
-[data-theme="light"] a:hover,
-[data-theme="light"] a:focus {
-  color: var(--petrol);
-}
-
 /* ==============================
    Contact
 ============================== */
 .contact-label {
   font-weight: bold;
   color: var(--gold);
+  display: inline-block;
+  margin-right: 6px;
 }
 
-.contact-value {
-  font-weight: normal;
-  font-size: 1rem;
+.contact-value { font-weight: normal; }
+
+/* ==============================
+   Language Tags
+============================== */
+.lang-tag {
+  color: var(--gold);
+  margin-right: 0.5rem;
 }
 
-[data-theme="light"] .contact-label {
-  color: var(--petrol);
+.level-tag {
+  color: #ffffff;
+  margin-right: 1rem;
 }
 
 /* ==============================
@@ -280,8 +213,7 @@ a:focus {
 .cta-btn {
   display: inline-block;
   margin: 0.5rem;
-  padding: 0.6rem 1.5rem;
-  font-size: 0.9rem;
+  padding: 0.8rem 1.8rem;
   background: var(--accent);
   color: #000;
   font-weight: normal;
@@ -325,25 +257,21 @@ footer {
 /* ==============================
    Final Note
 ============================== */
-.wrapup-message {
-  font-weight: normal;
-  text-align: center;
-  margin-top: 10px;
-}
+.wrapup-message { font-weight: normal; text-align: center; margin-top: 10px; }
 
 /* ==============================
    Mobile Optimization
 ============================== */
 @media (max-width: 700px) {
   .top-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-  .nav-links ul { flex-wrap: wrap; gap: 1rem; }
+  .nav-links ul { flex-wrap: wrap; gap: 0.8rem; }
   h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.5rem; }
+  h2 { font-size: 18px; }
   .profile-pic { width: 120px; height: 120px; }
-  .motto { font-size: 1.2rem; }
+  .motto { font-size: 1.1rem; }
   .card { margin: 1rem; }
-  .lang-tag, .level-tag { font-size: 0.95rem; }
+  .lang-tag, .level-tag { font-size: 12px; padding: 2px 6px; }
   .cta-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
-  .contact-label, .contact-value { font-size: 0.95rem; }
+  .contact-label, .contact-value { font-size: 14px; }
   .wrapup-message { font-size: 0.95rem; }
 }
