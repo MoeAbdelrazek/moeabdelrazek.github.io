@@ -10,6 +10,8 @@
   --motto: #ffffff;
   --shadow: rgba(255, 215, 0, 0.3);
   --gold: #FFD700;
+  --header-font-increase: 1.375rem; /* 1.1rem + 2 scale approx */
+  --subtext-font-increase: 1.25rem; /* 1.2rem + 1 scale approx */
 }
 
 [data-theme="light"] {
@@ -20,7 +22,9 @@
   --card: #ffffff;
   --motto: #000000;
   --shadow: rgba(0, 95, 95, 0.3);
-  --gold: #005f5f; /* Petrol for light mode */
+  --gold: #005f5f; /* petrol color instead of gold */
+  --header-font-increase: 1.375rem;
+  --subtext-font-increase: 1.25rem;
 }
 
 /* ==============================
@@ -74,7 +78,7 @@ body::before {
 }
 
 .site-title {
-  font-size: 1.3rem; /* Increased by 2 */
+  font-size: var(--header-font-increase);
   font-weight: bold;
   color: var(--gold);
   font-family: "Times New Roman", Times, serif;
@@ -91,6 +95,7 @@ body::before {
   font-family: "Times New Roman", Times, serif;
   font-weight: normal;
   text-decoration: none;
+  font-size: var(--header-font-increase);
 }
 
 .nav-links a:hover,
@@ -119,12 +124,32 @@ body::before {
   font-weight: normal;
 }
 
-.hero h1.gold-text { color: var(--gold); }
+.hero h1 {
+  font-size: var(--header-font-increase);
+  color: var(--gold);
+}
 
 .motto {
-  font-size: 1.2rem;
+  font-size: var(--subtext-font-increase);
   margin-bottom: 25px;
 }
+
+/* ==============================
+   Profile Picture
+============================== */
+.profile-pic {
+  display: block;
+  margin: 0 auto 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 10px var(--shadow);
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover { transform: scale(1.05); }
 
 /* ==============================
    Cards
@@ -147,21 +172,20 @@ body::before {
   transform: translateY(0);
 }
 
-/* Headers inside cards font increase */
-#about h2,
-#skills h2,
-#projects h2,
-#contact h2,
-#wrapup h2 { font-size: 1.4rem; } /* Increased by 2 */
+.card h2 {
+  font-size: var(--header-font-increase);
+  color: var(--gold);
+}
 
 /* ==============================
-   About Text Increase
+   About Text
 ============================== */
 .about-text,
-.language-tags,
-#projects ul li,
-#contact p,
-.wrapup-message { font-size: 17px; } /* Increased by 1 */
+.skills-list li,
+.contact-value,
+.wrapup-message {
+  font-size: var(--subtext-font-increase);
+}
 
 /* ==============================
    Lists
@@ -173,7 +197,7 @@ li::before {
   color: var(--gold);
 }
 
-li { margin: 6px 0; font-size: 16px; font-weight: normal; }
+li { margin: 6px 0; font-weight: normal; }
 
 /* ==============================
    Links
@@ -183,6 +207,7 @@ a {
   text-decoration: none;
   font-weight: normal;
   font-family: "Times New Roman", Times, serif;
+  font-size: var(--subtext-font-increase);
 }
 
 a:hover,
@@ -200,8 +225,6 @@ a:focus {
   display: inline-block;
   margin-right: 6px;
 }
-
-.contact-value { font-weight: normal; }
 
 /* ==============================
    CTA Buttons
