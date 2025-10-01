@@ -75,7 +75,7 @@ body::before {
 }
 
 .site-title {
-  font-size: 1.3rem; /* increased font */
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--gold);
 }
@@ -83,11 +83,11 @@ body::before {
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem; /* increased gap */
+  gap: 1.5rem;
 }
 
 .header-link {
-  font-size: 1.1rem; /* increase font by 1 */
+  font-size: 1.1rem;
   font-weight: bold;
   text-decoration: none;
   color: var(--gold);
@@ -115,7 +115,7 @@ body::before {
 }
 
 .hero h1.hero-name {
-  font-size: 2rem; /* bigger font */
+  font-size: 2rem;
   font-weight: bold;
   color: var(--gold);
 }
@@ -123,7 +123,7 @@ body::before {
 [data-theme="light"] .hero h1.hero-name { color: var(--petrol); }
 
 .motto {
-  font-size: 1.2rem; /* increased by 1 */
+  font-size: 1.2rem;
   color: var(--motto);
   margin-bottom: 25px;
 }
@@ -177,8 +177,8 @@ body::before {
    About Me Text
 ============================== */
 .about-text {
-  font-size: 1.1rem; /* increased by 1 */
-  line-height: 1.3; /* remove extra distance */
+  font-size: 1.1rem;
+  line-height: 1.3;
 }
 
 .language-tags {
@@ -204,18 +204,18 @@ body::before {
 ============================== */
 .skills-list li {
   margin: 6px 0;
-  font-size: 17px; /* increased by 1 */
+  font-size: 17px;
 }
 
 .skills-list li::before {
-  content: ""; /* removed white/gold dot */
+  content: "";
 }
 
 /* ==============================
    Projects
 ============================== */
 .project-title {
-  font-size: 1.1rem; /* increased by 1 */
+  font-size: 1.1rem;
 }
 
 .github-link {
@@ -298,7 +298,7 @@ footer {
   h1 { font-size: 24px; }
   h2 { font-size: 18px; }
   .profile-pic { width: 120px; height: 120px; }
-  .motto { font-size: 1.2rem; } /* increased by 1 on mobile too */
+  .motto { font-size: 1.2rem; }
   .card { margin: 1rem; }
   .lang-tag, .level-tag { font-size: 12px; padding: 2px 6px; }
   .cta-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
