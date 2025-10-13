@@ -210,6 +210,24 @@ body::before {
 .skills-list li::before {
   content: "";
 }
+/* ==============================
+   Skills Columns (Two-Column Layout)
+============================== */
+.skills-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.skills-columns ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.skills-columns ul li {
+  margin-bottom: 10px;
+}
 
 /* ==============================
    Projects
