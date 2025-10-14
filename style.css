@@ -4,24 +4,24 @@
 :root {
   --bg1: #2a2a2a;
   --bg2: #3a3a3a;
-  --text: #ffffff;
+  --text: #FFD700; /* Muted Gold */
   --accent: #FFD700;
   --card: #444;
-  --motto: #ffffff;
-  --shadow: rgba(255, 215, 0, 0.3);
-  --gold: #FFD700;
+  --motto: #FFD700; /* Muted Gold */
+  --shadow: rgba(255, 255, 255, 0.3); /* Changed to white glow */
+  --gold: #ffffff; /* Gold → White */
   --petrol: #005f5f;
 }
 
 [data-theme="light"] {
   --bg1: #fdfdfd;
   --bg2: #f0f0f0;
-  --text: #000000;
+  --text: #005f5f; /* Muted Gold effect in light mode */
   --accent: #005f5f;
   --card: #ffffff;
-  --motto: #000000;
+  --motto: #005f5f;
   --shadow: rgba(0, 95, 95, 0.3);
-  --gold: #005f5f;
+  --gold: #ffffff; /* White for gold elements */
 }
 
 /* ==============================
@@ -68,7 +68,7 @@ body::before {
   align-items: center;
   padding: 0.8rem 1.2rem;
   background: var(--card);
-  border-bottom: 1px solid rgba(255,215,0,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -193,11 +193,11 @@ body::before {
 }
 
 .level-tag {
-  color: #fff;
+  color: var(--text);
 }
 
 [data-theme="light"] .lang-tag { color: var(--petrol); }
-[data-theme="light"] .level-tag { color: #000; }
+[data-theme="light"] .level-tag { color: #005f5f; }
 
 /* ==============================
    Skills List
@@ -210,6 +210,7 @@ body::before {
 .skills-list li::before {
   content: "";
 }
+
 /* ==============================
    Skills Columns (Two-Column Layout)
 ============================== */
@@ -264,7 +265,7 @@ body::before {
   margin: 0.5rem;
   padding: 0.8rem 1.8rem;
   background: var(--accent);
-  color: #000;
+  color: var(--text);
   font-weight: normal;
   border-radius: 6px;
   text-decoration: none;
@@ -297,7 +298,7 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   color: var(--text);
-  border-top: 1px solid rgba(255,215,0,0.2);
+  border-top: 1px solid rgba(255,255,255,0.2);
   background: var(--card);
   border-radius: 6px 6px 0 0;
 }
