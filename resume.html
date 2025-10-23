@@ -179,6 +179,36 @@
       .download-link a { font-size: 16px; }
       .theme-toggle { font-size: 16px; padding: 0.4rem 0.8rem; }
     }
+    /* Center the Skills section neatly under its title */
+.card h2 {
+  text-align: center;
+  position: relative;
+}
+
+/* Add an underline that stays centered */
+.card h2::after {
+  content: "";
+  display: block;
+  width: 50px; /* adjust line length */
+  height: 2px;
+  background-color: var(--gold);
+  margin: 6px auto 10px auto; /* centers line */
+  border-radius: 3px;
+}
+
+/* Center only the list in the Skills card */
+.card h2 + ul {
+  text-align: center;
+  padding-left: 0;
+}
+
+.card h2 + ul li {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+}
+
   </style>
 </head>
 <body>
