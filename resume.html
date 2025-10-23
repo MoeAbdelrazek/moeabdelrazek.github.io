@@ -181,6 +181,7 @@
     }
     /* Center the Skills section neatly under its title */
 /* Keeps list items left-aligned, but indents wrapped lines cleanly */
+/* Subtle outlined gold stars for Skills list */
 .card ul {
   list-style: none;
   padding-left: 0;
@@ -189,20 +190,22 @@
 
 .card ul li {
   position: relative;
-  padding-left: 1.4em; /* space for the bullet */
-  text-indent: -0.8em; /* makes wrapped lines start under text */
-  margin-bottom: 4px;
+  padding-left: 1.8em;
+  text-indent: -0.8em;
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
 
-/* custom gold bullet */
 .card ul li::before {
-  content: "•";
+  content: "☆";
   color: var(--gold);
   position: absolute;
   left: 0;
   top: 0;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 16px;
 }
+
 
 
   </style>
