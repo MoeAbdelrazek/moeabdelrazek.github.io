@@ -83,14 +83,15 @@
 
     .profile-pic {
       display: block;
-      margin: 20px auto 40px; /* more space below pic */
+      margin: 20px auto 40px;
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--gold);
-      box-shadow: 0 0 10px rgba(255,215,0,0.6);
+      border: 2px solid var(--gold); /* keeps the elegant gold border */
+      box-shadow: none; /* removes the glow */
     }
+
 
     .grid {
       display: flex;
