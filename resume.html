@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Mohamed Abdelrazek — Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg1: #2a2a2a;
@@ -14,8 +15,8 @@
     }
 
     [data-theme="light"] {
-      --gold: #005f5f; /* petrol */
-      --text: #000000; /* black */
+      --gold: #005f5f;
+      --text: #000000;
       --bg1: #fdfdfd;
       --bg2: #f0f0f0;
       --card: #ffffff;
@@ -23,75 +24,58 @@
 
     body {
       margin: 20px;
-      font-family: "Times New Roman", Times, serif;
+      font-family: "Lora", serif;
       font-size: 18px;
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
-      background-size: 400% 400%;
-      animation: backgroundShift 20s ease infinite;
       color: var(--text);
-      line-height: 1.4;
-      position: relative;
-      transition: background 0.4s ease, color 0.4s ease;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('hero-bg.jpg') center/cover no-repeat;
-      opacity: 0.12;
-      z-index: -2;
-    }
-
-    @keyframes backgroundShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      line-height: 1.6;
     }
 
     h1 {
-      font-family: "Times New Roman", Times, serif;
-      font-size: 30px; /* unchanged */
+      font-family: "Playfair Display", serif;
       text-align: center;
       color: var(--gold);
       font-weight: 700;
-      margin-bottom: 10px;
-      margin-top: 80px; /* moved down */
-    }
-
-    h2 {
-      font-family: "Times New Roman", Times, serif;
-      font-size: 21px; /* increased */
-      color: var(--gold);
-      margin-bottom: 10px;
-      font-weight: 700;
+      margin-top: 60px;
+      margin-bottom: 5px;
+      font-size: 34px;
     }
 
     .motto {
-      font-family: "Times New Roman", Times, serif;
       text-align: center;
-      font-weight: 600;
-      margin-bottom: 20px;
-      font-size: 18px; /* increased */
-      margin-top: 10px; /* spacing below name */
-      color: #ffffff; /* white in dark mode */
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--text);
+      opacity: 0.9;
+      margin-bottom: 10px;
     }
 
-    [data-theme="light"] .motto {
-      color: #000000; /* black in light mode */
+    .languages {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .lang-tag {
+      background-color: var(--gold);
+      color: #000;
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 2px 6px;
     }
 
     .profile-pic {
       display: block;
-      margin: 20px auto 40px;
+      margin: 25px auto 40px;
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--gold); /* keeps the elegant gold border */
-      box-shadow: none; /* removes the glow */
+      border: 2px solid var(--gold);
+      box-shadow: none;
     }
-
 
     .grid {
       display: flex;
@@ -99,6 +83,7 @@
       flex-wrap: nowrap;
       max-width: 1200px;
       margin: 0 auto;
+      gap: 20px;
     }
 
     .left-column {
@@ -114,242 +99,168 @@
 
     .card {
       background: var(--card);
-      padding: 0.8rem;
-      margin-bottom: 15px;
-      border-radius: 6px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-      font-family: "Times New Roman", Times, serif;
+      padding: 1.2rem;
+      margin-bottom: 22px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
       font-size: 18px;
     }
 
-    @keyframes fadeInUp {
-      to { opacity: 1; transform: translateY(0); }
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255,215,0,0.3);
+      padding-bottom: 5px;
     }
 
     ul { list-style-type: none; padding-left: 15px; margin: 0; }
     li::before { content: "• "; color: var(--gold); font-weight: bold; }
-    li { margin: 4px 0; font-size: 18px; color: var(--text); font-family: "Times New Roman", Times, serif; }
-    p { font-size: 18px; color: var(--text); font-family: "Times New Roman", Times, serif; }
-    a { color: var(--text); text-decoration: none; font-family: "Times New Roman", Times, serif; font-size: 18px; }
-    a:hover { text-decoration: underline; }
-    .role { font-weight: 700; font-family: "Times New Roman", Times, serif; font-size: 18px; }
-  .role {
-  font-weight: 700;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
-  color: var(--gold); /* full gold highlight */
-}
-    .date { font-size: 17px; font-weight: 700; font-family: "Times New Roman", Times, serif; }
-    .contact-label { font-weight: 700; color: var(--gold); display: block; margin-top: 6px; font-family: "Times New Roman", Times, serif; font-size: 18px; }
-    .contact-value { margin-left: 10px; display: inline-block; color: var(--text); font-weight: 700; font-family: "Times New Roman", Times, serif; font-size: 18px; }
-    .lang-tag { display: inline-block; background-color: var(--gold); color: #000; padding: 3px 8px; border-radius: 12px; font-size: 16px; font-weight: 700; margin-right: 4px; font-family: "Times New Roman", Times, serif; }
-    .level-tag { display: inline-block; background-color: #666; color: #fff; padding: 3px 8px; border-radius: 12px; font-size: 15px; margin-right: 12px; font-family: "Times New Roman", Times, serif; }
-    .download-link { text-align: center; margin-top: 30px; font-family: "Times New Roman", Times, serif; font-size: 18px; }
-    .download-link a { color: var(--gold); font-weight: 700; font-size: 18px; text-decoration: none; cursor: pointer; font-family: "Times New Roman", Times, serif; }
-    .download-link a:hover { text-decoration: underline; }
-    .theme-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; background: var(--gold); border: none; border-radius: 6px; color: #000; font-family: "Times New Roman", Times, serif; font-size: 18px; }
-    [data-theme="dark"] .dark-nobold { font-weight: 400 !important; }
-    [data-theme="light"] .light-nobold { font-weight: 400 !important; }
+    li { margin: 4px 0; }
 
-    /* --- RESPONSIVE MOBILE STYLING --- */
-    @media screen and (max-width: 768px) {
-      .grid {
-        flex-direction: column;
-      }
-      .left-column, .right-column {
-        width: 100%;
-        padding: 0;
-        border-left: none;
-      }
-      .profile-pic {
-        width: 100px;
-        height: 100px;
-        margin: 20px auto 30px;
-      }
-      h1 {
-        font-size: 28px;
-        margin-top: 60px;
-      }
-      .motto {
-        font-size: 16px;
-      }
-      .card {
-        font-size: 16px;
-      }
-      li, p, a, .role, .date, .contact-label, .contact-value {
-        font-size: 16px;
-      }
-      .lang-tag { font-size: 14px; padding: 2px 6px; }
-      .level-tag { font-size: 13px; padding: 2px 6px; }
-      .download-link a { font-size: 16px; }
-      .theme-toggle { font-size: 16px; padding: 0.4rem 0.8rem; }
+    .role {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 18px;
     }
-    /* Center the Skills section neatly under its title */
-/* Keeps list items left-aligned, but indents wrapped lines cleanly */
-/* Subtle outlined gold stars for Skills list */
-.card ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
 
-.card ul li {
-  position: relative;
-  padding-left: 1.8em;
-  text-indent: -0.8em;
-  margin-bottom: 6px;
-  line-height: 1.5;
-}
+    .date {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--gold);
+      float: right;
+    }
 
-.card ul li::before {
-  content: "☆";
-  color: var(--gold);
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: 600;
-  font-size: 16px;
-}
+    .contact-label { font-weight: 700; color: var(--gold); display: block; margin-top: 8px; }
+    .contact-value a { color: var(--text); text-decoration: none; }
+    .contact-value a:hover { text-decoration: underline; }
 
+    .theme-toggle { position: fixed; top: 20px; right: 20px; padding: 0.5rem 1rem; font-weight: 700; cursor: pointer; background: var(--gold); border: none; border-radius: 6px; color: #000; }
 
-
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .grid { flex-direction: column; }
+      .left-column, .right-column { width: 100%; border-left: none; padding: 0; }
+    }
   </style>
 </head>
-<body>
 
+<body>
   <button id="themeToggle" class="theme-toggle">🌙 Mode</button>
 
   <h1>Mohamed Abdelrazek</h1>
   <div class="motto">Athlete’s discipline. Engineering mindset. Lifelong learner. Shaped by global, multicultural experiences.</div>
+
+  <div class="languages">
+    <span class="lang-tag">Arabic — Native</span>
+    <span class="lang-tag">English — Near Native</span>
+    <span class="lang-tag">German — B2 Intermediate</span>
+  </div>
+
   <img src="profile.jpg" alt="Portrait of Mohamed Abdelrazek" class="profile-pic" />
 
   <div class="grid">
+    <!-- LEFT COLUMN -->
     <div class="left-column">
+
       <div class="card">
         <h2>Skills</h2>
         <ul>
-          <li class="light-nobold">Digital Marketing & E-Commerce</li>
-          <li class="light-nobold">SEO & SEM</li>
-          <li class="light-nobold">Python (Debugging, Automation, Pandas,              NumPy, Matplotlib)</li>
-          <li class="light-nobold">Data Analysis & Visualization (Jupyter Notebook, Google Analytics, Shopify Analytics)</li>
-          <li class="light-nobold">Statistics & Probability (Hypothesis Testing, Regression, A/B Testing)</li>
-          <li class="light-nobold">GitHub & Version Control</li>
-          <li class="light-nobold">Microsoft Suite (Excel, PowerPoint, Word)</li>
-          <li class="light-nobold">Project Management Tools (Asana, Trello)</li>
-          <li class="light-nobold">Advertising Platforms (Meta Ads Manager, Google Ads)</li>
-          <li class="light-nobold">AI Applications in Marketing & Analytics</li>
-          <li class="light-nobold">Email & CRM Platforms (Ma ilchimp, HubSpot)</li>
-          <li class="light-nobold">Creative Tools (Canva, Adobe Creative Cloud)</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>Certifications</h2>
-        <ul>
-          <li class="light-nobold">Google Digital Marketing & E-Commerce</li>
-          <li class="light-nobold">Google Advanced Data Analytics</li>
-          <li class="light-nobold">IBM Digital Marketing and Growth Hacking</li>
-          <li class="light-nobold">Google IT Automation with Python</li>
-          <li class="light-nobold">Microsoft Python Development</li>
-          
+          <li>Digital Marketing & E-Commerce</li>
+          <li>SEO & SEM (Google Ads, Analytics)</li>
+          <li>Python (Automation, Pandas, NumPy)</li>
+          <li>Data Analysis & Visualization</li>
+          <li>Statistics & Hypothesis Testing</li>
+          <li>AI in Marketing & Analytics</li>
+          <li>GitHub & Version Control</li>
+          <li>Project Management (Asana, Trello)</li>
+          <li>Email & CRM (HubSpot, Mailchimp)</li>
+          <li>Creative Tools (Canva, Adobe)</li>
+          </li>Shopify</li>
         </ul>
       </div>
 
       <div class="card">
         <h2>Contact</h2>
-        <p><span class="contact-label">Email:</span><span class="contact-value dark-nobold light-nobold"> <a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
-        <p><span class="contact-label">Phone:</span><span class="contact-value dark-nobold light-nobold"> <a href="tel:+201017286384">+20 1017286384</a></span></p>
-        <p><span class="contact-label">Website:</span><span class="contact-value dark-nobold light-nobold"> <a href="https://moeabdelrazek.github.io/#" target="_blank">Portfolio Website</a></span></p>
-        <p><span class="contact-label">Location:</span><span class="contact-value dark-nobold light-nobold"> Alexandria, Egypt</span></p>
+        <p><span class="contact-label">Email:</span> <span class="contact-value"><a href="mailto:moe-abdelrazek@outlook.com">moe-abdelrazek@outlook.com</a></span></p>
+        <p><span class="contact-label">Phone:</span> <span class="contact-value"><a href="tel:+201017286384">+20 1017286384</a></span></p>
+        <p><span class="contact-label">LinkedIn:</span> <span class="contact-value"><a href="https://www.linkedin.com/in/moe-abdelrazek/" target="_blank">Linkedin</a></span></p>
+        <p><span class="contact-label">Website:</span> <span class="contact-value"><a href="https://moeabdelrazek.github.io" target="_blank">Portfolio Website</a></span></p>
+        <p><span class="contact-label">Location:</span> <span class="contact-value">Alexandria, Egypt</span></p>
       </div>
     </div>
 
+    <!-- RIGHT COLUMN -->
     <div class="right-column">
+      
       <div class="card">
         <h2>Professional Summary</h2>
-        <p class="light-nobold">Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Deeply committed to continuous learning and real-world impact.<br>
-        Currently pursuing certifications to bridge technology with business outcomes.</p>
-        <p>
-          <span class="lang-tag">Arabic</span> <span class="level-tag">Native</span>
-          <span class="lang-tag">English</span> <span class="level-tag">Near Native</span>
-          <span class="lang-tag">German</span> <span class="level-tag">B2 – Intermediate</span>
-        </p>
+        <p>Multidisciplinary professional blending engineering foundations with Python, AI, data analysis, and digital marketing. Resilient and disciplined, with a decade of high-performance experience shaped by professional football. Passionate about continuous learning and bridging technology with business impact.</p>
       </div>
 
       <div class="card">
-  <h2>Professional Experience</h2>
+        <h2>Professional Experience</h2>
 
-  <!-- Freelance Marketing Experience (Top) -->
-  <p><span class="role">Freelance Digital Marketing Specialist - (Self-Employed)</span> <span class="date">(2023–Present)</span></p>
-  <ul>
-    <li class="light-nobold">Designed and executed digital campaigns using AI-driven marketing tools (HubSpot, Google Analytics, SEMrush, Meta Ads).</li>
-    <li class="light-nobold">Managed multi-channel marketing projects including email, social media, SEO, and paid advertising.</li>
-    <li class="light-nobold">Created performance dashboards and tracked KPIs to optimize ROI and engagement.</li>
-    <li class="light-nobold">Developed brand strategy and content marketing assets for clients across industries.</li>
-    <li class="light-nobold">Applied data-driven decision making and A/B testing to maximize campaign effectiveness.</li>
-  </ul>
+        <p><span class="role">Freelance Digital Marketing Specialist — (Self-Employed)</span> <span class="date">(2023–Present)</span></p>
+        <ul>
+          <li>Executed multi-channel campaigns (SEO, Meta Ads, Email, Analytics) using AI-driven tools.</li>
+          <li>Developed brand strategies and creative content for cross-industry clients.</li>
+          <li>Built KPI dashboards to measure engagement, conversions, and ROI.</li>
+        </ul>
 
-  <!-- Engoo Online Tutor (Part-Time) -->
-  <p><span class="role">Engoo - Online Tutor (Part-Time)</span> <span class="date">(2021–Present)</span></p>
-  <ul>
-    <li class="light-nobold">Delivered personalized lessons to diverse learners; strengthened communication and adaptability.</li>
-    <li class="light-nobold">Leveraged digital tools to improve outcomes and track progress.</li>
-    <li class="light-nobold">Maintained high session quality and learner satisfaction across hundreds of lessons.</li>
-  </ul>
+        <p><span class="role">Engoo — Online Tutor (Part-Time)</span> <span class="date">(2021–Present)</span></p>
+        <ul>
+          <li>Delivered tailored English lessons to global learners across multiple proficiency levels.</li>
+          <li>Enhanced communication, adaptability, and digital teaching effectiveness.</li>
+        </ul>
 
-  <!-- Professional Athlete -->
-  <p><span class="role">Professional Athlete - Football</span> <span class="date">(2011–2022)</span></p>
-  <ul>
-    <li class="light-nobold">Competed at a high level for over a decade; developed discipline and resilience under pressure.</li>
-    <li class="light-nobold">Led and collaborated within dynamic teams; honed leadership and teamwork.</li>
-    <li class="light-nobold">Transferred performance mindset to technology learning and delivery.</li>
-  </ul>
-</div>
-
+        <p><span class="role">Professional Athlete — (Football)</span> <span class="date">(2011–2022)</span></p>
+        <ul>
+          <li>Competed professionally for over a decade, cultivating leadership and resilience.</li>
+          <li>Translated performance discipline into analytical and strategic problem-solving.</li>
+        </ul>
+      </div>
 
       <div class="card">
         <h2>Education</h2>
-        <p><span class="role">Alexandria University - Bachelor’s Degree in Engineering Studies (Incomplete) </span></p>
+        <p><span class="role">Alexandria University — Bachelor’s in Engineering Studies (Incomplete)</span></p>
         <ul>
-          <li class="light-nobold">Completed 4 years, 48 rigorous courses; degree not finalized.</li>
-          <li class="light-nobold">Focus areas: Systems Thinking, Analytical Methods, Problem-Solving.</li>
-          <li class="light-nobold">Applied engineering discipline to software development workflows.</li>
+          <li>Completed four academic years across 48 analytical and systems courses.</li>
+          <li>Developed a structured problem-solving approach applied to tech and data workflows.</li>
+        </ul>
+
+        <h2>Certifications</h2>
+        <ul>
+          <li>Google Digital Marketing & E-Commerce</li>
+          <li>Google Advanced Data Analytics</li>
+          <li>IBM Digital Marketing and Growth Hacking</li>
+          <li>Google IT Automation with Python</li>
+          <li>Microsoft Python Development</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <div class="download-link">
-    <a id="downloadResume" download>Download Resume</a>
-  </div>
-
   <script>
     const themeToggle = document.getElementById("themeToggle");
-    const downloadLink = document.getElementById("downloadResume");
-
     function applyTheme(theme) {
       document.documentElement.setAttribute("data-theme", theme);
       themeToggle.textContent = theme === "light" ? "☀️ Mode" : "🌙 Mode";
-      downloadLink.href = theme === "light" ? "L-Mohamed_Abdelrazek_Resume.pdf" : "D-Mohamed_Abdelrazek_Resume.pdf";
     }
-
     function toggleTheme() {
       const current = document.documentElement.getAttribute("data-theme");
       const newTheme = current === "light" ? "dark" : "light";
       applyTheme(newTheme);
       localStorage.setItem("theme", newTheme);
     }
-
     themeToggle.addEventListener("click", toggleTheme);
-
     window.addEventListener("DOMContentLoaded", () => {
       const saved = localStorage.getItem("theme");
-      const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-      applyTheme(saved || (prefersLight ? "light" : "dark"));
+      applyTheme(saved || "dark");
     });
   </script>
-
 </body>
 </html>
